@@ -4,7 +4,16 @@ Contexto persistente do projeto para o Claude Code. Responda sempre em portuguê
 
 - **Projeto:** `2TIAO/GLOBAL-SOLUTION-2/` (o resto do repositório é o template FIAP-PORTFOLIO-AI).
 - **Meu papel no grupo:** **Engenheiro de IA** (papel 2, ver seção 6). Escopo de IA encerrado em 18/11/2026.
-- **Integrantes e turma:** [PREENCHER]
+- **Integrantes:**
+
+  | Função | Integrante(s) | RM |
+  |---|---|---|
+  | Product Owner e Pesquisador | João / Tayná Esteves | RM565999 / RM562491 |
+  | Engenheiro de IA | João | RM565999 |
+  | Dev Full Stack | Endrew Alves | RM563646 |
+  | Tech Lead e Documentador | Carlos Eduardo | RM566487 |
+
+- **Turma:** [PREENCHER]
 - **Repositório:** [`Carlos566487/GLOBAL_SOLUTION_2026_2`](https://github.com/Carlos566487/GLOBAL_SOLUTION_2026_2) (https://github.com/Carlos566487/GLOBAL_SOLUTION_2026_2.git), com a estrutura do template `fiap-tutoria/FIAP-PORTFOLIO-AI`; deve ficar privado e compartilhado com `fiap-tutoria`. Repositório anterior: `JV-004/GS-2`.
 
 ---
