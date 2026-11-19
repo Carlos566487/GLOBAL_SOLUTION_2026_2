@@ -5,7 +5,7 @@ Contexto persistente do projeto para o Claude Code. Responda sempre em portuguê
 - **Projeto:** `2TIAO/GLOBAL-SOLUTION-2/` (o resto do repositório é o template FIAP-PORTFOLIO-AI).
 - **Meu papel no grupo:** **Engenheiro de IA** (papel 2, ver seção 6). Escopo de IA encerrado em 18/11/2026.
 - **Integrantes e turma:** [PREENCHER]
-- **Repositório:** `JV-004/GS-2`, privado, criado a partir do template `fiap-tutoria/FIAP-PORTFOLIO-AI` (histórico preservado), compartilhado com `fiap-tutoria`.
+- **Repositório:** [`Carlos566487/GLOBAL_SOLUTION_2026_2`](https://github.com/Carlos566487/GLOBAL_SOLUTION_2026_2) (https://github.com/Carlos566487/GLOBAL_SOLUTION_2026_2.git), com a estrutura do template `fiap-tutoria/FIAP-PORTFOLIO-AI`; deve ficar privado e compartilhado com `fiap-tutoria`. Repositório anterior: `JV-004/GS-2`.
 
 ---
 
@@ -375,7 +375,7 @@ Para cada cenário, guardar: entrada, esperado, observado e um print do painel o
 ## 10. Estrutura do repositório
 
 ```
-GS-2/  (template FIAP-PORTFOLIO-AI)
+GLOBAL_SOLUTION_2026_2/  (template FIAP-PORTFOLIO-AI)
 ├── CLAUDE.md
 ├── .gitignore
 └── 2TIAO/GLOBAL-SOLUTION-2/
