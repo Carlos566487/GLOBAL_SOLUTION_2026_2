@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+dist/
+.expo/
+
+# Segredos
+.env
+.env.*
+!.env.example
+
+# Dados gerados e pacotes
+*.db
+*.sqlite
+*.zip
+
+# Sistema
+.DS_Store
+Thumbs.db

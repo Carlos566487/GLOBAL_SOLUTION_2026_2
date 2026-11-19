@@ -1,0 +1,466 @@
+24/02/2026, 09:40 SEI/MS - 0052984465 - Nota Técnica Conjunta
+Ministério da Saúde
+Secretaria de Vigilância em Saúde e Ambiente
+Departamento de Doenças Transmissíveis
+Coordenação-Geral de Vigilância de Zoonoses e Doenças de Transmissão Hídrica e Alimentar
+NOTA TÉCNICA CONJUNTA Nº 17/2026-CGZHA/DEDT/SVSA/MS E ANVISA
+Dispõe sobre orientações relativas a
+casos de intoxicação por cereulida associados ao
+consumo de fórmulas infantis da Nestlé em
+recolhimento voluntário, cuja comercialização,
+distribuição e uso foram proibidos pela Anvisa.
+1. CONTEXTUALIZAÇÃO
+1.1. Evidenciada a contaminação de fórmulas infantis destinadas a crianças de 0 a 3 anos de idade
+com cereulida, uma toxina produzida pela bactéria Bacillus cereus.
+1.2. Uma unidade fabril da Nestlé localizada na Holanda identificou, durante análises de controle
+interno, a presença de cereulida em produtos acabados fabricados nessa unidade fabril. Na investigação
+conduzida pela empresa, verificou-se que a origem da contaminação refere-se a um óleo fonte de ácido
+araquidônico (óleo ARA), fabricado pela empresa CABIO Biotech (China) e distribuído por Cargill N.V (Bélgica).
+O óleo ARA é usado pela empresa Sofinol S.A (Suíça), uma empresa do Grupo Nestlé, para produção de um
+ingrediente formulado exclusivo da Nestlé fonte de ácidos graxos poli-insaturados de cadeia curta (Mix LC-
+PUFA), o qual é usado na produção de fórmulas infantis.
+1.3. Em 05/01/2026, a Anvisa recebeu o comunicado de recolhimento voluntário em nome da
+Nestlé Brasil LTDA., referente a vários lotes de fórmulas infantis das marcas NESTOGENO, NAN SUPREME,
+NANLAC SUPREME, NANLAC COMFOR, NAN SCIENCE PRO SENSITIVE e ALFAMINO.
+1.4. Com isso, foi publicada a Resolução RE nº 32, de 6 de janeiro de 2026¹ com a proibição de
+comercialização, distribuição e uso dos seguintes produtos:
+=== INÍCIO: TRANSCRIÇÃO MANUAL DE TABELA EM IMAGEM — Nota Técnica Conjunta 17/2026, páginas 1–2 ===
+(As tabelas abaixo estão como imagem no PDF original. Transcritas à mão pelo Engenheiro de IA a partir das 9 imagens, em 17/11/2026, sem consultar o gabarito.)
+
+Produto | Lote | Validade
+NESTOGENO 0-6 MESES 800g | 5341046041 | 01/03/2027
+NESTOGENO 0-6 MESES 800g | 5342046041 | 01/03/2027
+NESTOGENO 0-6 MESES 800g | 5343046041 | 01/03/2027
+NESTOGENO 0-6 MESES 800g | 5344046041 | 01/03/2027
+
+Produto | Lote | Validade
+NAN SUPREME PRO 0-6 Meses 400g | 5321046041 | 01/08/2027
+NAN SUPREME PRO 0-6 Meses 400g | 5321046043 | 01/08/2027
+
+Produto | Lote | Validade
+NAN SUPREME PRO 0-6 Meses 800g | 5319046041 | 01/08/2027
+NAN SUPREME PRO 0-6 Meses 800g | 5320046041 | 01/08/2027
+NAN SUPREME PRO 0-6 Meses 800g | 5321046041 | 01/08/2027
+
+Produto | Lote | Validade
+NAN SUPREME PRO 6-12 Meses 800g | 5324046041 | 01/08/2027
+NAN SUPREME PRO 6-12 Meses 800g | 5325046041 | 01/08/2027
+NAN SUPREME PRO 6-12 Meses 800g | 5326046041 | 01/08/2027
+
+Produto | Lote | Validade
+NANLAC SUPREME PRO 1 A 3 Anos 800g | 5301046041 | 01/10/2026
+NANLAC SUPREME PRO 1 A 3 Anos 800g | 5302046041 | 01/10/2026
+NANLAC SUPREME PRO 1 A 3 Anos 800g | 5338046041 | 01/12/2026
+NANLAC SUPREME PRO 1 A 3 Anos 800g | 5339046041 | 01/12/2026
+NANLAC SUPREME PRO 1 A 3 Anos 800g | 5340046041 | 01/12/2026
+
+Produto | Lote | Validade
+NANLAC COMFOR 1 A 3 ANOS 800g | 5327046041 | 01/11/2026
+NANLAC COMFOR 1 A 3 ANOS 800g | 5327046043 | 01/11/2026
+NANLAC COMFOR 1 A 3 ANOS 800g | 5328046041 | 01/11/2026
+NANLAC COMFOR 1 A 3 ANOS 800g | 5336046041 | 01/12/2026
+NANLAC COMFOR 1 A 3 ANOS 800g | 5337046041 | 01/12/2026
+NANLAC COMFOR 1 A 3 ANOS 800g | 5338046041 | 01/12/2026
+
+Produto | Lote | Validade
+NANLAC COMFOR 1 A 3 Anos 1,6kg | 53360460V4 | 01/11/2026
+NANLAC COMFOR 1 A 3 Anos 1,6kg | 53370460V1 | 01/11/2026
+NANLAC COMFOR 1 A 3 Anos 1,6kg | 53380460V1 | 01/11/2026
+NANLAC COMFOR 1 A 3 Anos 1,6kg | 53390460V1 | 01/11/2026
+NANLAC COMFOR 1 A 3 Anos 1,6kg | 53390460V2 | 01/11/2026
+NANLAC COMFOR 1 A 3 Anos 1,6kg | 53430460V2 | 01/11/2026
+
+Produto | Lote | Validade
+NAN SCIENCE PRO SENSITIVE 800g | 5323046041 | 01/08/2027
+
+Produto | Lote | Validade
+ALFAMINO 400g | 51060017Y1 | 16/04/2027
+ALFAMINO 400g | 51540017Y1 | 03/06/2027
+ALFAMINO 400g | 52720017Y2 | 29/09/2027
+=== FIM DA TRANSCRIÇÃO MANUAL ===
+
+https://sei.saude.gov.br/sei/controlador.php?acao=procedimento_trabalhar&acao_origem=protocolo_pesquisar&id_procedimento=56797397&id… 1/10
+
+24/02/2026, 09:40 SEI/MS - 0052984465 - Nota Técnica Conjunta
+1.5. A Infosan, The International Food Safety Authorities Network da FAO/OMS, notificou o Brasil
+sobre o recolhimento da fórmula infantil da Nestlé distribuída internacionalmente devido a contaminação com
+a toxina cereulida. Nessa oportunidade, foram compartilhados dados de distribuição para o Brasil de 4 lotes
+https://sei.saude.gov.br/sei/controlador.php?acao=procedimento_trabalhar&acao_origem=protocolo_pesquisar&id_procedimento=56797397&id… 2/10
+
+24/02/2026, 09:40 SEI/MS - 0052984465 - Nota Técnica Conjunta
+do produto ALFAMINO ACS040 6x400g BR fabricado na Holanda e objeto de recolhimento internacional.
+Verificou-se que esses lotes foram contemplados no comunicado de recolhimento realizado pela Nestlé e
+publicado na Resolução RE 32/2026, exceto o lote 53010017Y2 que, apesar de ter sido internalizado no Brasil,
+está de posse da empresa e não houve distribuição.
+1.6. A Nestlé informou que o universo de produtos afetados se deu em 03/01/2026, sendo que essa
+análise considerou as fórmulas que utilizavam o ingrediente Mix LC-PUFA e o cálculo teórico baseado na
+receita do produto com possibilidade da presença de cereulida em nível igual ou superior a 0,2ng/g, que é o
+limite de detecção do método de referência (ISO 18465:2017).
+1.7. Conforme relatório inicial do recolhimento voluntário apresentado pela Nestlé, foram
+distribuídas 1.736.202 unidades de produtos objeto do recolhimento para todos os estados brasileiros.
+Figura 1. Unidades de produtos distribuídas por Unidade da Federação, Brasil. Fonte: Nestlé Brasil LTDA.
+2. AGENTE ETIOLÓGICO
+2.1. A toxina emética (cereulida) é produzida pela bactéria Bacillus cereus, um microrganismo Gram-
+positivo, anaeróbio facultativo e formador de esporos, amplamente distribuído no ambiente natural. Essa
+bactéria é facilmente transmitida por poeira e insetos, podendo contaminar diversos alimentos².
+2.2. A cereulida apresenta elevada estabilidade, sendo pré-formada nos alimentos e altamente
+resistente ao calor, suportando temperaturas de até 100 °C por mais de duas horas. Portanto, trata-se de uma
+toxina extremamente estável, com baixa probabilidade de ser inativada pelo processamento de alimentos,
+representando riscos potenciais para os consumidores².
+2.3. Após a ingestão, a toxina é absorvida pelo trato gastrointestinal e distribuída pelo organismo,
+podendo atravessar barreira hematoencefálica ou acumular-se no fígado e nos rins. Os sintomas incluem por
+náuseas, vômitos e dor abdominal, com início dos sintomas entre 30 minutos a 6 horas após a ingestão do
+alimento contaminado. Em casos graves, essa distribuição sistêmica pode resultar em falência múltipla de
+2,3
+órgãos e até mesmo levar ao óbito .
+2.4. Ressalta-se que a cereulida é capaz de causar intoxicação alimentar mesmo em quantidades
+muito baixas, variando de 0,01 a 1,28 µg/g de alimento contaminado².
+3. ASPECTOS REGULATÓRIOS
+3.1. O procedimento de recolhimento de alimentos visa a retirada do mercado dos lotes de
+produtos que representem risco ou agravo à saúde do consumidor, imediatamente após a ciência dessa
+necessidade.
+3.2. No contexto das Boas Práticas de Fabricação, a empresa responsável pelo produto e demais
+empresas da cadeia produtiva devem implementar medidas de controle e metodologia apropriada de
+https://sei.saude.gov.br/sei/controlador.php?acao=procedimento_trabalhar&acao_origem=protocolo_pesquisar&id_procedimento=56797397&id… 3/10
+
+24/02/2026, 09:40 SEI/MS - 0052984465 - Nota Técnica Conjunta
+avaliação de eventuais desvios para intervir sempre que necessário, com vistas a assegurar alimentos aptos ao
+consumo humano.
+3.3. A Resolução RDC 655/2022 4 estabelece os critérios e procedimentos para o recolhimento de
+alimentos e para a comunicação à Anvisa e aos consumidores. Há dois tipos de recolhimento previsto, o
+recolhimento voluntário e o recolhimento determinado.
+3.4. O recolhimento voluntário é iniciado pela empresa responsável pelo produto, conferindo maior
+agilidade para imediata e eficiente retirada do mercado de consumo, considerando as medidas de controle de
+qualidade adotadas pela empresa.
+3.5. Enquanto o recolhimento determinado é estabelecido pela Anvisa, como medida preventiva de
+risco ou agravo à saúde do consumidor, caso não seja realizado voluntariamente pela empresa responsável
+pelo produto.
+5
+3.6. No Brasil, a Resolução RDC 724/2022 dispõe sobre os padrões microbiológicos dos alimentos e
+6
+suas aplicações, enquanto a Instrução Normativa (IN) 161/2022 estabelece os padrões microbiológicos dos
+alimentos.
+3.7. Os produtos objeto do recolhimento da Nestlé se encaixam na categoria 13 da Instrução
+Normativa 161/22: “Fórmulas infantis e fórmulas dietoterápicas para lactentes e crianças de primeira
+infância”. Para esta categoria, o padrão microbiológico estabelecido pela referida Instrução Normativa inclui
+parâmetro para Bacillus cereus e a quantidade de Bacillus cereus é estabelecida em unidade formadora de
+colônia (UFC), sendo adotado o seguinte plano de amonstragem de três classes: n=5, c=1; m=50 UFC/g;
+M=500 UFC/g.
+3.8. Os valores citados são os limites quantitativos para a bactéria Bacillus cereus e não para a toxina
+cereulida. Entretanto, apesar de a norma não explicitar um limite para a toxina, isso não significa que sua
+presença no alimento é tolerável. Ao contrário, o artigo 4° da RDC 724/2022 é claro ao definir o seguinte
+princípio geral: “Art. 4º “Os alimentos não podem conter micro-organismos patogênicos, suas toxinas ou
+metabólitos em quantidades que causem dano para a saúde humana”.
+3.9. Considerando que a cereulida é responsável por intoxicação aguda e apresenta elevada
+termoestabilidade, a sua presença em fórmulas infantis não é tolerada do ponto de vista da segurança do
+alimento, por representar risco agudo à saúde dessa população vulnerável.
+3.10. Adicionalmente, no parágrafo §3º do art. 5º da RDC 724/22, há a previsão de análises de micro-
+organismos, toxinas ou metabólitos não previstos nos padrões microbiológicos, como meio adicional para
+verificação dos processos produtivos e da inocuidade do alimento.
+3.11. Cumpre também destacar que, em caso de resultados de qualidade intermediária ou
+insatisfatórios, é uma obrigação legal dos entes da cadeia produtiva de alimentos:
+a) Investigar as causas e implementar as ações corretivas necessárias para evitar que estes
+resultados voltem a ocorrer; e
+b) Avaliar a segurança do consumo de outros lotes que possam ter sido afetados pelas
+causas determinadas, quando se tratar de risco inaceitável para a saúde humana.
+3.12. Este contexto legal brasileiro está respaldo em referências internacionais e é convergente com
+normativos editados por autoridades regulatórias estrangeiras consideradas referências globais. O Codex
+Alimentarius, por meio do Código de Práticas de Higiene para Fórmulas em Pó para Lactentes e Crianças (CXC
+7
+66-2008) definiu critérios numéricos apenas para:
+a) Cronobacter spp. (ausência em 30 amostras de 10g).
+b) Salmonella (ausência em 60 amostras de 25g).
+c) Enterobacteriaceae (usadas como indicadores de higiene do processo).
+3.13. Entretanto, recentemente, o Comite de Higiene Alimentar do Codex, solicitou ao JEMRA
+(especialistas da FAO/OMS) que seja feita uma avaliação de risco específica para Bacillus cereus e Clostridium
+botulinum. O CXC 66-2008 será revisado para melhor gerir os riscos relacionados a esses patógenos e suas
+toxinas.
+https://sei.saude.gov.br/sei/controlador.php?acao=procedimento_trabalhar&acao_origem=protocolo_pesquisar&id_procedimento=56797397&id… 4/10
+
+24/02/2026, 09:40 SEI/MS - 0052984465 - Nota Técnica Conjunta
+3.14. Na União Europeia, o Regulamento CE n° 2073/2005 8 também define para fórmulas infantis
+secas um plano de três classes para os Bacillus cereus, compreendendo os seguintes critérios: n=5, c=1; m=50
+UFC/g; M=500 UFC/g.
+3.15. Da mesma forma que no Brasil, o limite estabelecido não é para toxina e sim para a bactéria.
+9
+Entretanto, conforme o Artigo 14.º do Regulamento (CE) n.º 178/2002 , um alimento não pode ser colocado
+no mercado se for considerado prejudicial à saúde. Como a toxina é termoestável e perigosa para bebês, a
+presença dela invalida o lote mesmo que a contagem da bactéria esteja abaixo de 500 UFC/g.
+3.16. No âmbito do Australia New Zealand Food Standards Code, a FSANZ não estabelece requisitos
+microbiológicos específicos nem limites regulatórios para a toxina cereulídeo produzida por Bacillus cereus em
+10
+fórmulas infantis em pó. O Standard 1.6.1 e o Schedule 27 contemplam exclusivamente critérios de
+segurança para Cronobacter spp. e Salmonella nesses produtos, não incluindo limites para B. cereus nem para
+sua toxina. A abordagem da FSANZ para B. cereus e para a cereulida é indireta e baseada em orientação
+técnica não normativa, tratando o microrganismo como um indicador de higiene e controle de processo no
+Compendium of Microbiological Criteria for Food, sem requisitos específicos de monitoramento ou limites
+legais para a toxina.
+3.17. Quanto aos Estados Unidos, o 21 CFR § 106.55 11 é a principal referência legal que regula
+microbiologia de fórmula infantil em pó. Mas neste código não está definido um limite legal de B. cereus ou
+toxinas específicas como cereulídeo para as fórmulas infantis. Os únicos padrões microbiológicos legais
+expressos no texto são para Cronobacter e Salmonella.
+3.18. Observa-se que as autoridades regulatórias, inclusive o Brasil, têm historicamente controlado o
+risco associado à cereulida de forma indireta, por meio do monitoramento e controle da contagem de Bacillus
+cereus, porque a produção dessa toxina ocorre apenas após o crescimento da bactéria até níveis elevados.
+Como a cereulida é uma toxina termoestável e não é eliminada por tratamentos térmicos usuais, a estratégia
+mais eficaz do ponto de vista da segurança do alimento é impedir a sua formação, evitando que a bactéria
+alcance condições e quantidade que favoreçam a síntese da toxina. Para a formação de toxina e causar danos
+à saúde, usualmente é necessária uma quantidade de 100.000 UFC/g, sendo os limites legais cautelatórios até
+em razão de eventuais falhas de processos.
+4. DEFINIÇÕES DE CASO
+4.1. Caso suspeito de intoxicação por cereulida após consumo de fórmula infantil: indivíduo com
+histórico de consumo de fórmula infantil listada na Resolução nº 32/2026, com início do quadro clínico entre 1
+e 6 horas após o consumo, incluindo um ou mais dos seguintes sinais e sintomas: vômitos, geralmente
+persistentes; cólica abdominal e náuseas. A diarreia pode estar ausente ou ser discreta, e a febre é incomum.
+4.2. Caso confirmado pelo critério clínico-epidemiológico: caso suspeito submetido à investigação
+clínica e laboratorial no qual não tenha sido identificada outra etiologia capaz de explicar o quadro clínico,
+mantendo-se a compatibilidade temporal e clínica com a intoxicação por cereulide.
+4.3. Caso descartado: caso suspeito, com identificação de outra etiologia.
+4.4. Caso inconclusivo: caso suspeito sem análises laboratoriais para outros agentes etiológicos,
+impossibilitando a exclusão de diagnósticos diferenciais.
+5. NOTIFICAÇÃO DE CASO SUSPEITO
+5.1. Os casos individuais de intoxicação por cereulida não são de notificação compulsória e não
+dispõem de ficha específica no Sistema de Informação de Agravos de Notificação (Sinan). Dessa forma, todo
+caso suspeito e/ou confirmado deve ser notificado ao Ministério da Saúde, por todos os profissionais de saúde
+que atuam na rede pública ou privada, por meio do endereço eletrônico dtha.ms@saude.gov.br.
+5.2. Na notificação devem constar, no mínimo, as seguintes informações:
+a) Data da notificação;
+b) Nome do caso;
+c) Data de nascimento;
+d) Sexo;
+e) Unidade Federativa de notificação e de residência;
+https://sei.saude.gov.br/sei/controlador.php?acao=procedimento_trabalhar&acao_origem=protocolo_pesquisar&id_procedimento=56797397&id… 5/10
+
+24/02/2026, 09:40 SEI/MS - 0052984465 - Nota Técnica Conjunta
+f) Município de notificação e de residência;
+g) Data de início dos sinais e sintomas;
+h) Descrição dos sinais e sintomas;
+i) Nome do produto consumido (incluindo faixa etária indicada e gramatura), número do
+lote e data de validade;
+j) Informação sobre a coleta de amostras clínicas e respectivos resultados laboratoriais,
+incluindo de diagnóstico diferencial, quando disponíveis.
+5.3. Na ocorrência de um caso suspeito, recomenda-se a investigação ativa de outros indivíduos que
+tenham consumido o mesmo produto e/ou apresentado sintomatologia semelhante, com o objetivo de
+detectar possíveis surtos.
+5.4. Na ocorrência de dois ou mais casos suspeitos com vínculo epidemiológico, deve-se iniciar a
+investigação do surto, conforme preconizado pela vigilância epidemiológica de surtos por Doenças de
+Transmissão Hídrica e Alimentar (DTHA). Nesses casos, deve-se realizar a notificação por meio da Ficha de
+Investigação de Surto-DTA e proceder com o registro das informações no Sinan.
+6. NOTIFICAÇÃO DE EVENTOS ADVERSOS
+6.1. A notificação de eventos adversos associados ao consumo dos produtos motivo desta Nota
+Técnica Conjunta é fundamental para a atuação das autoridades de vigilância sanitária. A comunicação
+imediata desses casos contribui para a identificação do alcance do problema e apoia decisões regulatórias,
+fortalecendo a proteção da saúde pública.
+6.2. A notificação é essencial para confirmar ou afastar riscos, orientar investigações e garantir ações
+rápidas e eficazes. Dessa forma, o registro de qualquer sintoma após o consumo desses produtos torna-se
+uma medida de responsabilidade coletiva e um passo decisivo para prevenir novos casos.
+6.3. A notificação à Anvisa deve ser feita pelo link https://www.gov.br/pt-br/servicos/notificar-
+problemas-com-produtos-sujeitos-a-vigilancia-sanitaria.
+7. DIAGNÓSTICO LABORATORIAL
+7.1. Amostras clínicas
+7.1.1. A detecção laboratorial da cereulide é complexa, restrita a poucos métodos especializados, com
+importantes limitações metodológicas e ainda não validados, o que inviabiliza, no momento, uma confirmação
+laboratorial ampla. Portanto não recomenda-se a coleta de amostras clínicas para detecção da toxina.
+7.1.2. Considerando que os sinais e sintomas da intoxicação por cereulida são inespecíficos e
+semelhantes aos de outros agentes etiológicos das Doenças de Transmissão Hídrica e Alimentar (DTHA),
+recomenda-se a coleta de amostras clínicas para fins de diagnóstico e investigação epidemiológica. A coleta
+deve ser realizada, preferencialmente, no momento do atendimento nas unidades de saúde e antes do início
+do uso de antibióticos. Sempre que possível, recomenda-se a coleta de amostras pareadas para pesquisa viral
+(fezes in natura), coprocultura (swab retal ou amostra fecal) e exame parasitológico (fezes frescas), com o
+objetivo de subsidiar o diagnóstico diferencial, e não para a detecção da toxina cereulida.
+7.2. Amostras bromatológicas
+7.3. Por se tratar de produto em recolhimento voluntário, com comercialização proibida por meio
+da Resolução-RE nº 32, de 6 de janeiro de 2026, não é recomendada a coleta e a análise de amostras com
+12
+finalidade fiscal, conforme orientado na "Figura 4 – Critérios para coleta de amostras" do Guia nº 19/Anvisa .
+7.4. A norma ISO 18465:2017 (Microbiology of the food chain — Quantitative determination of
+13
+emetic toxin (cereulide) using LC-MS/MS) é o padrão internacional de referência para a quantificação da
+toxina emética (cereulida) produzida pelo Bacillus cereus. Em consulta ao perfil analítico da Rede Nacional de
+Laboratório de Vigilância Sanitária (RNLVISA), não foi identificado laboratório oficial que declare capacidade de
+identificar/quantificar a toxina cereulida em alimentos.
+8. DIAGNÓSTICO DIFERENCIAL
+8.1. Todo caso suspeito de intoxicação por cereulida deve ser submetido à investigação
+epidemiológica, envolvendo avaliação clínica e exames laboratoriais, com o objetivo de identificar ou
+https://sei.saude.gov.br/sei/controlador.php?acao=procedimento_trabalhar&acao_origem=protocolo_pesquisar&id_procedimento=56797397&id… 6/10
+
+24/02/2026, 09:40 SEI/MS - 0052984465 - Nota Técnica Conjunta
+descartar outras possíveis etiologias.
+8.2. O diagnóstico diferencial da intoxicação por cereulida deve considerar, entre outras, as
+14
+seguintes condições :
+a) Infecções bacterianas: Campylobacter spp., Shigella spp., Salmonella spp., Escherichia
+coli, Yersinia enterocolitica, Vibrio cholerae e Clostridioides difficile.
+b) Infecções parasitárias: Giardia duodenalis, Cryptosporidium spp., Entamoeba histolytica,
+Microsporidium spp. e Cyclospora cayetanensis.
+c) Intoxicações por outras toxinas bacterianas: Staphylococcus aureus.
+d) Infecções virais: rotavírus
+e) Outras condições não infecciosas: apendicite, diverticulite e isquemia mesentérica, entre
+outras.
+9. RECOMENDAÇÕES À VIGILÂNCIA SANITÁRIA
+9.1. A Anvisa recomenda que as ações de fiscalização em estabelecimentos que comercializam
+fórmulas infantis, como supermercados, farmácias e drogarias, observem os lotes dos produtos descritos na
+Resolução RE 32, de 6 de janeiro de 2026.
+9.2. Para identificar os produtos objeto de recolhimento: verificar o nome comercial, a faixa etária
+de indicação e o conteúdo líquido declarados no painel frontal do rótulo; e, verificar o número do lote
+impresso na parte inferior da lata.
+9.3. Se identificado produto objeto do recolhimento, orienta-se que sejam adotadas medidas
+conforme o código sanitário local, que pode incluir a interdição dos produtos no local ficando o
+estabelecimento como fiel depositário até que sejam adotadas as providências de recolhimento pela empresa
+Nestlé.
+9.4. Realizar o registro fotográfico mostrando o nome do produto e os lotes e documentar no
+processo de investigação.
+9.5. De acordo com o art. 16 da RDC 655/2022, os produtos objetos de recolhimento devem ser
+armazenados pelos estabelecimentos da cadeia produtiva, em local separado e identificado, até que a
+destinação seja estabelecida pela Nestlé.
+9.6. Não é recomendada a apreensão ou inutilização dos produtos, pois a destinação das unidades
+recolhidas é de responsabilidade da empresa Nestlé, que deve observar as normas vigentes relativas à
+destinação final ambientalmente adequada, conforme o disposto no art. 17 da RDC 655/2022.
+9.7. A empresa disponibilizou diversos canais para tratar do recolhimento em curso, como: site
+(https://www.nestle.com.br/comunicado-de-recolhimento-de-produto-em-todo-territorio-nacional), Fale
+Conosco via Whatsapp (11 – 97893-3289), e-mail (falecom@nestle.com.br) e telefone (0800 7612500).
+9.8. Por se tratar de produto em recolhimento voluntário, com comercialização proibida por meio
+da Resolução RE nº 32, de 6 de janeiro de 2026, não é recomendada a coleta e a análise de amostras com
+finalidade fiscal, conforme orientado na "Figura 4 – Critérios para coleta de amostras" do Guia nº 19/Anvisa.
+10. RECOMENDAÇÕES AOS CONSUMIDORES
+10.1. Os consumidores que utilizam produtos da Nestlé devem ficar atentos às informações do rótulo
+desses produtos.
+10.2. A Anvisa determinou o recolhimento preventivo de lotes específicos de fórmulas infantis da
+Nestlé no Brasil em 2026 e proibiu sua comercialização, distribuição e uso (Resolução RE 32/2026), devido à
+possível presença de uma toxina chamada cereulida, produzida pela bactéria Bacillus cereus.
+10.3. A medida é preventiva. Apenas os lotes informados oficialmente estão sendo recolhidos. Os
+produtos envolvidos pertencem às seguintes linhas:
+a) Fórmula infantil Nestogeno
+b) Fórmula infantil NAN Supreme
+c) Fórmula infantil NANLAC
+https://sei.saude.gov.br/sei/controlador.php?acao=procedimento_trabalhar&acao_origem=protocolo_pesquisar&id_procedimento=56797397&id… 7/10
+
+24/02/2026, 09:40 SEI/MS - 0052984465 - Nota Técnica Conjunta
+d) Fórmula infantil Alfamino
+10.4. Esses produtos são fórmulas infantis destinadas a bebês e crianças pequenas. Se você tem
+produtos dessa marca:
+a) Verifique o nome do produto, a faixa de idade de indicação e a gramatura que estão
+descritos na parte frontal do rótulo e confira o número do lote impresso na parte inferior da
+embalagem do produto que você tem em casa.
+b) Se o produto e lote estiver na lista divulgada pela Anvisa referente a esse recall, não o
+utilize.
+c) Não tente ferver ou preparar a fórmula infantil de outra forma, pois isso não elimina a
+toxina, caso ela esteja presente.
+d) Entre em contato com a Nestlé, que está orientando sobre devolução, troca ou
+reembolso. A empresa disponibilizou diversos canais como: site
+(https://www.nestle.com.br/comunicado-de-recolhimento-de-produto-em-todo-territorio-
+nacional), Fale Conosco via Whatsapp (11 – 97893-3289), e-mail (falecom@nestle.com.br) e
+telefone (0800 7612500).
+10.5. Os sintomas mais comuns de intoxicação pela toxina cereulida são vômitos, mas podem ocorrer
+também episódios de diarreia e letargia (sonolência excessiva e lentidão). Caso a criança apresente esses
+sintomas após o consumo de produto pertencente aos lotes indicados, leve-a imediatamente para
+atendimento médico. No momento do atendimento, informe o alimento consumido e, sempre que possível,
+apresente uma amostra da embalagem do produto ou registro fotográfico, caso esteja disponível.
+10.6. Informações sobre o uso seguro de fórmulas infantis podem ser acessadas em:
+https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2024/anvisa-orienta-sobre-uso-seguro-de-
+formulas-infantis.
+11. RECOMENDAÇÕES AOS PROFISSIONAIS DE SAÚDE
+11.1. Recomenda-se que as equipes de vigilância epidemiológica realizem a análise oportuna e a
+qualificação das notificações recebidas, verificando a compatibilidade clínica e o vínculo epidemiológico com
+os produtos e lotes interditados pela Anvisa, bem como procedam à notificação pelos meios estabelecidos
+nesta Nota Técnica.
+11.2. Deve ser mantida articulação permanente entre a vigilância epidemiológica, vigilância sanitária
+e assistência à saúde, de modo a assegurar resposta coordenada, oportuna e integrada frente à ocorrência de
+casos suspeitos e/ou surtos.
+11.3. Os profissionais de saúde devem considerar a suspeita de intoxicação por cereulida em crianças
+com histórico de consumo de fórmulas infantis incluídas na Resolução vigente da Anvisa que atendam à
+definição de caso suspeito ou confirmado, devendo ser realizada anamnese detalhada, com investigação
+criteriosa do consumo recente dessas fórmulas.
+12. CONCLUSÃO
+12.1. O Ministério da Saúde e a Agência Nacional de Vigilância Sanitária Anvisa têm atuado de forma
+articulada, coordenada e contínua no monitoramento dos riscos associados à intoxicação por cereulida,
+adotando medidas regulatórias, sanitárias e de vigilância epidemiológica com foco na proteção da saúde da
+população, especialmente de lactentes e crianças de primeira infância. As ações incluem o acompanhamento
+do recolhimento dos produtos envolvidos, a orientação às vigilâncias locais, aos profissionais de saúde e aos
+consumidores, bem como o fortalecimento da comunicação de riscos e da investigação de casos e surtos,
+reafirmando o compromisso institucional com a segurança dos alimentos e a prevenção de agravos à saúde
+pública.
+REFERÊNCIAS
+https://sei.saude.gov.br/sei/controlador.php?acao=procedimento_trabalhar&acao_origem=protocolo_pesquisar&id_procedimento=56797397&id… 8/10
+
+24/02/2026, 09:40 SEI/MS - 0052984465 - Nota Técnica Conjunta
+1. Agência Nacional de Vigilância Sanitária (ANVISA). Resolução-RE nº 32, de 6 de janeiro de
+2026. Diário Oficial da União [Internet]. 06 Jan 2026 [citado 2026 Jan 19]; Seção 1. Proíbe a comercialização,
+distribuição e uso de determinados lotes de fórmulas infantis por risco de contaminação. Disponível em:
+https://www.in.gov.br/web/dou/-/resolucao-re-n-32-de-6-de-janeiro-de-2026-679850103
+2. Yang S, Wang Y, Ren F, Wang X, Zhang W, Pei X, Dong Q. As fontes de contaminação por
+Bacillus cereus e sua associação com a produção de cereulídeos em linhas de processamento de laticínios e
+arroz cozido. Qual Saf [Internet]. 2023;7:fyad023. doi:10.1093/fqsafe/fyad023.
+3. Logan NA. Bacillus and relatives in foodborne illness. J Appl Microbiol. 2012 Mar;112(3):417-
+429.
+4. Agência Nacional de Vigilância Sanitária (ANVISA). Resolução – RDC nº 655, de 24 de
+março de 2022. Diário Oficial da União [Internet]. 30 Mar 2022 [citado 2026 Jan 19]; Seção 1:324. Dispõe
+sobre o recolhimento de alimentos e sua comunicação à Anvisa e aos consumidores. Disponível
+em:https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2022/rdc-655-2022
+5. Agência Nacional de Vigilância Sanitária (ANVISA). Resolução – RDC nº 724, de 1º de julho
+de 2022. Diário Oficial da União [Internet]. 06 Jul 2022 [citado 2026 Jan 19]; Seção 1:205. Dispõe sobre os
+padrões microbiológicos dos alimentos e sua aplicação. Disponível em:
+https://www.in.gov.br/en/web/dou/-/resolucao-rdc-n-724-de-1-de-julho-de-2022-413364812
+6. Agência Nacional de Vigilância Sanitária (ANVISA). Instrução Normativa – IN nº 161, de 1º
+de julho de 2022. Diário Oficial da União [Internet]. 06 Jul 2022 [citado 2026 Jan 19]; Seção 1:235. Estabelece
+os padrões microbiológicos dos alimentos. Disponível em: https://www.in.gov.br/en/web/dou/-/instrucao-
+normativa-in-n-161-de-1-de-julho-de-2022-413366880
+7 . Codex Alimentarius Commission. Code of Hygienic Practice for Powdered Formulae for
+Infants and Young Children (CXC 66-2008) [Internet]. Rome: Food and Agriculture Organization of the United
+Nations & World Health Organization; 2008 [acesso 2026 Jan 19]. Disponível em:https://www.fao.org/fao-
+who-codexalimentarius/sh-proxy/ro/?
+lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXC%2B66-
+2008%252FCXC_066e.pdf
+8. European Commission. Regulation (EC) No 2073/2005 of 15 November 2005 on
+microbiological criteria for foodstuffs (consolidated version 28 Feb 2019) [Internet]. Official Journal of the
+European Union L 338:1; 22 Dec 2005 [acesso 2026 Jan 19]. Disponível em: https://eur-lex.europa.eu/legal-
+content/PT/TXT/PDF/?uri=CELEX:02005R2073-20190228
+9. European Parliament and Council of the European Union. Regulation (EC) No 178/2002 of 28
+January 2002 laying down the general principles and requirements of food law, establishing the European
+Food Safety Authority and laying down procedures in matters of food and feed safety. Official Journal of the
+European Union [Internet]. 01 Feb 2002; L 31:1–24 [cited 2026 Jan 19]. Consolidated version as of 25 Mar
+2008. Disponível em: https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?
+uri=CONSLEG:2002R0178:20080325:PT:PDF
+10. Australia New Zealand Food Standards Code. Schedule 27 – Microbiological limits in food
+[Internet]. Canberra (AUS): Federal Register of Legislation; [acesso 2026 Jan 19]. In force. Disponível
+em:https://www.legislation.gov.au/F2015L00453/latest/text
+11. U.S. Food and Drug Administration (FDA). 21 CFR § 106.55 – Controls to prevent
+adulteration from microorganisms [Internet]. In: Code of Federal Regulations Title 21 – Food and Drugs. e-CFR;
+[acesso 2026 Jan 19]. Dsiponível em: https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-
+106/subpart-B/section-106.55
+12. Agência Nacional de Vigilância Sanitária (ANVISA). Guia nº 19/2019 – Coleta,
+acondicionamento, transporte, recepção e destinação de amostras para análises laboratoriais no âmbito do
+Sistema Nacional de Vigilância Sanitária – versão 3, de 06/01/2022 [Internet]. Brasília: ANVISA; 2022 [acesso
+2026 Jan 19].Disponível em: https://anexosportal.datalegis.net/arquivos/1886454.pdf
+13. International Organization for Standardization (ISO). ISO 18465:2017 – Microbiology of the
+food chain — Quantitative determination of emetic toxin (cereulide) using LC-MS/MS. Geneva: ISO; 2017.
+https://sei.saude.gov.br/sei/controlador.php?acao=procedimento_trabalhar&acao_origem=protocolo_pesquisar&id_procedimento=56797397&id… 9/10
+
+24/02/2026, 09:40 SEI/MS - 0052984465 - Nota Técnica Conjunta
+14. McDowell RH, Sands EM, Friedman H. Bacillus Cereus [Internet]. In: StatPearls. Treasure
+Island (FL): StatPearls Publishing; [acesso 19 Jan 2026]. Disponível em:
+https://www.ncbi.nlm.nih.gov/books/NBK459121/
+Documento assinado eletronicamente por Marilia Santini de Oliveira, Diretor(a) do Departamento de
+Doenças Transmissíveis, em 21/01/2026, às 10:04, conforme horário oficial de Brasília, com fundamento
+no § 3º, do art. 4º, do Decreto nº 10.543, de 13 de novembro de 2020; e art. 8º, da Portaria nº 900 de 31
+de Março de 2017.
+Documento assinado eletronicamente por Silene Lima Dourado Ximenes Santos, Coordenador(a)-Geral
+de Vigilância de Zoonoses e Doenças de Transmissão Hídrica e Alimentar substituto(a), em 21/01/2026,
+às 18:03, conforme horário oficial de Brasília, com fundamento no § 3º, do art. 4º, do Decreto nº 10.543,
+de 13 de novembro de 2020; e art. 8º, da Portaria nº 900 de 31 de Março de 2017.
+Documento assinado eletronicamente por Mariângela Batista Galvão Simão, Secretário(a) de Vigilância
+em Saúde e Ambiente, em 23/01/2026, às 15:45, conforme horário oficial de Brasília, com fundamento no
+§ 3º, do art. 4º, do Decreto nº 10.543, de 13 de novembro de 2020; e art. 8º, da Portaria nº 900 de 31 de
+Março de 2017.
+Documento assinado eletronicamente por Leandro Pinheiro Safatle, Usuário Externo, em 12/02/2026, às
+15:40, conforme horário oficial de Brasília, com fundamento no § 3º, do art. 4º, do Decreto nº 10.543, de
+13 de novembro de 2020; e art. 8º, da Portaria nº 900 de 31 de Março de 2017.
+A autenticidade deste documento pode ser conferida no site
+http://sei.saude.gov.br/sei/controlador_externo.php?
+acao=documento_conferir&id_orgao_acesso_externo=0, informando o código verificador 0052984465 e o
+código CRC FC7C93EF.
+Referência: Processo nº 25000.007014/2026-22 SEI nº 0052984465
+Coordenação-Geral de Vigilância de Zoonoses e Doenças de Transmissão Hídrica e Alimentar - CGZHA
+SRTVN Quadra 701, Via W5 Norte Edifício PO700, 6º andar - Bairro Asa Norte, Brasília/DF, CEP 70719-040
+Site - saude.gov.br
+https://sei.saude.gov.br/sei/controlador.php?acao=procedimento_trabalhar&acao_origem=protocolo_pesquisar&id_procedimento=56797397&i… 10/10

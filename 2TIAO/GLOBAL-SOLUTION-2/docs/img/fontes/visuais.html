@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<style>
+  :root{--deep:#06352b;--deep2:#0b4a3c;--mint:#2fd39a;--pink:#ed145b;--ink:#0b0b0b;--ink2:#52514e;--line:#e2e1dc;--soft:#f6f6f3;--blue:#2a78d6;--orange:#eb6834;--green:#0f7a43}
+  body{margin:0;font-family:Inter,"Segoe UI",Arial,sans-serif;background:#fff;color:var(--ink)}
+  .card{display:inline-block;margin:0}
+  /* BANNER */
+  #banner{width:1280px;height:400px;position:relative;overflow:hidden;color:#fff;
+    background:radial-gradient(ellipse at 85% 20%,rgba(47,211,154,.28),transparent 55%),radial-gradient(ellipse at 10% 110%,rgba(237,20,91,.30),transparent 50%),linear-gradient(135deg,#041f19,#06352b 45%,#0b4a3c);}
+  #banner .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:40px 40px;mask-image:linear-gradient(90deg,transparent,black 60%)}
+  #banner .l{position:absolute;left:64px;top:62px;width:640px}
+  #banner .tag{font-size:14px;letter-spacing:.18em;font-weight:700;color:var(--mint);text-transform:uppercase}
+  #banner h1{font-size:76px;margin:14px 0 6px;letter-spacing:-.02em;line-height:1}
+  #banner h1 span{color:var(--mint)}
+  #banner p{font-size:21px;line-height:1.4;color:#d7ece5;margin:0 0 26px}
+  #banner .pills span{display:inline-block;font-size:13.5px;font-weight:600;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 13px;margin:0 6px 8px 0;background:rgba(255,255,255,.06)}
+  #banner .flow{position:absolute;right:56px;top:52px;width:430px}
+  .step{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:12px 16px;margin-bottom:10px;backdrop-filter:blur(2px)}
+  .step .n{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:800;font-size:15px;color:#06352b;background:var(--mint)}
+  .step.ia .n{background:#8fc0ff} .step.h .n{background:#ffd27a} .step.c .n{background:#ff8fb3}
+  .step b{display:block;font-size:16px} .step small{color:#bcd9cf;font-size:13px}
+  .arrow{height:10px;margin:-6px 0 4px 32px;border-left:2px dashed rgba(255,255,255,.35)}
+  /* KPI */
+  #kpis{width:1280px;padding:8px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;box-sizing:border-box}
+  .k{border:1px solid var(--line);border-radius:16px;padding:22px 22px 18px;background:#fff;position:relative;overflow:hidden}
+  .k:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--c)}
+  .k .v{font-size:46px;font-weight:800;letter-spacing:-.02em;line-height:1.05}
+  .k .t{font-size:15px;font-weight:700;margin-top:6px}
+  .k .d{font-size:13px;color:var(--ink2);margin-top:4px;line-height:1.35}
+  /* COMO FUNCIONA */
+  #fluxo{width:1280px;padding:10px;box-sizing:border-box;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .f{padding:22px 20px;border:1px solid var(--line);background:#fff;position:relative}
+  .f:first-child{border-radius:16px 0 0 16px}.f:last-child{border-radius:0 16px 16px 0}
+  .f + .f{border-left:none}
+  .f .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:26px;background:var(--bg)}
+  .f h3{margin:14px 0 4px;font-size:19px}
+  .f .who{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+  .f p{font-size:14px;color:var(--ink2);line-height:1.45;margin:8px 0 10px}
+  .f code{font-family:"JetBrains Mono",Consolas,monospace;font-size:12px;background:var(--soft);padding:2px 6px;border-radius:5px;display:inline-block;margin-top:2px}
+  .f .chev{position:absolute;right:-15px;top:44px;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-weight:800;color:var(--ink2);z-index:2}
+  /* GALERIA */
+  #galeria{width:1280px;padding:10px;box-sizing:border-box;display:grid;grid-template-columns:1.35fr 1.35fr 1fr 1fr 1fr;gap:14px}
+  .g{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+  .g .img{height:220px;background:#f2f2ef center/cover no-repeat}
+  .g .img.contain{background-size:contain;background-color:#fff}
+  .g .cap{padding:10px 12px 12px;font-size:12.5px;color:var(--ink2);line-height:1.4}
+  .g .cap b{color:var(--ink);font-size:13.5px}
+  .badge{display:inline-block;font-size:11px;font-weight:800;border-radius:999px;padding:3px 9px;margin-bottom:6px;letter-spacing:.03em}
+  .b-real{background:#e8f1fc;color:#1d5aa3}.b-sim{background:#fdeee7;color:#a8431a}
+  .r{display:inline-block;font-family:Consolas,monospace;font-size:11.5px;font-weight:700;padding:2px 7px;border-radius:6px;margin-top:5px}
+  .r-p{background:#fff3c4;color:#7a5400}.r-e{background:#fde2e2;color:#a01818}.r-s{background:#e2f4e8;color:#0f6b3a}
+  /* PRINCÍPIOS */
+  #principios{width:1280px;padding:10px;box-sizing:border-box;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .p{border-radius:16px;padding:22px;background:var(--soft);border:1px solid var(--line)}
+  .p .h{font-size:19px;font-weight:800;margin:10px 0 6px}
+  .p .tx{font-size:14px;color:var(--ink2);line-height:1.5}
+  .p .ic{font-size:28px}
+</style></head><body>
+
+<div class="card" id="banner">
+  <div class="grid"></div>
+  <div class="l">
+    <div class="tag">FIAP · Global Solution 2026.2 · CitizenTech</div>
+    <h1>Recall <span>Seguro</span></h1>
+    <p>IA para rastrear recolhimentos de alimentos da Anvisa — do alerta oficial à prateleira da loja e à casa do consumidor.</p>
+    <div class="pills"><span>IA Generativa</span><span>Visão computacional</span><span>Regras determinísticas</span><span>Humano no circuito</span><span>ODS 3 · Saúde</span></div>
+  </div>
+  <div class="flow">
+    <div class="step"><div class="n">1</div><div><b>Alerta oficial</b><small>Anvisa · gov.br · URL + hash</small></div></div>
+    <div class="arrow"></div>
+    <div class="step ia"><div class="n">2</div><div><b>LLM só extrai</b><small>texto → JSON validado (Gemini, temp. 0)</small></div></div>
+    <div class="arrow"></div>
+    <div class="step"><div class="n">3</div><div><b>Regras decidem</b><small>lote · data de corte · todos</small></div></div>
+    <div class="arrow"></div>
+    <div class="step h"><div class="n">4</div><div><b>Pessoa aprova</b><small>painel da rede com evidência</small></div></div>
+  </div>
+</div>
+
+<div class="card" id="kpis">
+  <div class="k" style="--c:#2a78d6"><div class="v">25/26</div><div class="t">regras de lote corretas</div><div class="d">extrator LLM em 15 recolhimentos reais nunca vistos pelo prompt (96%)</div></div>
+  <div class="k" style="--c:#0f7a43"><div class="v">0</div><div class="t">falsos "sem recall"</div><div class="d">na extração, no motor de regras e no leitor da embalagem</div></div>
+  <div class="k" style="--c:#eb6834"><div class="v">53 ms</div><div class="t">para 1.000 recebimentos</div><div class="d">20 lojas simuladas · 501/501 matches e 126/126 pendentes corretos</div></div>
+  <div class="k" style="--c:#ed145b"><div class="v">206</div><div class="t">testes automatizados</div><div class="d">+ 5 testes de ponta a ponta dos cenários da demonstração</div></div>
+</div>
+
+<div class="card" id="fluxo">
+  <div class="f" style="--bg:#eef0f3;--c:#52514e"><div class="ic">📰</div><div class="who">Fonte oficial</div><h3>Coleta do alerta</h3><p>Só domínios <b>gov.br</b> e <b>datalegis</b>. O texto bruto é guardado com URL e hash SHA-256 (linhagem).</p><code>fonte_url · fonte_hash</code><div class="chev">›</div></div>
+  <div class="f" style="--bg:#e8f1fc;--c:#2a78d6"><div class="ic">🧠</div><div class="who">IA generativa</div><h3>Extração + validação</h3><p>Gemini, temperatura 0, saída em JSON Schema. Pydantic recalcula pendências: campo decisivo ausente bloqueia o match.</p><code>regra_lote.tipo = lista</code><div class="chev">›</div></div>
+  <div class="f" style="--bg:#fdeee7;--c:#c4521f"><div class="ic">⚙️</div><div class="who">Motor determinístico</div><h3>Cruzamento com estoques</h3><p>Identidade do produto antes do lote. Gera match com <b>evidência</b>; dado ausente vira pendente.</p><code>"153" ∈ [148,153,166,167]</code><div class="chev">›</div></div>
+  <div class="f" style="--bg:#e2f4e8;--c:#0f7a43"><div class="ic">✅</div><div class="who">Decisão humana</div><h3>Aprovação e resposta</h3><p>Responsável da loja confirma ou rejeita. O cidadão recebe a resposta pela foto da embalagem, com a fonte.</p><code>confirmado · qualidade.loja03</code></div>
+</div>
+
+<div class="card" id="galeria">
+  <div class="g"><div class="img" style="background-image:url(../../../data/fotos_teste/foto11.jpg)"></div><div class="cap"><span class="badge b-real">FOTO REAL</span><br><b>foto11 · lote H26H0115</b><br>EAN e lote lidos; confiança 0,69 &lt; 0,8<br><span class="r r-p">verificacao_pendente</span></div></div>
+  <div class="g"><div class="img" style="background-image:url(../../../data/fotos_teste/foto09.jpg)"></div><div class="cap"><span class="badge b-real">FOTO REAL</span><br><b>foto09 · lote JGU 080926</b><br>lote lido; sem EAN no quadro → produto não identificado<br><span class="r r-p">verificacao_pendente</span></div></div>
+  <div class="g"><div class="img contain" style="background-image:url(../../../data/demo/demo_vaidosa_153.png)"></div><div class="cap"><span class="badge b-sim">SIMULADA</span><br><b>Ricota Vaidosa · lote 153</b><br>confiança 0,99<br><span class="r r-e">em_recall</span></div></div>
+  <div class="g"><div class="img contain" style="background-image:url(../../../data/demo/demo_vaidosa_154.png)"></div><div class="cap"><span class="badge b-sim">SIMULADA</span><br><b>Ricota Vaidosa · lote 154</b><br>confiança 0,98<br><span class="r r-s">sem_recall</span></div></div>
+  <div class="g"><div class="img contain" style="background-image:url(../../../data/demo/demo_ilegivel.png)"></div><div class="cap"><span class="badge b-sim">SIMULADA</span><br><b>Lote ilegível</b><br>pendência: lote<br><span class="r r-p">verificacao_pendente</span></div></div>
+</div>
+
+<div class="card" id="principios">
+  <div class="p"><div class="ic">🧠</div><div class="h">O LLM só extrai</div><div class="tx">O modelo transforma texto oficial em JSON. Não decide se um produto está em recall: isso é papel do motor de regras e de uma pessoa.</div></div>
+  <div class="p"><div class="ic">🛑</div><div class="h">Na dúvida, pendente</div><div class="tx">Lote ilegível, confiança &lt; 0,8, campo faltando ou serviço fora do ar viram <b>verificacao_pendente</b>. Um falso "sem recall" é o pior erro possível.</div></div>
+  <div class="p"><div class="ic">🔒</div><div class="h">Foto não é guardada</div><div class="tx">OCR e código de barras rodam no próprio backend, em memória, sem serviço externo. A imagem não é salva, logada nem enviada ao LLM (LGPD — finalidade e necessidade).</div></div>
+</div>
+</body></html>

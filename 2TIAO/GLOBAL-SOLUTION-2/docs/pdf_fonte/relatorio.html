@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Recall Seguro — Global Solution 2026.2</title>
+<!-- Fonte do PDF da entrega. Para regerar: preencha os campos [PREENCHER], abra no Chrome/Edge
+     e use Imprimir → Salvar como PDF (A4, margens padrão, "Gráficos de fundo" ligado),
+     ou rode: python docs/pdf_fonte/gerar_pdf.py -->
+<style>
+  @page { size: A4; margin: 20mm 18mm 20mm 18mm; }
+  :root { --ink:#0b0b0b; --ink2:#52514e; --muted:#8a8984; --line:#e2e1dc; --accent:#ed145b; --blue:#2a78d6; --orange:#eb6834; --soft:#f6f6f3; --green:#0f6b3a; }
+  * { box-sizing: border-box; }
+  html { font-family: "Inter","Segoe UI",Arial,sans-serif; color: var(--ink); font-size: 10.4pt; line-height: 1.5; }
+  body { margin: 0; }
+  h1 { font-size: 20pt; margin: 0 0 6pt; line-height: 1.15; }
+  h2 { font-size: 15pt; margin: 18pt 0 6pt; padding-bottom: 4pt; border-bottom: 2px solid var(--accent); break-after: avoid; }
+  h3 { font-size: 11.5pt; margin: 12pt 0 4pt; break-after: avoid; }
+  p { margin: 0 0 7pt; text-align: justify; }
+  ul, ol { margin: 0 0 8pt 16pt; padding: 0; } li { margin-bottom: 2pt; }
+  table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; font-size: 9pt; break-inside: avoid; }
+  th { background: var(--soft); text-align: left; font-weight: 600; color: var(--ink2); }
+  th, td { border-bottom: 1px solid var(--line); padding: 4pt 6pt; vertical-align: top; }
+  code { font-family: "JetBrains Mono",Consolas,monospace; font-size: 8.6pt; background: var(--soft); padding: 0 3px; border-radius: 3px; }
+  pre { font-family: "JetBrains Mono",Consolas,monospace; font-size: 8pt; line-height: 1.4; background: #fafaf8; border: 1px solid var(--line); border-left: 3px solid var(--blue); padding: 7pt 9pt; white-space: pre-wrap; break-inside: avoid; margin: 4pt 0 10pt; }
+  figure { margin: 8pt 0 12pt; text-align: center; break-inside: avoid; }
+  figure img { max-width: 100%; border-radius: 4px; }
+  figcaption { font-size: 8.6pt; color: var(--ink2); margin-top: 4pt; }
+  .page-break { break-before: page; }
+  .callout { background: var(--soft); border-left: 4px solid var(--accent); padding: 8pt 11pt; margin: 8pt 0 12pt; break-inside: avoid; }
+  .callout p:last-child { margin: 0; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8pt; margin: 8pt 0 12pt; break-inside: avoid; }
+  .kpi { border: 1px solid var(--line); border-radius: 6px; padding: 8pt 9pt; }
+  .kpi b { display: block; font-size: 17pt; line-height: 1.1; }
+  .kpi span { font-size: 8.4pt; color: var(--ink2); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; align-items: start; }
+  .ok { color: var(--green); font-weight: 600; } .warn { color: #a35a00; font-weight: 600; } .bad { color: #b3261e; font-weight: 600; }
+  .fill { background: #fff3c4; padding: 0 3px; }
+  /* capa */
+  .cover { height: 257mm; display: flex; flex-direction: column; }
+  .cover .logo { width: 46%; margin: 4mm 0 16mm; }
+  .cover .tag { font-size: 9pt; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  .cover h1 { font-size: 27pt; margin: 6pt 0 8pt; }
+  .cover .sub { font-size: 12.5pt; color: var(--ink2); margin-bottom: 18mm; }
+  .cover table { font-size: 10pt; }
+  .cover .bottom { margin-top: auto; font-size: 9.5pt; color: var(--ink2); }
+  .toc ol { columns: 2; font-size: 10pt; }
+</style>
+</head>
+<body>
+
+<!-- ================= CAPA ================= -->
+<section class="cover">
+  <img class="logo" src="../img/capa/logo-fiap.png" alt="FIAP">
+  <div class="tag">Global Solution 2026.2 · CitizenTech</div>
+  <h1>Recall Seguro</h1>
+  <div class="sub">Inteligência Artificial para rastrear recolhimentos de alimentos da Anvisa — do alerta oficial à prateleira e à casa do consumidor</div>
+
+  <table>
+    <tr><th style="width:38%">Integrante</th><th>Papel</th><th style="width:18%">RM</th></tr>
+    <tr><td>Tayná Esteves</td><td>Product Owner &amp; Pesquisadora</td><td>RM562491</td></tr>
+    <tr><td>João</td><td>Engenheiro de IA</td><td>RM565999</td></tr>
+    <tr><td>Endrew Alves</td><td>Dev Full-Stack</td><td>RM563646</td></tr>
+    <tr><td>Carlos Eduardo</td><td>Tech Lead &amp; Documentador</td><td>RM566487</td></tr>
+  </table>
+  <table>
+    <tr><th style="width:38%">Turma</th><td><span class="fill">[PREENCHER]</span> — Graduação em Inteligência Artificial, 2º ano</td></tr>
+    <tr><th>Vídeo (YouTube, não listado)</th><td><span class="fill">[PREENCHER]</span></td></tr>
+    <tr><th>Repositório GitHub (privado)</th><td>https://github.com/Carlos566487/GLOBAL_SOLUTION_2026_2 — pasta <code>2TIAO/GLOBAL-SOLUTION-2</code></td></tr>
+    <tr><th>Professores</th><td>Tutor turma A: Caique Nonato da Silva Bezerra · Tutor turma R: Leonardo Ruiz Orabona · Coordenador: André Godoi Chiovato</td></tr>
+    <tr><th>ODS</th><td>ODS 3 — Saúde e Bem-Estar</td></tr>
+  </table>
+  <div class="bottom">FIAP — Faculdade de Informática e Administração Paulista · São Paulo, novembro de 2026</div>
+</section>
+
+<!-- ================= SUMÁRIO + RESUMO ================= -->
+<section class="page-break">
+  <h2>Resumo</h2>
+  <p>Quando a Anvisa publica um recolhimento de alimento, a rede de supermercados precisa responder rapidamente <i>"quais lojas receberam esse lote?"</i> e o consumidor precisa saber se o produto que tem em casa está afetado. Os alertas, porém, chegam em texto livre e descrevem o lote de quatro formas diferentes (lista de lotes, final do lote, data de fabricação limite ou todos os lotes). O <b>Recall Seguro</b> é uma prova de conceito em que um <b>LLM (Google Gemini) extrai a regra de lote</b> do texto oficial em JSON validado, um <b>motor de regras determinístico</b> cruza essa regra com os recebimentos das lojas e <b>uma pessoa aprova</b> cada ação. O cidadão fotografa a embalagem e um <b>leitor local de OCR e código de barras</b> devolve <code>em_recall</code>, <code>sem_recall</code> ou <code>verificacao_pendente</code>, sem armazenar a foto.</p>
+  <p>Em 15 recolhimentos reais nunca vistos pelo prompt, a regra de lote foi extraída corretamente em <b>25 de 26 registros (96%)</b>, sem nenhum falso "sem recall" e sem alucinações. O motor reproduziu os três cenários de demonstração e classificou corretamente 1.000 recebimentos simulados em 53 ms. Nas 12 fotos reais, o leitor não cometeu nenhum erro confiante. A solução se relaciona ao <b>ODS 3 — Saúde e Bem-Estar</b>.</p>
+
+  <div class="kpis">
+    <div class="kpi"><b>25/26</b><span>regras de lote extraídas corretamente</span></div>
+    <div class="kpi"><b>0</b><span>falsos "sem recall" (extração, motor, OCR)</span></div>
+    <div class="kpi"><b>53 ms</b><span>para cruzar 1.000 recebimentos de 20 lojas</span></div>
+    <div class="kpi"><b>206</b><span>testes automatizados + 5 de ponta a ponta</span></div>
+  </div>
+
+  <div class="toc">
+    <h3>Sumário</h3>
+    <ol>
+      <li>Introdução</li>
+      <li>Desenvolvimento
+        <ol><li>Arquitetura</li><li>Tecnologias e justificativas</li><li>Dados</li><li>Códigos principais</li><li>Governança, privacidade e riscos</li></ol>
+      </li>
+      <li>Resultados obtidos</li>
+      <li>ODS 3 e medição de impacto</li>
+      <li>Conclusões</li>
+      <li>Referências e links</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= 1. INTRODUÇÃO ================= -->
+<section class="page-break">
+  <h2>1. Introdução</h2>
+  <h3>1.1 Problema</h3>
+  <p>O grupo levantou <b>27 recolhimentos de alimentos por motivos sanitários</b> publicados entre 01/01/2025 e 16/11/2026 em fontes oficiais (notícias da Anvisa, Prefeitura de São Paulo e resoluções publicadas no DOU/datalegis). Em cada caso, a informação que define o que deve sair da prateleira está em texto corrido, e o formato varia:</p>
+  <table>
+    <tr><th>Tipo de regra</th><th>Exemplo real</th><th>Comparação necessária</th></tr>
+    <tr><td><code>lista</code></td><td>Ricota Fresca Vaidosa — lotes 148, 153, 166 e 167 (RE 2.905/2026, 24/07/2026)</td><td>lote ∈ lista</td></tr>
+    <tr><td><code>data_corte</code></td><td>Sanibras — suplementos fabricados até 12/06/2026</td><td>data de fabricação ≤ limite (inclusive)</td></tr>
+    <tr><td><code>todos</code></td><td>Equaliv, Nutra — todos os lotes do produto</td><td>somente a identidade do produto</td></tr>
+    <tr><td><code>sufixo</code></td><td>lotes terminados em um código (sem caso real; teste sintético)</td><td>lote termina com o sufixo</td></tr>
+  </table>
+  <div class="two">
+    <figure><img src="../img/graficos/recolhimentos_motivos.png" alt="Motivos"><figcaption>Gráfico — Motivo sanitário dos 20 recolhimentos rotulados: 45% contaminação microbiológica.</figcaption></figure>
+    <figure><img src="../img/graficos/recolhimentos_trimestre.png" alt="Por trimestre"><figcaption>Gráfico — Recolhimentos rotulados por trimestre (2025 T3 a 2026 T4).</figcaption></figure>
+  </div>
+  <p>Hoje a triagem é manual — ler o comunicado, procurar o lote nas planilhas de recebimento de cada loja — ou a rede retira todos os produtos da marca, gerando desperdício. Do lado do consumidor, o alerta raramente chega a quem tem o produto em casa. Um caso real ilustra o risco de fontes não oficiais: um site publicou a ricota Vaidosa com lotes <code>L2305A</code> a <code>L2308D</code>, que <b>não correspondem</b> aos lotes da Anvisa.</p>
+
+  <h3>1.2 Público beneficiado</h3>
+  <table>
+    <tr><th>Público</th><th>Necessidade</th><th>O que a solução entrega</th></tr>
+    <tr><td><b>Cidadão / consumidor</b></td><td>Saber se a embalagem que tem em casa está em recall e o que fazer</td><td>Consulta por foto com resposta, orientação e link da fonte oficial</td></tr>
+    <tr><td><b>Responsável de qualidade da rede</b></td><td>Identificar as lojas afetadas e decidir com evidência</td><td>Painel com alerta, loja, regra aplicada, valores comparados e botão de aprovação</td></tr>
+  </table>
+
+  <h3>1.3 Objetivo e hipótese</h3>
+  <p><b>Objetivo:</b> construir uma POC que transforme o alerta oficial em decisão rastreável — da fonte à loja e à embalagem — sem delegar a decisão ao modelo de linguagem.</p>
+  <p><b>Hipótese:</b> estruturar os alertas com IA generativa e cruzá-los com os recebimentos por regras determinísticas reduz o tempo de triagem e preserva a capacidade de explicar cada sinalização.</p>
+  <div class="callout"><p><b>Princípio de projeto.</b> O LLM <u>só extrai</u>. Quem decide é o motor de regras e uma pessoa. Na dúvida, a resposta é <code>verificacao_pendente</code>, porque um falso "sem recall" é o pior erro possível: o consumidor continuaria exposto a um produto que deveria ter sido retirado.</p></div>
+</section>
+
+<!-- ================= 2. DESENVOLVIMENTO ================= -->
+<section class="page-break">
+  <h2>2. Desenvolvimento</h2>
+  <h3>2.1 Arquitetura</h3>
+  <figure>
+    <img src="../img/diagramas/arquitetura_vertical.png" alt="Arquitetura em três linhas" style="max-height:150mm">
+    <figcaption>Figura 1 — Arquitetura em três linhas. Azul: componentes de IA; laranja: componentes determinísticos; verde: interfaces e decisão humana; cinza: dados.</figcaption>
+  </figure>
+  <ul>
+    <li><b>Linha 1 — Pipeline de alertas:</b> texto oficial (URL + hash SHA-256) → extrator LLM → validador Pydantic. Alerta com campo decisivo ausente <b>não chega ao motor</b>; vai ao painel como pendente.</li>
+    <li><b>Linha 2 — Rede de supermercados:</b> recebimentos (base simulada) → motor de regras → match com evidência → aprovação humana → painel.</li>
+    <li><b>Linha 3 — Cidadão:</b> foto da embalagem → leitor OCR + EAN (local) → motor → resposta com orientação e fonte.</li>
+  </ul>
+  <p>Um único backend FastAPI atende painel e cidadão pelos endpoints <code>POST /alertas/coletar</code>, <code>GET /alertas</code>, <code>POST /motor/processar</code>, <code>GET /matches</code>, <code>POST /matches/{id}/decisao</code> e <code>POST /cidadao/verificar</code>. Os componentes se comunicam por <b>sete contratos JSON</b> acordados pelo grupo antes da implementação (alerta extraído, recebimento, match, decisão humana, leitura da embalagem, resposta ao cidadão e evento de auditoria), o que permitiu aos quatro papéis trabalhar em paralelo.</p>
+
+  <h3>2.2 Tecnologias e justificativas</h3>
+  <table>
+    <tr><th>Camada</th><th>Tecnologia</th><th>Justificativa</th></tr>
+    <tr><td>Extração</td><td>Google Gemini <code>gemini-3.5-flash-lite</code>, SDK <code>google-genai</code>, temperatura 0, few-shot, saída restrita a JSON Schema</td><td>Texto livre → estrutura. Nulos explícitos no schema dão ao modelo uma saída válida para "não está no texto". Única variante com 100% de respostas nos testes de 17/11 (as versões Flash maiores retornaram 503/504) e a de menor custo</td></tr>
+    <tr><td>Validação</td><td>Pydantic v2</td><td>Valida o contrato e <b>recalcula</b> as pendências: o LLM não consegue remover uma pendência</td></tr>
+    <tr><td>Decisão</td><td>Python puro</td><td>Determinístico, explicável e testável; mesma entrada, mesma saída</td></tr>
+    <tr><td>Visão computacional</td><td>OpenCV (CLAHE) + EasyOCR + pyzbar</td><td>Lote/datas por OCR e EAN por código de barras, <b>tudo local</b>: a foto não sai da máquina</td></tr>
+    <tr><td>API</td><td>FastAPI</td><td>Um backend para painel e app; validação e documentação OpenAPI automáticas</td></tr>
+    <tr><td>Front-end</td><td>React 19 + Vite</td><td>Painel com indicadores, evidência e aprovação</td></tr>
+    <tr><td>Qualidade</td><td>pytest</td><td>206 testes unitários + 5 testes de ponta a ponta</td></tr>
+  </table>
+</section>
+
+<section class="page-break">
+  <h3>2.3 Dados: origem, tratamento e limitações</h3>
+  <table>
+    <tr><th>Conjunto</th><th>Natureza</th><th>Volume</th><th>Uso</th></tr>
+    <tr><td>Levantamento de recolhimentos</td><td><b>Real</b> — Anvisa, Prefeitura SP, datalegis</td><td>27 recolhimentos</td><td>Dimensionar o problema</td></tr>
+    <tr><td>Golden set</td><td><b>Real</b>, rotulado manualmente pela PO</td><td>20 recolhimentos, 36 registros</td><td>Gabarito do extrator</td></tr>
+    <tr><td>Textos oficiais de avaliação</td><td><b>Real</b> (Nestlé transcrita do PDF)</td><td>20 textos</td><td>Entrada do extrator</td></tr>
+    <tr><td>Fotos de embalagens</td><td><b>Reais, próprias</b> (18/11/2026), sem EXIF e sem pessoas</td><td>12 fotos</td><td>Avaliação do OCR</td></tr>
+    <tr><td>Imagens da demo</td><td><b>Simuladas</b>, com faixa "IMAGEM SIMULADA" e EAN fictício <code>200…</code></td><td>3 imagens</td><td>Vídeo e teste do fluxo</td></tr>
+    <tr><td>Recebimentos das lojas</td><td><b>Simulados</b>, marcados <code>simulado: true</code></td><td>até 1.000 registros, 20 lojas</td><td>Cenários e escala</td></tr>
+  </table>
+  <figure style="width:78%;margin-left:auto;margin-right:auto">
+    <img src="../img/graficos/golden_set_tipos.png" alt="Distribuição dos tipos de regra no golden set">
+    <figcaption>Figura 2 — Golden set por tipo de regra: forte predominância de <code>lista</code>; <code>sufixo</code> só tem teste sintético.</figcaption>
+  </figure>
+  <p><b>Tratamento.</b> (i) Lote é sempre texto: normalização por <code>strip</code> + maiúsculas, preservando zeros à esquerda (<code>07225288 ≠ 7225288</code>), barras e pontos; (ii) só são aceitas fontes <code>*.gov.br</code> e <code>datalegis.net</code>; (iii) a divisão do golden set — 5 recolhimentos (10 registros) como exemplos do prompt e <b>15 reservados</b> (26 registros) para avaliação — foi decidida <b>antes</b> de escrever o prompt, mantendo juntas as apresentações de um mesmo recolhimento e os recolhimentos que compartilham o mesmo texto; um teste automatizado falha se algum lote reservado aparecer no prompt.</p>
+  <p><b>Limitações.</b> Amostra pequena e concentrada em <code>lista</code>; tipo <code>sufixo</code> sem caso real; base de recebimentos fictícia, que não representa o estoque de nenhuma rede; 12 fotos com variação limitada de iluminação e ângulo.</p>
+
+  <h3>2.4 Códigos principais</h3>
+  <p><b>(a) Validador — o LLM não consegue retirar uma pendência</b> (<code>src/ia/schemas.py</code>). Depois que o Gemini devolve o JSON, o Pydantic recalcula as pendências a partir do próprio conteúdo:</p>
+<pre>@model_validator(mode="after")
+def _calcular_pendencias(self) -> "AlertaExtraido":
+    pendentes = list(dict.fromkeys(self.campos_pendentes))
+    def marcar(campo):
+        if campo not in pendentes: pendentes.append(campo)
+    for campo in ("produto", "marca", "cnpj"):          # campos decisivos
+        if getattr(self, campo) is None: marcar(campo)
+    if self.cnpj is not None and not CNPJ_RE.match(self.cnpj): marcar("cnpj")
+    if self.escopo == "categoria_fabricante" and self.categoria is None: marcar("categoria")
+    if self.regra_lote.tipo is None: marcar("regra_lote.tipo")
+    ...  # lista sem lotes, sufixo vazio, data_corte sem data
+    self.status_extracao = "verificacao_pendente" if pendentes else "ok"</pre>
+  <p><b>(b) Motor de regras — regra <code>lista</code></b> (<code>src/backend/app/motor_regras.py</code>). A identidade do produto (produto + CNPJ ou marca) é verificada <b>antes</b> do lote, porque o mesmo código aparece em produtos diferentes (ex.: <code>5321046041</code> = NAN 400 g e 800 g):</p>
+<pre>if tipo == "lista":
+    lote_recebimento = normalizar_lote(recebimento.get("lote"))
+    if not lote_recebimento:                       # lote ausente ou ilegível
+        return {"resultado": "verificacao_pendente", "motivos": ["lote"], "match": False, ...}
+    lotes_alerta = {n for lote in regra.get("lotes") or [] if (n := normalizar_lote(lote))}
+    encontrou = lote_recebimento in lotes_alerta
+    return {"resultado": "match" if encontrou else "sem_match", "match": encontrou,
+            "evidencia": {"campo": "lote", "valor_alerta": regra.get("lotes"),
+                          "valor_recebimento": recebimento.get("lote")}}</pre>
+  <p><b>(c) Extrator — nunca levanta exceção</b> (<code>src/ia/extrator.py</code>). Falha de serviço, JSON inválido, fonte não oficial ou tempo esgotado (teto de 90 s) viram um alerta <code>verificacao_pendente</code> com o motivo (<code>extracao:&lt;motivo&gt;</code>), nunca um "sem recall". Retentativas: 429/500/503 → esperas de 2, 4 e 8 s; 504/timeout → modelo de fallback. CPF, e-mail e telefone são mascarados antes do envio.</p>
+</section>
+
+<section class="page-break">
+  <h3>2.5 Governança, privacidade e riscos</h3>
+  <table>
+    <tr><th>Tema</th><th>Controle implementado</th></tr>
+    <tr><td>Rastreabilidade (linhagem)</td><td>Todo alerta carrega <code>fonte_url</code> oficial e <code>fonte_hash</code> SHA-256; cada match traz a <b>evidência</b> (campo, valor do alerta, valor do estoque); a decisão humana registra responsável e horário e não pode ser sobrescrita (HTTP 409)</td></tr>
+    <tr><td>Privacidade (LGPD, art. 6º — finalidade e necessidade)</td><td>Foto processada só em memória e localmente; não é salva, logada nem enviada ao LLM (teste automatizado falha se a leitura gravar arquivo). Texto bruto do OCR não é registrado</td></tr>
+    <tr><td>Limites do LLM</td><td>Temperatura 0, saída em schema, sem poder de decisão, fonte citada em cada extração, prompt versionado (<code>extracao_v1</code>)</td></tr>
+    <tr><td>Fonte incorreta</td><td>Somente domínios oficiais; fonte não oficial gera lista vazia</td></tr>
+    <tr><td>OCR incerto</td><td>Limiar de confiança 0,8; sem EAN legível o produto não é identificado → pendente</td></tr>
+    <tr><td>Dado de base simulado</td><td>Todo registro fictício leva <code>simulado: true</code> e está identificado nos READMEs e neste PDF</td></tr>
+  </table>
+  <p><b>Matriz de riscos (resumo da PO).</b> Riscos críticos: fonte incorreta ou conflitante; extração que inventa, omite ou altera valor; OCR ilegível ou identificação ambígua; erro de cruzamento do lote ou do limite de data; foto com dados pessoais. Riscos altos: ação sem revisão ou trilha de auditoria; viés e cobertura limitada da amostra; interpretação excessiva de <code>sem_recall</code>. Cada risco tem controle e forma de verificação definidos em <code>data/Nota_de_Produto_e_Matriz_de_Riscos.md</code>.</p>
+  <p><b>Vieses.</b> O gabarito concentra-se em lotes listados e em produtos de grandes marcas; o desempenho em formatos raros (<code>sufixo</code>, PDFs escaneados) não está comprovado. As fotos foram tiradas por uma pessoa, com um celular, em ambiente doméstico; outras condições de luz e embalagens curvas tendem a reduzir a leitura.</p>
+</section>
+
+<!-- ================= 3. RESULTADOS ================= -->
+<section class="page-break">
+  <h2>3. Resultados obtidos</h2>
+  <h3>3.1 Extrator LLM — 15 recolhimentos reservados (26 registros)</h3>
+  <figure>
+    <img src="../img/graficos/extracao_por_campo.png" alt="Acerto por campo do extrator">
+    <figcaption>Figura 3 — Acerto por campo. "Sobre o recuperável" considera só os campos cujo valor do gabarito aparece no texto de entrada.</figcaption>
+  </figure>
+  <figure style="width:80%;margin-left:auto;margin-right:auto"><img src="../img/graficos/extracao_por_tipo.png" alt="Por tipo"><figcaption>Gráfico — Regra de lote correta por tipo de regra.</figcaption></figure>
+  <table>
+    <tr><th>Indicador</th><th>Resultado</th><th>Leitura</th></tr>
+    <tr><td>Regra de lote completa (tipo + lotes/data)</td><td class="ok">25/26 (96%)</td><td>O único erro (Equaliv, <code>todos</code>) terminou em <code>verificacao_pendente</code></td></tr>
+    <tr><td>Por tipo: <code>lista</code> · <code>data_corte</code> · <code>null</code></td><td class="ok">23/23 · 1/1 · 1/1</td><td><code>todos</code>: 0/1; <code>sufixo</code>: sem caso real</td></tr>
+    <tr><td>Falsos "sem recall"</td><td class="ok">0</td><td>Nenhuma divergência levou a uma resposta conclusiva errada</td></tr>
+    <tr><td>Alucinações (11 alertas não rotulados)</td><td class="ok">0</td><td>Todos sustentados por trecho literal do texto</td></tr>
+    <tr><td>Registro totalmente correto</td><td class="warn">5/26 (19%) · 12/26 (46%) sobre o recuperável</td><td>25 dos 39 erros de identidade são valores ausentes do texto (a PO completou com a resolução); erros reais concentram-se em <b>marca</b> (14)</td></tr>
+  </table>
+
+  <h3>3.2 Motor de regras e API — cenários de demonstração</h3>
+  <table>
+    <tr><th>Cenário</th><th>Entrada (simulada)</th><th>Esperado</th><th>Observado</th></tr>
+    <tr><td>1 · Vaidosa · <code>lista</code></td><td>Loja A lote 153; Loja B lote 154</td><td>A: match → confirmado; B: sem match</td><td class="ok">✔ A <code>aguardando_aprovacao</code> → <code>confirmado</code> (qualidade.loja03); nova decisão → 409; B <code>sem_match</code></td></tr>
+    <tr><td>2 · Sanibras · <code>data_corte</code></td><td>Fabricação 12/06 × 13/06/2026</td><td>A: match (dia limite incluso); B: sem match</td><td class="ok">✔ evidência <code>data_fabricacao</code> 2026-06-12</td></tr>
+    <tr><td>3 · Vaidosa · lote ilegível</td><td>Lote vazio e <code>null</code></td><td><code>verificacao_pendente</code> com <code>["lote"]</code></td><td class="ok">✔ nenhum match conclusivo</td></tr>
+    <tr><td>Escala</td><td>1.000 recebimentos, 20 lojas</td><td>501 matches; 126 pendentes</td><td class="ok">✔ 501/501; 126/126; 53 ms</td></tr>
+    <tr><td>2b · Sanibras com nome comercial</td><td>"Whey Protein 900 g", mesmo CNPJ</td><td>match (escopo do fabricante)</td><td class="bad">✘ sem_match — lacuna conhecida (teste <code>xfail</code>)</td></tr>
+  </table>
+  <figure style="width:82%;margin-left:auto;margin-right:auto">
+    <img src="../img/graficos/motor_escala.png" alt="Motor em escala">
+    <figcaption>Figura 4 — Motor de regras com 1.000 recebimentos simulados: todas as contagens iguais às esperadas.</figcaption>
+  </figure>
+</section>
+
+<section class="page-break">
+  <h3>3.3 Painel da rede</h3>
+  <figure>
+    <img src="../img/telas/painel_topo.png" alt="Painel da rede — indicadores e alertas">
+    <figcaption>Figura 5 — Painel da rede (captura de 19/11/2026) com os cenários 1 e 2 carregados: indicadores, alertas e link para a fonte oficial.</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/telas/painel_matches.png" alt="Painel da rede — matches e aprovação humana">
+    <figcaption>Figura 6 — Matches com evidência e aprovação humana: o match da loja SP-ZL-03 já confirmado; os demais aguardam decisão.</figcaption>
+  </figure>
+</section>
+
+<section class="page-break">
+  <h3>3.4 Leitor da embalagem — 12 fotos reais</h3>
+  <div class="two">
+    <figure><img src="../img/graficos/ocr_desfechos.png" alt="Desfechos do OCR"><figcaption>Figura 7 — Desfecho por foto.</figcaption></figure>
+    <figure><img src="../img/graficos/ocr_por_campo.png" alt="Acerto por campo do OCR"><figcaption>Figura 8 — Campos lidos corretamente.</figcaption></figure>
+  </div>
+  <ul>
+    <li><b>0/12 erros confiantes</b> — o leitor nunca deu uma resposta conclusiva com lote ou EAN errado.</li>
+    <li><b>EAN 6/6</b> e <b>lote 4/7</b>, nenhum campo lido com valor errado (só "não lido").</li>
+    <li><b>0/12 respostas conclusivas</b> em fotos reais: confiança abaixo de 0,8 ou EAN fora do quadro. O comportamento é seguro, porém conservador.</li>
+    <li>A convenção de delimitação do lote foi alinhada ao gabarito após a inspeção das fotos; por transparência, as duas versões são reportadas (lote 3/7 na regra original e 4/7 na alinhada).</li>
+  </ul>
+  <div class="two">
+    <figure><img src="../../data/fotos_teste/foto11.jpg" alt="Foto real de embalagem"><figcaption>Figura 9 — Foto real (foto11): lote <code>H26H0115</code> e EAN lidos; confiança 0,69 → pendente.</figcaption></figure>
+    <figure><img src="../../data/demo/demo_vaidosa_153.png" alt="Imagem simulada da demo" style="max-height:62mm"><figcaption>Figura 10 — Imagem <b>simulada</b> da demo: Ricota Vaidosa lote 153, leitura completa (confiança 0,99) → <code>em_recall</code>.</figcaption></figure>
+  </div>
+</section>
+
+<!-- ================= 4. ODS ================= -->
+<section class="page-break">
+  <h2>4. ODS 3 — Saúde e Bem-Estar: como medir o impacto</h2>
+  <p>A solução contribui para a <b>meta 3.d</b> — reforçar a capacidade de alerta precoce, redução e gerenciamento de riscos à saúde — ao encurtar o caminho entre o alerta sanitário oficial e a retirada do produto da loja e da casa do consumidor.</p>
+  <table>
+    <tr><th>Indicador</th><th>Como medir</th><th>Valor na POC</th><th>Meta em piloto</th></tr>
+    <tr><td>Acerto da regra de lote extraída</td><td>Regras corretas ÷ alertas avaliados, por tipo</td><td>96% (25/26)</td><td>≥ 95%, com revisão humana</td></tr>
+    <tr><td>Falsos "sem recall"</td><td>Pares alerta–recebimento afetados classificados como "sem recall"</td><td>0</td><td>0</td></tr>
+    <tr><td>Tempo de triagem</td><td>Cronômetro: fluxo manual × automatizado, mesmos alertas e lojas</td><td>Automatizado: 53 ms / 1.000 recebimentos; manual: a medir</td><td>Redução ≥ 90%</td></tr>
+    <tr><td>Lojas com ação confirmada em 24 h</td><td>Matches confirmados ≤ 24 h ÷ matches gerados</td><td>—</td><td>≥ 90%</td></tr>
+    <tr><td>Consultas do cidadão conclusivas</td><td>Respostas <code>em_recall</code>/<code>sem_recall</code> ÷ consultas</td><td>0/12 fotos reais</td><td>≥ 60% com guia de enquadramento</td></tr>
+  </table>
+  <p>Medir unidades que deixaram de ser vendidas ou consumidas — e, mais adiante, efeitos em saúde — exige um piloto com uma rede real e dados de operação, o que está fora do escopo desta POC e é declarado como limitação.</p>
+
+  <!-- ================= 5. CONCLUSÕES ================= -->
+  <h2>5. Conclusões</h2>
+  <p>A POC confirmou que a IA generativa é útil exatamente na etapa em que os alertas são heterogêneos — transformar texto oficial em uma regra estruturada — e que é possível usá-la sem entregar a decisão ao modelo. O desenho "LLM extrai, regras decidem, pessoa aprova", com o estado <code>verificacao_pendente</code> como rede de segurança, produziu <b>zero falsos "sem recall"</b> em todas as etapas avaliadas: extração, cruzamento e leitura da embalagem.</p>
+  <p><b>Aprendizados.</b> (1) Separar exemplos e reservados antes de escrever o prompt evitou métricas infladas; (2) reportar "contra o gabarito" e "sobre o recuperável" separou erro do modelo de informação ausente no texto; (3) a identidade do produto precisa vir antes do lote; (4) num contexto de saúde, um leitor de OCR conservador é preferível a um confiante.</p>
+  <p><b>Limitações e próximos passos.</b></p>
+  <ul>
+    <li>Implementar o <b>escopo <code>categoria_fabricante</code></b> no motor (falso negativo identificado no caso Sanibras com nome comercial).</li>
+    <li>Implementar o <b>coletor agendado</b>, a <b>base SQLite de recebimentos</b> e o <b>log de auditoria append-only</b> (hoje a API guarda dados em memória).</li>
+    <li>Concluir a <b>tela do app do cidadão</b> (upload da foto → <code>POST /cidadao/verificar</code>) e guiar o enquadramento (lote + EAN no mesmo quadro, correção de rotação).</li>
+    <li>Ampliar o golden set com os 7 recolhimentos não rotulados e casos de <code>sufixo</code>; cronometrar o fluxo manual.</li>
+    <li>Piloto com uma rede real para medir impacto em ODS 3.</li>
+  </ul>
+
+  <h2>6. Referências e links</h2>
+  <ul>
+    <li>Anvisa — Ricota fresca da marca Vaidosa será recolhida voluntariamente pelo fabricante (24/07/2026): https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/ricota-fresca-da-marca-vaidosa-sera-recolhida-voluntariamente-pelo-fabricante</li>
+    <li>Nações Unidas Brasil — ODS 3: https://brasil.un.org/pt-br/sdgs/03</li>
+    <li>Lei nº 13.709/2018 (LGPD), art. 6º.</li>
+    <li>Documentos do grupo: <i>Arquitetura e papéis — Recall de alimentos</i>; <i>Nota de Produto e Matriz de Riscos</i>; <i>Cenários de Implementação e Testes</i>; <code>Dataset_Recall_Anvisa.xlsx</code>; <code>Golden_Set_Recall.json</code>.</li>
+    <li>Relatórios técnicos no repositório: <code>docs/resultados_extracao.md</code>, <code>docs/resultados_ocr.md</code>, <code>docs/evidencias_testes.md</code>, <code>docs/arquitetura.md</code>.</li>
+  </ul>
+  <table>
+    <tr><th style="width:30%">Vídeo (YouTube, não listado)</th><td><span class="fill">[PREENCHER]</span></td></tr>
+    <tr><th>Repositório GitHub (privado, compartilhado com fiap-tutoria)</th><td>https://github.com/Carlos566487/GLOBAL_SOLUTION_2026_2</td></tr>
+  </table>
+</section>
+</body>
+</html>

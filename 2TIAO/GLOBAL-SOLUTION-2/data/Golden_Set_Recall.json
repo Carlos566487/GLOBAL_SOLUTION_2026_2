@@ -1,0 +1,931 @@
+{
+  "finalidade": "Gabarito manual para avaliação da extração. Os rótulos são agrupados por recolhimento e mantêm um produto por registro.",
+  "fonte_hash": "Campo de coleta aguardando o Tech Lead. O valor nulo identifica uma etapa de integração. Não carregar este gabarito no motor como base operacional.",
+  "avaliacao": "Comparar os campos com a fonte usada na coleta e manter todos os produtos de um recolhimento juntos ao dividir exemplos de prompt e casos reservados. A completude de marca, fabricante e CNPJ foi tratada conservadoramente.",
+  "alertas": [
+    {
+      "recolhimento_id": "crystal",
+      "data_publicacao": "2026-06-03",
+      "resolucao": "2.247/2026",
+      "motivo": "Detecção de Pseudomonas aeruginosa em análise fiscal.",
+      "nota": "Código completo no início do comunicado. A orientação usa LZ1 VAL 200127. Preservar as duas formas como evidência, sem cadastrar dois lotes.",
+      "rotulos": [
+        {
+          "alerta_id": "crystal",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/lote-da-agua-mineral-crystal-sem-gas-tem-recolhimento-voluntario",
+          "fonte_hash": null,
+          "produto": "Água Mineral Natural sem Gás, 500 ml",
+          "marca": "Crystal",
+          "fabricante": "Mineração Bom Jesus Ltda.",
+          "cnpj": "07.245.544/0001-62",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "LZ1 VAL200127 3 P 200126"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "aptamil",
+      "data_publicacao": "2026-03-19",
+      "resolucao": "1.056/2026",
+      "motivo": "Presença de cereulida detectada em laudos do fabricante.",
+      "nota": null,
+      "rotulos": [
+        {
+          "alerta_id": "aptamil",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-proibe-venda-de-formula-infantil-contaminada-por-toxina",
+          "fonte_hash": null,
+          "produto": "Aptamil Premium 1, 800 g",
+          "marca": "Aptamil",
+          "fabricante": "Danone Ltda.",
+          "cnpj": "23.643.315/0001-52",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "2026.09.07",
+              "2026.10.03",
+              "2026.09.09"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "la-vaquita",
+      "data_publicacao": "2026-02-06",
+      "resolucao": "405/2026 (retificada)",
+      "motivo": "Reprovação em ensaio de estafilococos coagulase positiva.",
+      "nota": "Fabricante e CNPJ conferidos na RE 405/2026 retificada.",
+      "rotulos": [
+        {
+          "alerta_id": "la-vaquita",
+          "fonte_url": "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&cod_menu=9451&cod_modulo=134&link=S&numeroAto=00000405&orgao=RE%2FGGFIS%2FANVISA%2FMS&seqAto=000&tipo=RES&valorAno=2026",
+          "fonte_hash": null,
+          "produto": "Leite Condensado Semidesnatado",
+          "marca": "La Vaquita",
+          "fabricante": "Indústria, Comércio, Importação e Exportação de Alimentos Multlac Ltda.",
+          "cnpj": "02.389.692/0001-37",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "183/3B"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "granoro",
+      "data_publicacao": "2026-01-07",
+      "resolucao": "33/2026",
+      "motivo": "Alerta europeu de fragmentos de vidro no lote importado.",
+      "nota": "CNPJ do importador não equivale ao identificador do fabricante estrangeiro.",
+      "rotulos": [
+        {
+          "alerta_id": "granoro",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/molho-de-tomate-e-suplementos-alimentares-sao-alvos-de-acoes-fiscais/",
+          "fonte_hash": null,
+          "produto": "Passata de Pomodoro Di Puglia",
+          "marca": "Mastromauro Granoro",
+          "fabricante": "Mastromauro Granoro S.r.l.",
+          "cnpj": null,
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "LM283"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "verificacao_pendente",
+          "campos_pendentes": [
+            "cnpj"
+          ]
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "neovite",
+      "data_publicacao": "2026-01-07",
+      "resolucao": "30/2026",
+      "motivo": "Páprica não aprovada como fonte de zeaxantina e Caramelo IV acima do limite.",
+      "nota": "Código S25G073 conferido no comunicado sanitário municipal, vinculado à RE 30/2026.",
+      "rotulos": [
+        {
+          "alerta_id": "neovite",
+          "fonte_url": "https://prefeitura.sp.gov.br/web/saude/w/recolhimento-do-produto-neovite-vis%C3%A3o-lotes-s25g073-s25c004-s25c003-s25c002-e-s25g072-",
+          "fonte_hash": null,
+          "produto": "Suplemento alimentar Neovite Visão",
+          "marca": "Neovite",
+          "fabricante": "BL Indústria Ótica Ltda. (Bausch Lomb)",
+          "cnpj": "27.011.022/0001-03",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "S25G073",
+              "S25C004",
+              "S25C003",
+              "S25C002",
+              "S25G072"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "de-marchi",
+      "data_publicacao": "2025-07-07",
+      "resolucao": "2.524/2025",
+      "motivo": "Resultado insatisfatório na pesquisa de matérias estranhas.",
+      "nota": "Caso histórico. A Anvisa registra recurso administrativo posterior, que requer verificação para uso em consulta de vigência.",
+      "rotulos": [
+        {
+          "alerta_id": "de-marchi",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2025/anvisa-suspende-azeite-polpa-de-fruta-champignon-e-molho-de-alho",
+          "fonte_hash": null,
+          "produto": "Polpa de morango",
+          "marca": "De Marchi",
+          "fabricante": "De Marchi Indústria e Comércio de Frutas Ltda.",
+          "cnpj": "52.884.061/0001-62",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "09437-181"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "ubon",
+      "data_publicacao": "2025-09-01",
+      "resolucao": "3.283/2025",
+      "motivo": "Dióxido de enxofre detectado em laudo e ausência de declaração de aditivos à base da substância.",
+      "nota": null,
+      "rotulos": [
+        {
+          "alerta_id": "ubon",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2025/anvisa-determina-apreensao-de-alimentos-infantis-e-recolhimento-de-lote-de-molho-de-pimenta",
+          "fonte_hash": null,
+          "produto": "Molho de Pimenta Extra Forte",
+          "marca": "Ubon",
+          "fabricante": "Magalhães e Ferraz Ltda. (Temperos Cali)",
+          "cnpj": "18.116.328/0001-33",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "4512823"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "vaidosa",
+      "data_publicacao": "2026-07-24",
+      "resolucao": "2.905/2026",
+      "motivo": "Grau alimentício do hidróxido de sódio sem comprovação documental.",
+      "nota": null,
+      "rotulos": [
+        {
+          "alerta_id": "vaidosa",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/ricota-fresca-da-marca-vaidosa-sera-recolhida-voluntariamente-pelo-fabricante/",
+          "fonte_hash": null,
+          "produto": "Ricota Fresca",
+          "marca": "Vaidosa",
+          "fabricante": "Vaidosa Indústria e Comércio de Alimentos Ltda.",
+          "cnpj": "02.896.434/0001-47",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "148",
+              "153",
+              "166",
+              "167"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "italy",
+      "data_publicacao": "2026-11-12",
+      "resolucao": "4.423/2026",
+      "motivo": "Detecção de Listeria monocytogenes.",
+      "nota": null,
+      "rotulos": [
+        {
+          "alerta_id": "italy",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-suspende-venda-de-queijo-mussarela-da-marca-italy",
+          "fonte_hash": null,
+          "produto": "Queijo Mussarela Fatiado",
+          "marca": "Italy",
+          "fabricante": "Agroindústria Santo Anjo Ltda.",
+          "cnpj": "29.286.789/0001-70",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "180926"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "kf",
+      "data_publicacao": "2026-10-28",
+      "resolucao": "4.227/2026",
+      "motivo": "Detecção de Listeria monocytogenes.",
+      "nota": null,
+      "rotulos": [
+        {
+          "alerta_id": "kf",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-suspende-venda-de-linguica-suina-defumada-da-marca-kf-embutidos",
+          "fonte_hash": null,
+          "produto": "Linguiça de Carne Suína Defumada",
+          "marca": "KF Embutidos",
+          "fabricante": "Fábrica de Embutidos Zanetti Ltda.",
+          "cnpj": "23.692.548/0001-45",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "21/08/2026"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "militao",
+      "data_publicacao": "2026-07-29",
+      "resolucao": "2.937 e 2.938/2026",
+      "motivo": "Coliformes acima dos limites.",
+      "nota": "Vincular a RE individual. Comunicado informa SIF 5256.",
+      "rotulos": [
+        {
+          "alerta_id": "militao",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-comunica-recolhimento-voluntario-de-queijo-artesanal-e-molho-pesto",
+          "fonte_hash": null,
+          "produto": "Queijo Minas Artesanal",
+          "marca": "Militão da Canastra",
+          "fabricante": "Queijaria Militão da Canastra",
+          "cnpj": null,
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "42"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "verificacao_pendente",
+          "campos_pendentes": [
+            "cnpj"
+          ]
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "cecco",
+      "data_publicacao": "2026-07-29",
+      "resolucao": "2.937 e 2.938/2026",
+      "motivo": "Nozes omitidas da declaração de alergênicos.",
+      "nota": "Vincular a RE individual.",
+      "rotulos": [
+        {
+          "alerta_id": "cecco",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-comunica-recolhimento-voluntario-de-queijo-artesanal-e-molho-pesto",
+          "fonte_hash": null,
+          "produto": "Molho Pesto Vermelho com Mascarpone",
+          "marca": "Cecco",
+          "fabricante": "Cia Bel de Alimentos (Festval)",
+          "cnpj": "78.116.670/0005-99",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "07225288"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "jms",
+      "data_publicacao": "2026-04-29",
+      "resolucao": "1.742/2026",
+      "motivo": "Detecção de Salmonella spp.",
+      "nota": "A notícia da Anvisa diverge no código. Usei o código da RE, com três algarismos 4 no final.",
+      "rotulos": [
+        {
+          "alerta_id": "jms-01",
+          "fonte_url": "https://prefeitura.sp.gov.br/web/saude/w/recolhimento-volunt%C3%A1rio-dos-produtos-peixe-congelado-sardinha-laje-espalmada-800g-lote-13099022444-peixe-congelado-sardinha-laje-eviscerada-800g-lote-13099022444-",
+          "fonte_hash": null,
+          "produto": "Sardinha-laje congelada espalmada, 800 g",
+          "marca": null,
+          "fabricante": "JMS Indústria e Comércio de Pescados",
+          "cnpj": "07.171.099/0001-33",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "13099022444"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "verificacao_pendente",
+          "campos_pendentes": [
+            "marca"
+          ]
+        },
+        {
+          "alerta_id": "jms-02",
+          "fonte_url": "https://prefeitura.sp.gov.br/web/saude/w/recolhimento-volunt%C3%A1rio-dos-produtos-peixe-congelado-sardinha-laje-espalmada-800g-lote-13099022444-peixe-congelado-sardinha-laje-eviscerada-800g-lote-13099022444-",
+          "fonte_hash": null,
+          "produto": "Sardinha-laje congelada eviscerada, 800 g",
+          "marca": null,
+          "fabricante": "JMS Indústria e Comércio de Pescados",
+          "cnpj": "07.171.099/0001-33",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "13099022444"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "verificacao_pendente",
+          "campos_pendentes": [
+            "marca"
+          ]
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "agua-da-serra",
+      "data_publicacao": "2026-01-05",
+      "resolucao": "7/2026",
+      "motivo": "Contaminação e falhas nas boas práticas de fabricação.",
+      "nota": null,
+      "rotulos": [
+        {
+          "alerta_id": "agua-da-serra",
+          "fonte_url": "https://anttlegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&cod_menu=7794&cod_modulo=161&link=S&numeroAto=00000007&orgao=RE%2FGGFIS%2FANVISA%2FMS&seqAto=000&tipo=RES&valorAno=2026",
+          "fonte_hash": null,
+          "produto": "Chá de Camomila Lavi Tea",
+          "marca": "Água da Serra",
+          "fabricante": "Água da Serra Industrial de Bebidas S.A.",
+          "cnpj": "80.936.685/0001-11",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "6802956"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "dviez",
+      "data_publicacao": "2026-01-06",
+      "resolucao": null,
+      "motivo": "Fungos na superfície dos produtos.",
+      "nota": "Quatro apresentações com o mesmo código de lote. Confirmar CNPJ e RE.",
+      "rotulos": [
+        {
+          "alerta_id": "dviez-01",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/determinado-recolhimento-de-lotes-de-panetones-contaminados-com-fungos",
+          "fonte_hash": null,
+          "produto": "Mini Panetone com Gotas de Chocolate Trufado Tradicional, 140 g",
+          "marca": "D’Viez",
+          "fabricante": "D’Viez Indústria e Comércio de Chocolates Finos Ltda.",
+          "cnpj": null,
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "251027"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "verificacao_pendente",
+          "campos_pendentes": [
+            "cnpj"
+          ]
+        },
+        {
+          "alerta_id": "dviez-02",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/determinado-recolhimento-de-lotes-de-panetones-contaminados-com-fungos",
+          "fonte_hash": null,
+          "produto": "Panetone Nossa Língua Trufado com Bombons, 700 g",
+          "marca": "D’Viez",
+          "fabricante": "D’Viez Indústria e Comércio de Chocolates Finos Ltda.",
+          "cnpj": null,
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "251027"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "verificacao_pendente",
+          "campos_pendentes": [
+            "cnpj"
+          ]
+        },
+        {
+          "alerta_id": "dviez-03",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/determinado-recolhimento-de-lotes-de-panetones-contaminados-com-fungos",
+          "fonte_hash": null,
+          "produto": "Panetone com Gotas de Chocolate Trufado Tradicional, 700 g",
+          "marca": "D’Viez",
+          "fabricante": "D’Viez Indústria e Comércio de Chocolates Finos Ltda.",
+          "cnpj": null,
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "251027"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "verificacao_pendente",
+          "campos_pendentes": [
+            "cnpj"
+          ]
+        },
+        {
+          "alerta_id": "dviez-04",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/determinado-recolhimento-de-lotes-de-panetones-contaminados-com-fungos",
+          "fonte_hash": null,
+          "produto": "Panetone com Frutas Trufado Tradicional, 700 g",
+          "marca": "D’Viez",
+          "fabricante": "D’Viez Indústria e Comércio de Chocolates Finos Ltda.",
+          "cnpj": null,
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "251027"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "verificacao_pendente",
+          "campos_pendentes": [
+            "cnpj"
+          ]
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "sanibras",
+      "data_publicacao": "2026-06-19",
+      "resolucao": "2.418/2026",
+      "motivo": "Falhas de fabricação, risco de contaminação e ausência de estudos de estabilidade.",
+      "nota": "Inclui o dia do corte. Aplicar aos suplementos do fabricante.",
+      "rotulos": [
+        {
+          "alerta_id": "sanibras",
+          "fonte_url": "https://prefeitura.sp.gov.br/web/saude/w/recolhimento-de-todos-os-suplemenos-alimentares-todos-os-lotes-fabricados-at%C3%A9-12/06/2026-da-empresa-sanibras-medicamentos-e-nutri%C3%A7%C3%A3o-ltda.",
+          "fonte_hash": null,
+          "produto": "Suplementos alimentares do fabricante",
+          "marca": "Sanibras",
+          "fabricante": "Sanibras Medicamentos e Nutrição Ltda.",
+          "cnpj": "82.268.269/0001-18",
+          "regra_lote": {
+            "tipo": "data_corte",
+            "lotes": [],
+            "sufixo": null,
+            "fabricado_ate": "2026-06-12"
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "bento",
+      "data_publicacao": "2026-10-26",
+      "resolucao": "4.189/2026",
+      "motivo": "Melatonina e inositol sem avaliação de segurança para esse uso.",
+      "nota": "Anexo com o campo de lote em branco. Rotular como verificação pendente.",
+      "rotulos": [
+        {
+          "alerta_id": "bento",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-determina-o-recolhimento-de-picole-com-ingredientes-nao-autorizados",
+          "fonte_hash": null,
+          "produto": "Picolé Magnésio + Inositol Relief 3.0",
+          "marca": "Bentô Gelatos",
+          "fabricante": "ABB Gelateria Ltda.",
+          "cnpj": "61.590.463/0001-45",
+          "regra_lote": {
+            "tipo": null,
+            "lotes": [],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "verificacao_pendente",
+          "campos_pendentes": [
+            "regra_lote.tipo"
+          ]
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "equaliv",
+      "data_publicacao": "2026-10-26",
+      "resolucao": "4.160/2026",
+      "motivo": "Proteína de fava hidrolisada sem avaliação de segurança para uso em alimentos.",
+      "nota": "Escopo conferido na transcrição da RE 4.160/2026. Fonte oficial vinculada no comunicado.",
+      "rotulos": [
+        {
+          "alerta_id": "equaliv",
+          "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-determina-o-recolhimento-de-picole-com-ingredientes-nao-autorizados",
+          "fonte_hash": null,
+          "produto": "Body Strong Protein, cacau",
+          "marca": "Equaliv",
+          "fabricante": "Althaia S.A. Indústria Farmacêutica",
+          "cnpj": "48.344.725/0007-19",
+          "regra_lote": {
+            "tipo": "todos",
+            "lotes": [],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "nutra",
+      "data_publicacao": "2026-09-09",
+      "resolucao": "3.540/2026",
+      "motivo": "Ausência de estudos de estabilidade para o prazo de validade.",
+      "nota": null,
+      "rotulos": [
+        {
+          "alerta_id": "nutra-01",
+          "fonte_url": "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&cod_menu=9373&cod_modulo=630&link=S&numeroAto=00003540&orgao=RE%2FGGFIS%2FANVISA%2FMS&seqAto=000&tipo=RES&valorAno=2026",
+          "fonte_hash": null,
+          "produto": "Nutra Senior",
+          "marca": "Nutra Senior",
+          "fabricante": "LHS Indústria e Comércio de Alimentos Ltda.",
+          "cnpj": "26.726.809/0001-99",
+          "regra_lote": {
+            "tipo": "todos",
+            "lotes": [],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        },
+        {
+          "alerta_id": "nutra-02",
+          "fonte_url": "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&cod_menu=9373&cod_modulo=630&link=S&numeroAto=00003540&orgao=RE%2FGGFIS%2FANVISA%2FMS&seqAto=000&tipo=RES&valorAno=2026",
+          "fonte_hash": null,
+          "produto": "Nutra Senior Premium",
+          "marca": "Nutra Senior Premium",
+          "fabricante": "LHS Indústria e Comércio de Alimentos Ltda.",
+          "cnpj": "26.726.809/0001-99",
+          "regra_lote": {
+            "tipo": "todos",
+            "lotes": [],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        },
+        {
+          "alerta_id": "nutra-03",
+          "fonte_url": "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&cod_menu=9373&cod_modulo=630&link=S&numeroAto=00003540&orgao=RE%2FGGFIS%2FANVISA%2FMS&seqAto=000&tipo=RES&valorAno=2026",
+          "fonte_hash": null,
+          "produto": "Nutra Senior Zero Açúcar",
+          "marca": "Nutra Senior Zero Açúcar",
+          "fabricante": "LHS Indústria e Comércio de Alimentos Ltda.",
+          "cnpj": "26.726.809/0001-99",
+          "regra_lote": {
+            "tipo": "todos",
+            "lotes": [],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        },
+        {
+          "alerta_id": "nutra-04",
+          "fonte_url": "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&cod_menu=9373&cod_modulo=630&link=S&numeroAto=00003540&orgao=RE%2FGGFIS%2FANVISA%2FMS&seqAto=000&tipo=RES&valorAno=2026",
+          "fonte_hash": null,
+          "produto": "Nutra Senior Diabetics Care",
+          "marca": "Nutra Senior Diabetics Care",
+          "fabricante": "LHS Indústria e Comércio de Alimentos Ltda.",
+          "cnpj": "26.726.809/0001-99",
+          "regra_lote": {
+            "tipo": "todos",
+            "lotes": [],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        },
+        {
+          "alerta_id": "nutra-05",
+          "fonte_url": "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&cod_menu=9373&cod_modulo=630&link=S&numeroAto=00003540&orgao=RE%2FGGFIS%2FANVISA%2FMS&seqAto=000&tipo=RES&valorAno=2026",
+          "fonte_hash": null,
+          "produto": "Nutra Whey Gourmet",
+          "marca": "Nutra Whey Gourmet",
+          "fabricante": "LHS Indústria e Comércio de Alimentos Ltda.",
+          "cnpj": "26.726.809/0001-99",
+          "regra_lote": {
+            "tipo": "todos",
+            "lotes": [],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        }
+      ]
+    },
+    {
+      "recolhimento_id": "nestle-formulas",
+      "data_publicacao": "2026-01-07",
+      "resolucao": "32/2026",
+      "motivo": "Risco de presença de cereulida.",
+      "nota": "Apresentações e lotes conforme a Nota Técnica Conjunta 17/2026. CNPJ conferido na RE 32/2026. Use a nota como entrada deste caso.",
+      "rotulos": [
+        {
+          "alerta_id": "nestle-formulas-01",
+          "fonte_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-17-2026-cgzha-dedt-svsa-ms-e-anvisa.pdf/@@download/file",
+          "fonte_hash": null,
+          "produto": "Nestogeno, 0–6 meses, 800 g",
+          "marca": "Nestogeno",
+          "fabricante": "Nestlé Brasil Ltda.",
+          "cnpj": "60.409.075/0001-52",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "5341046041",
+              "5342046041",
+              "5343046041",
+              "5344046041"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        },
+        {
+          "alerta_id": "nestle-formulas-02",
+          "fonte_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-17-2026-cgzha-dedt-svsa-ms-e-anvisa.pdf/@@download/file",
+          "fonte_hash": null,
+          "produto": "NAN Supreme Pro, 0–6 meses, 400 g",
+          "marca": "NAN Supreme Pro",
+          "fabricante": "Nestlé Brasil Ltda.",
+          "cnpj": "60.409.075/0001-52",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "5321046041",
+              "5321046043"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        },
+        {
+          "alerta_id": "nestle-formulas-03",
+          "fonte_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-17-2026-cgzha-dedt-svsa-ms-e-anvisa.pdf/@@download/file",
+          "fonte_hash": null,
+          "produto": "NAN Supreme Pro, 0–6 meses, 800 g",
+          "marca": "NAN Supreme Pro",
+          "fabricante": "Nestlé Brasil Ltda.",
+          "cnpj": "60.409.075/0001-52",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "5319046041",
+              "5320046041",
+              "5321046041"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        },
+        {
+          "alerta_id": "nestle-formulas-04",
+          "fonte_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-17-2026-cgzha-dedt-svsa-ms-e-anvisa.pdf/@@download/file",
+          "fonte_hash": null,
+          "produto": "NAN Supreme Pro, 6–12 meses, 800 g",
+          "marca": "NAN Supreme Pro",
+          "fabricante": "Nestlé Brasil Ltda.",
+          "cnpj": "60.409.075/0001-52",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "5324046041",
+              "5325046041",
+              "5326046041"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        },
+        {
+          "alerta_id": "nestle-formulas-05",
+          "fonte_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-17-2026-cgzha-dedt-svsa-ms-e-anvisa.pdf/@@download/file",
+          "fonte_hash": null,
+          "produto": "NANLAC Supreme Pro, 1–3 anos, 800 g",
+          "marca": "NANLAC Supreme Pro",
+          "fabricante": "Nestlé Brasil Ltda.",
+          "cnpj": "60.409.075/0001-52",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "5301046041",
+              "5302046041",
+              "5338046041",
+              "5339046041",
+              "5340046041"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        },
+        {
+          "alerta_id": "nestle-formulas-06",
+          "fonte_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-17-2026-cgzha-dedt-svsa-ms-e-anvisa.pdf/@@download/file",
+          "fonte_hash": null,
+          "produto": "NANLAC Comfor, 1–3 anos, 800 g",
+          "marca": "NANLAC Comfor",
+          "fabricante": "Nestlé Brasil Ltda.",
+          "cnpj": "60.409.075/0001-52",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "5327046041",
+              "5327046043",
+              "5328046041",
+              "5336046041",
+              "5337046041",
+              "5338046041"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        },
+        {
+          "alerta_id": "nestle-formulas-07",
+          "fonte_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-17-2026-cgzha-dedt-svsa-ms-e-anvisa.pdf/@@download/file",
+          "fonte_hash": null,
+          "produto": "NANLAC Comfor, 1–3 anos, 1,6 kg",
+          "marca": "NANLAC Comfor",
+          "fabricante": "Nestlé Brasil Ltda.",
+          "cnpj": "60.409.075/0001-52",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "53360460V4",
+              "53370460V1",
+              "53380460V1",
+              "53390460V1",
+              "53390460V2",
+              "53430460V2"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        },
+        {
+          "alerta_id": "nestle-formulas-08",
+          "fonte_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-17-2026-cgzha-dedt-svsa-ms-e-anvisa.pdf/@@download/file",
+          "fonte_hash": null,
+          "produto": "NAN Science Pro Sensitive, 800 g",
+          "marca": "NAN Science Pro Sensitive",
+          "fabricante": "Nestlé Brasil Ltda.",
+          "cnpj": "60.409.075/0001-52",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "5323046041"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        },
+        {
+          "alerta_id": "nestle-formulas-09",
+          "fonte_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-17-2026-cgzha-dedt-svsa-ms-e-anvisa.pdf/@@download/file",
+          "fonte_hash": null,
+          "produto": "Alfamino, 400 g",
+          "marca": "Alfamino",
+          "fabricante": "Nestlé Brasil Ltda.",
+          "cnpj": "60.409.075/0001-52",
+          "regra_lote": {
+            "tipo": "lista",
+            "lotes": [
+              "51060017Y1",
+              "51540017Y1",
+              "52720017Y2"
+            ],
+            "sufixo": null,
+            "fabricado_ate": null
+          },
+          "status_extracao": "ok",
+          "campos_pendentes": []
+        }
+      ]
+    }
+  ],
+  "teste_sintetico_sufixo": {
+    "finalidade": "Teste unitário da regra de sufixo. Excluir da contagem de alertas reais e da acurácia medida em alertas oficiais.",
+    "produto": "Biscoito fictício QA",
+    "marca": "Marca fictícia QA",
+    "regra_lote": {
+      "tipo": "sufixo",
+      "lotes": [],
+      "sufixo": "07",
+      "fabricado_ate": null
+    },
+    "casos": [
+      {
+        "lote": "A107",
+        "resultado_esperado": "correspondencia"
+      },
+      {
+        "lote": "07A",
+        "resultado_esperado": "sem_correspondencia"
+      },
+      {
+        "lote": null,
+        "resultado_esperado": "verificacao_pendente"
+      }
+    ]
+  }
+}

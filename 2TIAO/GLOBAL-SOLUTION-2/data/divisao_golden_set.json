@@ -1,0 +1,221 @@
+{
+  "versao": "1",
+  "data": "2026-11-17",
+  "responsavel": "Engenheiro de IA",
+  "regra": "Divisão decidida antes de montar o prompt. Todas as apresentações de um recolhimento ficam no mesmo grupo. Recolhimentos com o mesmo texto-fonte (militao+cecco, bento+equaliv) ficam juntos nos reservados.",
+  "exemplos_prompt": {
+    "recolhimentos": 5,
+    "registros": 10,
+    "itens": [
+      {
+        "recolhimento_id": "crystal",
+        "alerta_ids": [
+          "crystal"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      },
+      {
+        "recolhimento_id": "la-vaquita",
+        "alerta_ids": [
+          "la-vaquita"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      },
+      {
+        "recolhimento_id": "granoro",
+        "alerta_ids": [
+          "granoro"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      },
+      {
+        "recolhimento_id": "jms",
+        "alerta_ids": [
+          "jms-01",
+          "jms-02"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      },
+      {
+        "recolhimento_id": "nutra",
+        "alerta_ids": [
+          "nutra-01",
+          "nutra-02",
+          "nutra-03",
+          "nutra-04",
+          "nutra-05"
+        ],
+        "tipos": [
+          "todos"
+        ]
+      }
+    ],
+    "sintetico": [
+      {
+        "id": "sintetico-data-corte",
+        "tipo": "data_corte",
+        "observacao": "Exemplo fictício escrito pelo Engenheiro de IA para que a Sanibras real fique reservada. Fora da avaliação."
+      }
+    ]
+  },
+  "reservados_avaliacao": {
+    "recolhimentos": 15,
+    "registros": 26,
+    "itens": [
+      {
+        "recolhimento_id": "aptamil",
+        "alerta_ids": [
+          "aptamil"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      },
+      {
+        "recolhimento_id": "neovite",
+        "alerta_ids": [
+          "neovite"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      },
+      {
+        "recolhimento_id": "de-marchi",
+        "alerta_ids": [
+          "de-marchi"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      },
+      {
+        "recolhimento_id": "ubon",
+        "alerta_ids": [
+          "ubon"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      },
+      {
+        "recolhimento_id": "vaidosa",
+        "alerta_ids": [
+          "vaidosa"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      },
+      {
+        "recolhimento_id": "italy",
+        "alerta_ids": [
+          "italy"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      },
+      {
+        "recolhimento_id": "kf",
+        "alerta_ids": [
+          "kf"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      },
+      {
+        "recolhimento_id": "militao",
+        "alerta_ids": [
+          "militao"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      },
+      {
+        "recolhimento_id": "cecco",
+        "alerta_ids": [
+          "cecco"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      },
+      {
+        "recolhimento_id": "agua-da-serra",
+        "alerta_ids": [
+          "agua-da-serra"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      },
+      {
+        "recolhimento_id": "dviez",
+        "alerta_ids": [
+          "dviez-01",
+          "dviez-02",
+          "dviez-03",
+          "dviez-04"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      },
+      {
+        "recolhimento_id": "sanibras",
+        "alerta_ids": [
+          "sanibras"
+        ],
+        "tipos": [
+          "data_corte"
+        ]
+      },
+      {
+        "recolhimento_id": "bento",
+        "alerta_ids": [
+          "bento"
+        ],
+        "tipos": [
+          "None"
+        ]
+      },
+      {
+        "recolhimento_id": "equaliv",
+        "alerta_ids": [
+          "equaliv"
+        ],
+        "tipos": [
+          "todos"
+        ]
+      },
+      {
+        "recolhimento_id": "nestle-formulas",
+        "alerta_ids": [
+          "nestle-formulas-01",
+          "nestle-formulas-02",
+          "nestle-formulas-03",
+          "nestle-formulas-04",
+          "nestle-formulas-05",
+          "nestle-formulas-06",
+          "nestle-formulas-07",
+          "nestle-formulas-08",
+          "nestle-formulas-09"
+        ],
+        "tipos": [
+          "lista"
+        ]
+      }
+    ]
+  }
+}

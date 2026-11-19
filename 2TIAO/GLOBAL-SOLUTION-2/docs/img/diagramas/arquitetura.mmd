@@ -1,0 +1,24 @@
+%%{init: {"theme":"base","themeVariables":{"clusterBkg":"#fafaf8","clusterBorder":"#d9d8d4","fontFamily":"Arial","lineColor":"#52514e"}}}%%
+flowchart LR
+  classDef ia fill:#e8f1fc,stroke:#2a78d6,color:#0b0b0b
+  classDef det fill:#fdeee7,stroke:#eb6834,color:#0b0b0b
+  classDef hum fill:#e6f4ea,stroke:#008300,color:#0b0b0b
+  classDef dado fill:#f4f4f2,stroke:#8a8984,color:#0b0b0b
+  subgraph L1["Linha 1 · Pipeline de alertas"]
+    F["Fonte oficial<br/>Anvisa · gov.br · datalegis"]:::dado --> C["1 · Coletor<br/>URL + SHA-256"]:::det
+    C --> X["2 · Extrator LLM<br/>Gemini · temp. 0 · JSON schema"]:::ia
+    X --> V{"3 · Validador<br/>Pydantic"}:::det
+  end
+  subgraph L2["Linha 2 · Rede de supermercados"]
+    R[("5 · Recebimentos<br/>base SIMULADA")]:::dado --> M["4 · Motor de regras<br/>determinístico · sem LLM"]:::det
+    M --> H["6 · Aprovação humana"]:::hum --> P["8 · Painel da rede<br/>React + Vite"]:::hum
+  end
+  subgraph L3["Linha 3 · Cidadão"]
+    FO["Foto da embalagem<br/>não é armazenada"]:::dado --> O["9 · Leitor OCR + EAN<br/>OpenCV · EasyOCR · pyzbar"]:::ia
+    O --> A["10 · App do cidadão<br/>em_recall · sem_recall · pendente"]:::hum
+  end
+  V -- "JSON válido" --> M
+  V -- "campo faltando" --> PD["verificacao_pendente"]:::hum
+  PD --> P
+  O -- "lote lido" --> M
+  H -. "grava decisão" .-> LG[("7 · Log de auditoria<br/>append-only")]:::dado

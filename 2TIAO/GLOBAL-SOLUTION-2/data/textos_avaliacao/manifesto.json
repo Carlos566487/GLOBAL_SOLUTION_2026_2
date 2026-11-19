@@ -1,0 +1,163 @@
+{
+  "crystal": {
+    "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/lote-da-agua-mineral-crystal-sem-gas-tem-recolhimento-voluntario",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:32+00:00",
+    "obtencao": "script",
+    "caracteres": 3185,
+    "sha256_local": "a88f466c3babfbf0eaa46e00c2f958cea640f51598815aaa2cf3f65e3462de6a"
+  },
+  "aptamil": {
+    "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-proibe-venda-de-formula-infantil-contaminada-por-toxina",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:32+00:00",
+    "obtencao": "script",
+    "caracteres": 1952,
+    "sha256_local": "82f8330e561767f2a1b7d46e5de9a1349a82219e1bb4f525128c8e08a21ed825"
+  },
+  "la-vaquita": {
+    "fonte_url": "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&cod_menu=9451&cod_modulo=134&link=S&numeroAto=00000405&orgao=RE%2FGGFIS%2FANVISA%2FMS&seqAto=000&tipo=RES&valorAno=2026",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:33+00:00",
+    "obtencao": "script",
+    "caracteres": 1792,
+    "sha256_local": "af2270462215ea7c09a1ff422bab969541b99d55d152f47ef7d106c33d8c860e"
+  },
+  "granoro": {
+    "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/molho-de-tomate-e-suplementos-alimentares-sao-alvos-de-acoes-fiscais/",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:33+00:00",
+    "obtencao": "script",
+    "caracteres": 2611,
+    "sha256_local": "cc4248583778cdb1086b902763e10d68972e6663e9cda0d178c09a9cadc38e13"
+  },
+  "neovite": {
+    "fonte_url": "https://prefeitura.sp.gov.br/web/saude/w/recolhimento-do-produto-neovite-vis%C3%A3o-lotes-s25g073-s25c004-s25c003-s25c002-e-s25g072-",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:33+00:00",
+    "obtencao": "script",
+    "caracteres": 1437,
+    "sha256_local": "f10e65d5cfeb3e383446853215d0f4ce2ac7421406e01007294ab5a9ca24ce38"
+  },
+  "de-marchi": {
+    "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2025/anvisa-suspende-azeite-polpa-de-fruta-champignon-e-molho-de-alho",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:34+00:00",
+    "obtencao": "script",
+    "caracteres": 2377,
+    "sha256_local": "c6be720073ea23b3336ff6550de14da5ab1b209e1843aa9f875e1cc6007a0050"
+  },
+  "ubon": {
+    "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2025/anvisa-determina-apreensao-de-alimentos-infantis-e-recolhimento-de-lote-de-molho-de-pimenta",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:34+00:00",
+    "obtencao": "script",
+    "caracteres": 2970,
+    "sha256_local": "953eb7bc37a658c1c9989bfac1aa38686b40a65083e9532eb40657bef7eba99b"
+  },
+  "vaidosa": {
+    "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/ricota-fresca-da-marca-vaidosa-sera-recolhida-voluntariamente-pelo-fabricante/",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:34+00:00",
+    "obtencao": "script",
+    "caracteres": 801,
+    "sha256_local": "f1b568814a26f7d8a3b610a7efbad5c7067a27dec4269f4f316294889f74d4b3"
+  },
+  "italy": {
+    "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-suspende-venda-de-queijo-mussarela-da-marca-italy",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:35+00:00",
+    "obtencao": "script",
+    "caracteres": 1378,
+    "sha256_local": "d39ef94cbf43841edb75da8fe3bf27b4e7cb9fc72cbcab887915584f854561c6"
+  },
+  "kf": {
+    "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-suspende-venda-de-linguica-suina-defumada-da-marca-kf-embutidos",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:35+00:00",
+    "obtencao": "script",
+    "caracteres": 1368,
+    "sha256_local": "7261c7d247a3d736508722ead815c04189838b92d53f7c3bb5391f116ec22e9b"
+  },
+  "militao": {
+    "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-comunica-recolhimento-voluntario-de-queijo-artesanal-e-molho-pesto",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:35+00:00",
+    "obtencao": "script",
+    "caracteres": 1318,
+    "sha256_local": "9b016988e7aadfd43d7ffcd79fba29977e0924b3044a8c3574ca66c79ef78a6e"
+  },
+  "cecco": {
+    "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-comunica-recolhimento-voluntario-de-queijo-artesanal-e-molho-pesto",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:36+00:00",
+    "obtencao": "script",
+    "caracteres": 1318,
+    "sha256_local": "9b016988e7aadfd43d7ffcd79fba29977e0924b3044a8c3574ca66c79ef78a6e"
+  },
+  "jms": {
+    "fonte_url": "https://prefeitura.sp.gov.br/web/saude/w/recolhimento-volunt%C3%A1rio-dos-produtos-peixe-congelado-sardinha-laje-espalmada-800g-lote-13099022444-peixe-congelado-sardinha-laje-eviscerada-800g-lote-13099022444-",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:36+00:00",
+    "obtencao": "script",
+    "caracteres": 1885,
+    "sha256_local": "0c05e74ebfa38cdb94e3734483c328c1dd6ecd3a797b9bb6de65be8c34c9ed60"
+  },
+  "agua-da-serra": {
+    "fonte_url": "https://anttlegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&cod_menu=7794&cod_modulo=161&link=S&numeroAto=00000007&orgao=RE%2FGGFIS%2FANVISA%2FMS&seqAto=000&tipo=RES&valorAno=2026",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:37+00:00",
+    "obtencao": "script",
+    "caracteres": 2229,
+    "sha256_local": "fa5dd81b325c192500362b85baa3e5ffbb4eb97e599fb69df8ec760e7bea4f3e"
+  },
+  "dviez": {
+    "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/determinado-recolhimento-de-lotes-de-panetones-contaminados-com-fungos",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:37+00:00",
+    "obtencao": "script",
+    "caracteres": 2434,
+    "sha256_local": "031a7f59eb8f12a247ec6c266cfe40a674fbfe3e732c03591b103af23052775e"
+  },
+  "sanibras": {
+    "fonte_url": "https://prefeitura.sp.gov.br/web/saude/w/recolhimento-de-todos-os-suplemenos-alimentares-todos-os-lotes-fabricados-at%C3%A9-12/06/2026-da-empresa-sanibras-medicamentos-e-nutri%C3%A7%C3%A3o-ltda.",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:37+00:00",
+    "obtencao": "script",
+    "caracteres": 3294,
+    "sha256_local": "1ab199b8fae154f9b8d4c83c764ba752295dc734953111b5b69a88625eea47e9"
+  },
+  "bento": {
+    "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-determina-o-recolhimento-de-picole-com-ingredientes-nao-autorizados",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:37+00:00",
+    "obtencao": "script",
+    "caracteres": 1460,
+    "sha256_local": "d2acbd9d13f2b744cf38920448ec51797dbdb4b7628f16520884ef60ab398320"
+  },
+  "equaliv": {
+    "fonte_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-determina-o-recolhimento-de-picole-com-ingredientes-nao-autorizados",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:38+00:00",
+    "obtencao": "script",
+    "caracteres": 1460,
+    "sha256_local": "d2acbd9d13f2b744cf38920448ec51797dbdb4b7628f16520884ef60ab398320"
+  },
+  "nutra": {
+    "fonte_url": "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&cod_menu=9373&cod_modulo=630&link=S&numeroAto=00003540&orgao=RE%2FGGFIS%2FANVISA%2FMS&seqAto=000&tipo=RES&valorAno=2026",
+    "formato": "html",
+    "obtido_em": "2026-11-17T22:03:38+00:00",
+    "obtencao": "script",
+    "caracteres": 2590,
+    "sha256_local": "a63519113f35b6605ddd311a71bb0fc6b4f994eb93fc96c74c1cafdc8e4ee88d"
+  },
+  "nestle-formulas": {
+    "fonte_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-17-2026-cgzha-dedt-svsa-ms-e-anvisa.pdf/@@download/file",
+    "formato": "pdf",
+    "obtido_em": "2026-11-17T21:54:55+00:00",
+    "obtencao": "script (pdfplumber) + transcrição manual das tabelas em imagem, páginas 1–2",
+    "caracteres": 34252,
+    "sha256_local": "c5ee22418cd8d8f726310f58f143b75ea55a70862c28b5f374f33d91188a4ee7",
+    "transcricao_manual": true
+  }
+}

@@ -1,0 +1,17 @@
+google-genai>=3.4
+pydantic>=2.12
+python-dotenv>=1.0
+pytest>=8
+requests>=2.32
+beautifulsoup4>=4.12
+pdfplumber>=0.11
+openpyxl>=3.1
+# Leitor da embalagem (OCR local). PyTorch só-CPU, antes do easyocr:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+numpy>=1.26
+opencv-python-headless>=4.10
+pyzbar>=0.1.9   # no Linux exige o pacote do sistema libzbar0
+easyocr>=1.7
+# Só para os testes (gera código de barras sintético em memória)
+python-barcode>=0.15
+pillow>=10

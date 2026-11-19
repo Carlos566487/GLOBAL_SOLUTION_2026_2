@@ -1,0 +1,25 @@
+﻿versao;arquivo;grupos;legivel;resultado;ean_ok;lote_ok;data_fabricacao_ok;validade_ok;lote_gabarito;lote_lido;confianca_ocr;pendencias;duracao_s
+Regra original (medição sem contaminação);foto01.jpg;lote_legivel;True;pendente (legível);True;False;False;False;172U404I;;0.0;confianca_ocr|lote;14.37
+Regra original (medição sem contaminação);foto02.jpg;lote_legivel;True;pendente (legível);;False;;False;LJA 076 4051 2;;0.0;confianca_ocr|produto|lote;8.89
+Regra original (medição sem contaminação);foto03.jpg;so_ean;False;pendente correto;True;;;;;;0.0;confianca_ocr|lote;10.16
+Regra original (medição sem contaminação);foto04.jpg;lote_legivel|validade_mes_ano;True;pendente (legível);;False;;;029 SF;;0.0;confianca_ocr|produto|lote;4.31
+Regra original (medição sem contaminação);foto05.jpg;so_ean;False;pendente correto;True;;;;;;0.0;confianca_ocr|lote;10.92
+Regra original (medição sem contaminação);foto06.jpg;so_ean;False;pendente correto;True;;;;;;0.0;confianca_ocr|lote;7.24
+Regra original (medição sem contaminação);foto07.jpg;so_ean;False;pendente correto;True;;;;;;0.0;confianca_ocr|lote;7.15
+Regra original (medição sem contaminação);foto08.jpg;lote_legivel|validade_mes_ano;True;pendente (legível);;False;;;23;;0.0;confianca_ocr|produto|lote;7.18
+Regra original (medição sem contaminação);foto09.jpg;lote_legivel;True;pendente (legível);;True;;False;JGU 080926;JGU 080926;0.794;confianca_ocr|produto;7.69
+Regra original (medição sem contaminação);foto10.jpg;controle_negativo;False;pendente correto;;;;False;;;0.0;confianca_ocr|produto|lote;6.44
+Regra original (medição sem contaminação);foto11.jpg;lote_legivel|validade_mes_ano;True;pendente (legível);True;True;;;H26H0115;H26H0115;0.695;confianca_ocr;7.18
+Regra original (medição sem contaminação);foto12.jpg;lote_legivel;True;pendente (legível);;True;;True;3260;3260;0.539;confianca_ocr|produto;6.7
+Regra alinhada (convenção do gabarito);foto01.jpg;lote_legivel;True;pendente (legível);True;False;False;False;172U404I;;0.0;confianca_ocr|lote;9.83
+Regra alinhada (convenção do gabarito);foto02.jpg;lote_legivel;True;pendente (legível);;True;;False;LJA 076 4051 2;LJA 076 4051 2;0.88;produto;8.91
+Regra alinhada (convenção do gabarito);foto03.jpg;so_ean;False;pendente correto;True;;;;;;0.0;confianca_ocr|lote;9.1
+Regra alinhada (convenção do gabarito);foto04.jpg;lote_legivel|validade_mes_ano;True;pendente (legível);;False;;;029 SF;;0.0;confianca_ocr|produto|lote;4.04
+Regra alinhada (convenção do gabarito);foto05.jpg;so_ean;False;pendente correto;True;;;;;;0.0;confianca_ocr|lote;8.17
+Regra alinhada (convenção do gabarito);foto06.jpg;so_ean;False;pendente correto;True;;;;;;0.0;confianca_ocr|lote;6.49
+Regra alinhada (convenção do gabarito);foto07.jpg;so_ean;False;pendente correto;True;;;;;;0.0;confianca_ocr|lote;6.4
+Regra alinhada (convenção do gabarito);foto08.jpg;lote_legivel|validade_mes_ano;True;pendente (legível);;False;;;23;;0.0;confianca_ocr|produto|lote;7.65
+Regra alinhada (convenção do gabarito);foto09.jpg;lote_legivel;True;pendente (legível);;True;;False;JGU 080926;JGU 080926;0.794;confianca_ocr|produto;8.3
+Regra alinhada (convenção do gabarito);foto10.jpg;controle_negativo;False;pendente correto;;;;False;;;0.0;confianca_ocr|produto|lote;6.43
+Regra alinhada (convenção do gabarito);foto11.jpg;lote_legivel|validade_mes_ano;True;pendente (legível);True;True;;;H26H0115;H26H0115;0.695;confianca_ocr;8.64
+Regra alinhada (convenção do gabarito);foto12.jpg;lote_legivel;True;pendente (legível);;True;;True;3260;3260;0.539;confianca_ocr|produto;9.44

@@ -1,2 +1,97 @@
-# GLOBAL_SOLUTION_2026_2
-Recall Seguro · FIAP Global Solution 2026.2 (CitizenTech). IA que rastreia recolhimentos de alimentos da Anvisa: um LLM (Gemini) extrai a regra de lote do alerta oficial, um motor de regras cruza com os estoques das lojas, uma pessoa aprova cada ação e o cidadão consulta a embalagem por foto (OCR). ODS 3.
+# FIAP - Faculdade de Informática e Administração Paulista
+
+<p align="center">
+<a href= "https://www.fiap.com.br/"><img src="assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=40% height=40%></a>
+</p>
+
+<br>
+
+# 🎓 Graduação ON em Inteligência Artificial
+## 📚 Repositório Oficial de Projetos e Trabalhos Acadêmicos
+
+---
+
+## 👩🏻‍💻 Sobre este Repositório
+
+Este repositório tem como objetivo centralizar **todos os trabalhos, projetos, desafios, sprints, entregas e experimentos desenvolvidos durante a Graduação ON em Inteligência Artificial da FIAP**.
+
+Aqui está documentada minha evolução técnica, analítica e estratégica ao longo do curso, contemplando:
+
+- Projetos acadêmicos (PBLs, Global Solutions, Challenges)
+- Implementações práticas de IA e Machine Learning
+- Modelagem de dados e engenharia de dados
+- Experimentos com Deep Learning
+- Aplicações com IA Generativa
+- Integrações com IoT e sensores
+- Documentações técnicas completas
+- Arquiteturas de solução
+- Estudos dirigidos e explorações técnicas
+- ...
+
+Este repositório funciona como um **portfólio técnico estruturado**, evidenciando domínio progressivo das competências exigidas na formação.
+
+---
+
+## 🏆 Entrega em destaque — Global Solution 2026.2 (CitizenTech)
+
+<p align="center"><a href="2TIAO/GLOBAL-SOLUTION-2/README.md"><img src="2TIAO/GLOBAL-SOLUTION-2/docs/img/capa/banner.jpg" alt="Recall Seguro — IA para rastrear recolhimentos de alimentos da Anvisa" width="100%"></a></p>
+
+<p align="center"><img src="2TIAO/GLOBAL-SOLUTION-2/docs/img/destaques/kpis.png" alt="25/26 regras corretas, 0 falsos sem recall, 53 ms, 206 testes" width="100%"></p>
+
+**[Recall Seguro — IA para rastrear recolhimentos de alimentos da Anvisa](2TIAO/GLOBAL-SOLUTION-2/README.md)**
+
+Um LLM extrai a regra de lote dos alertas oficiais, um motor de regras determinístico cruza com os estoques das lojas, uma pessoa aprova cada ação e o cidadão consulta a embalagem por foto. ODS 3 — Saúde e Bem-Estar.
+
+| 📄 PDF da entrega | 🎬 Vídeo | 💻 Repositório | 📊 Resultados |
+|---|---|---|---|
+| [`GS2026-2_Recall_Seguro.pdf`](2TIAO/GLOBAL-SOLUTION-2/docs/GS2026-2_Recall_Seguro.pdf) | `[PREENCHER]` | [GLOBAL_SOLUTION_2026_2](https://github.com/Carlos566487/GLOBAL_SOLUTION_2026_2) | Regra de lote correta em **25/26**, **0** falsos "sem recall", **206** testes |
+
+**Integrantes:** Tayná Esteves (RM562491) · João (RM565999) · Endrew Alves (RM563646) · Carlos Eduardo (RM566487) — **Turma:** `[PREENCHER]`
+
+---
+
+## 🎯 Objetivo
+
+Organizar e versionar todo o fluxo de desenvolvimento acadêmico, garantindo:
+
+- 📌 Organização e rastreabilidade das entregas
+- 📌 Evolução contínua do conhecimento
+- 📌 Documentação clara e técnica
+- 📌 Reprodutibilidade dos experimentos
+- 📌 Portfólio profissional estruturado
+
+---
+
+## 🧠 Estrutura Macro do Repositório
+
+```bash
+📂 FIAP-PORTFOLIO-AI
+│
+├── 📂 1TIAO
+│   ├── 📂 ENTERPRISE-CHALLENGE
+│   ├── 📂 FASE1
+│   │   ├── 📂 CAP-X-NOME-DA-ATIVIDADE-APRESENTADA-NO-PORTAL
+│   ├── 📂 FASE2
+│   ├── 📂 FASE3
+│   ├── 📂 ...
+│   ├── 📂 GLOBAL-SOLUTION-1    
+│   └── 📂 GLOBAL-SOLUTION-2
+│
+├── 📂 2TIAO
+│   ├── 📂 ENTERPRISE-CHALLENGE
+│   ├── 📂 FASE1
+│   │   ├── 📂 CAP-X-NOME-DA-ATIVIDADE-APRESENTADA-NO-PORTAL
+│   ├── 📂 FASE2
+│   ├── 📂 FASE3
+│   ├── 📂 ...
+│   ├── 📂 GLOBAL-SOLUTION-1    
+│   └── 📂 GLOBAL-SOLUTION-2
+│
+└── README.md
+```
+
+---
+
+## 📋 Licença
+
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/fiap-tutoria/FIAP-PORTFOLIO-AI">TEMPLATE - FIAP PORTFÓLIO AI</a> por <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://fiap.com.br">FIAP</a> está licenciado sobre <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
