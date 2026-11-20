@@ -300,7 +300,7 @@ Relatórios completos: [`resultados_extracao.md`](2TIAO/GLOBAL-SOLUTION-2/docs/r
   <a href="https://youtu.be/_yUmZ12cpyI"><img src="https://img.youtube.com/vi/_yUmZ12cpyI/hqdefault.jpg" alt="Vídeo da apresentação do Recall Seguro no YouTube" width="560"></a>
 </p>
 
-<p align="center"><a href="https://youtu.be/_yUmZ12cpyI">https://youtu.be/_yUmZ12cpyI</a> · YouTube, não listado · 8 cenas: problema, solução, extração com IA, painel da rede, consulta do cidadão, governança/LGPD/ODS 3 e encerramento.</p>
+<p align="center"><a href="https://youtu.be/_yUmZ12cpyI">https://youtu.be/_yUmZ12cpyI</a> </p>
 
 ### Painel da rede (React + Vite)
 
