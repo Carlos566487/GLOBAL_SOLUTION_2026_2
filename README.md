@@ -16,7 +16,7 @@
   <img alt="React" src="https://img.shields.io/badge/React-19%20%2B%20Vite-61DAFB?logo=react&logoColor=black">
   <img alt="Gemini" src="https://img.shields.io/badge/LLM-Gemini%203.5%20Flash--Lite-8E75B2?logo=googlegemini&logoColor=white">
   <img alt="OpenCV" src="https://img.shields.io/badge/Vis%C3%A3o-OpenCV%20%C2%B7%20EasyOCR%20%C2%B7%20pyzbar-5C3EE8?logo=opencv&logoColor=white">
-  <img alt="Testes" src="https://img.shields.io/badge/pytest-206%20testes%20%2B%205%20e2e-0A9EDC?logo=pytest&logoColor=white">
+  <img alt="Testes" src="https://img.shields.io/badge/pytest-228%20testes-0A9EDC?logo=pytest&logoColor=white">
   <img alt="ODS 3" src="https://img.shields.io/badge/ODS%203-Sa%C3%BAde%20e%20Bem--Estar-4C9F38">
   <img alt="LGPD" src="https://img.shields.io/badge/LGPD-foto%20n%C3%A3o%20armazenada-555555">
 </p>
@@ -37,7 +37,7 @@
 > Quando a Anvisa publica um recolhimento, a rede de supermercados precisa saber **quais lojas receberam o lote afetado**, e o cidadão precisa saber **se o produto que tem em casa está em recall**. O **Recall Seguro** usa um **LLM para extrair a regra de lote** do texto oficial, um **motor de regras determinístico** para cruzar com os estoques e **uma pessoa para aprovar** cada ação. O cidadão consulta pela **foto da embalagem**.
 
 <p align="center">
-  <img src="2TIAO/GLOBAL-SOLUTION-2/docs/img/destaques/kpis.png" alt="25 de 26 regras de lote corretas; 0 falsos sem recall; 53 ms para 1.000 recebimentos; 206 testes automatizados" width="100%">
+  <img src="2TIAO/GLOBAL-SOLUTION-2/docs/img/destaques/kpis.png" alt="25 de 26 regras de lote corretas; 0 falsos sem recall; cerca de 0,1 s para 1.000 recebimentos; 228 testes automatizados" width="100%">
 </p>
 
 ---
@@ -239,7 +239,7 @@ Contratos de dados e regras do motor: [`docs/arquitetura.md`](2TIAO/GLOBAL-SOLUT
 | 👁️ Visão | **OpenCV** + **EasyOCR** + **pyzbar** | Lote/datas por OCR e EAN por código de barras, sem serviço externo |
 | 🌐 API | **FastAPI** | Um backend para painel e app; OpenAPI automático |
 | 🖥️ Front-end | **React 19 + Vite** | Painel com indicadores, evidência e aprovação |
-| 🧪 Qualidade | **pytest** | 206 testes + 5 de ponta a ponta |
+| 🧪 Qualidade | **pytest** | 228 testes: 194 da IA + 34 do backend (motor, cenários de demo e fluxo do cidadão) |
 
 ---
 
@@ -270,7 +270,7 @@ Contratos de dados e regras do motor: [`docs/arquitetura.md`](2TIAO/GLOBAL-SOLUT
 | 1 · Vaidosa · `lista` | lote `153` × `154` | match → confirmado · sem match | ✅ `confirmado` por `qualidade.loja03`; 2ª decisão → **409** |
 | 2 · Sanibras · `data_corte` | fabricação 12/06 × 13/06 | match (dia limite incluso) · sem match | ✅ |
 | 3 · Vaidosa · lote ilegível | `"   "` e `null` | `verificacao_pendente` `["lote"]` | ✅ |
-| Escala | 1.000 recebimentos · 20 lojas | 501 matches · 126 pendentes | ✅ 501/501 · 126/126 · **53 ms** |
+| Escala | 1.000 recebimentos · 20 lojas | 501 matches · 126 pendentes | ✅ 501/501 · 126/126 · **≈ 0,1 s** (mediana 102 ms, 10 execuções) |
 | 2b · Sanibras com nome comercial | "Whey Protein 900 g", mesmo CNPJ, categoria suplemento | match por fabricante + categoria | ✅ corrigido em 19/11 (antes era falso negativo) |
 
 <p align="center"><img src="2TIAO/GLOBAL-SOLUTION-2/docs/img/graficos/motor_escala.png" alt="Motor com 1.000 recebimentos: 501 matches, 126 pendentes, 373 sem match, todos iguais ao esperado" width="70%"></p>
@@ -325,7 +325,7 @@ Relatórios completos: [`resultados_extracao.md`](2TIAO/GLOBAL-SOLUTION-2/docs/r
 |---|---|---|---|
 | Regra de lote correta | corretas ÷ avaliadas, por tipo | **96%** | ≥ 95% com revisão humana |
 | Falsos "sem recall" | afetados classificados como "sem recall" | **0** | 0 |
-| Tempo de triagem | cronômetro manual × automatizado | **53 ms / 1.000** (manual: a medir) | redução ≥ 90% |
+| Tempo de triagem | cronômetro manual × automatizado | **≈ 0,1 s / 1.000** (mediana; manual: a medir) | redução ≥ 90% |
 | Lojas com ação em 24 h | confirmados ≤ 24 h ÷ matches | — | ≥ 90% |
 | Consultas conclusivas do cidadão | conclusivas ÷ consultas | 0/12 fotos reais | ≥ 60% com guia de enquadramento |
 
@@ -414,6 +414,8 @@ Catálogo de todas as imagens: [`docs/img/README.md`](2TIAO/GLOBAL-SOLUTION-2/do
 - [ ] Cronometrar o fluxo manual e fazer piloto com uma rede real.
 
 Detalhes e responsáveis: [`docs/revisao_entrega_checklist.md`](2TIAO/GLOBAL-SOLUTION-2/docs/revisao_entrega_checklist.md).
+
+> 🔎 **Auditoria final (19/11/2026):** correções do motor e do endpoint do cidadão, 228 testes, classificação de cada componente (validado · experimental · parcial · proposto) e revalidação das métricas em [`docs/auditoria_final.md`](2TIAO/GLOBAL-SOLUTION-2/docs/auditoria_final.md).
 
 ### 🗓️ Cronograma executado
 

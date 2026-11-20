@@ -30,20 +30,25 @@ flowchart LR
 
 Versão em imagem: [`img/diagramas/arquitetura.png`](img/diagramas/arquitetura.png).
 
-## 2. Componentes e estado de implementação
+## 2. Componentes e estado de implementação (auditoria de 19/11/2026)
 
-| # | Componente | Tecnologia | Papel | Estado em 19/11/2026 |
-|---|---|---|---|---|
-| 1 | Coletor de alertas | requests, BeautifulSoup, pdfplumber | Tech Lead | 🟡 `baixar_textos.py` baixa os 20 textos oficiais da avaliação; coleta agendada não implementada |
-| 2 | Extrator LLM | Gemini `gemini-3.5-flash-lite`, schema + few-shot, temp. 0 | IA | ✅ `src/ia/extrator.py` |
-| 3 | Validador | Pydantic v2 | IA | ✅ `src/ia/schemas.py` |
-| 4 | Motor de regras | Python puro | Full-Stack | ✅ `lista`, `sufixo`, `data_corte`, `todos` e escopo `categoria_fabricante` (fabricante + categoria) |
-| 5 | Base de recebimentos | Faker + SQLite | Tech Lead | 🟡 recebimentos simulados nos testes; base SQLite não criada |
-| 6 | Aprovação humana | FastAPI + painel | Full-Stack | ✅ `POST /matches/{id}/decisao` + botões no painel |
-| 7 | Log de auditoria | SQLite append-only | Tech Lead | 🔴 não implementado (decisão fica gravada no próprio match) |
-| 8 | Painel da rede | React + Vite | Full-Stack | ✅ `src/painel` |
-| 9 | Leitor da embalagem | OpenCV + EasyOCR + pyzbar | IA | ✅ `src/ia/embalagem.py` |
-| 10 | App do cidadão | React + Vite | Full-Stack | 🟡 endpoint `POST /cidadao/verificar` validado de ponta a ponta (`tests/test_cidadao_verificar.py`); a pasta `app-cidadao` ainda replica o painel |
+Classificação: **Implementado e validado** · **Implementado, experimental** · **Parcial** · **Proposto (evolução)**. Detalhes e evidências em [`auditoria_final.md`](auditoria_final.md).
+
+| # | Componente | Tecnologia | Classificação |
+|---|---|---|---|
+| 2 | Extrator LLM | Gemini `gemini-3.5-flash-lite`, schema + few-shot, temp. 0 | ✅ Implementado e validado |
+| 3 | Validador | Pydantic v2 | ✅ Implementado e validado |
+| 4 | Motor de regras | Python puro (`lista`, `sufixo`, `data_corte`, `todos`, escopo `categoria_fabricante`) | ✅ Implementado e validado |
+| 6 | Aprovação humana | FastAPI + painel | ✅ Implementado e validado |
+| 8 | Painel da rede | React + Vite | ✅ Implementado e validado (manual) |
+| — | API do cidadão `POST /cidadao/verificar` | FastAPI | ✅ Implementado e validado com imagens simuladas |
+| 9 | Leitor da embalagem | OpenCV + EasyOCR + pyzbar | 🧪 Implementado, experimental (0/12 conclusivas em fotos reais) |
+| 1 | Coletor de alertas | requests, BeautifulSoup | 🟡 Parcial (download dos textos de avaliação; sem agendamento) |
+| — | Contrato v2 do match / vigência | — | 🟡 Parcial (evidência em objeto; `alertas_nao_vigentes.json` não é lido) |
+| 10 | App do cidadão (interface) | React + Vite | ⏳ Proposto (pasta replica o painel) |
+| 5 | Base de recebimentos | Faker + SQLite | ⏳ Proposto (dados simulados só nos testes) |
+| 7 | Log de auditoria | SQLite append-only | ⏳ Proposto |
+| — | Persistência e deploy | SQLite, Vercel/Render | ⏳ Proposto (API em memória, CORS local) |
 
 ## 3. Contratos de dados (resumo)
 
@@ -113,6 +118,7 @@ Formatos 4 (decisão humana) e 7 (evento de auditoria): ver *Arquitetura e papé
 3. `sufixo` — lote **termina exatamente** com o sufixo.
 4. `data_corte` — `data_fabricacao` **≤** `fabricado_ate` (inclui o dia limite). **Nunca usa a validade.**
 5. `todos` — identidade confirmada basta.
+5b. Escopo `categoria_fabricante` — identidade = fabricante (CNPJ; sem CNPJ, razão social) + categoria; o nome comercial não é usado. Fabricante ou categoria ausentes → `verificacao_pendente`.
 6. Dado da regra ausente (lote/fabricação `null`) → `verificacao_pendente` com o campo faltante.
 7. CNPJ igual com marca divergente → match com `revisao_manual`.
 8. **Na dúvida, `verificacao_pendente`.**

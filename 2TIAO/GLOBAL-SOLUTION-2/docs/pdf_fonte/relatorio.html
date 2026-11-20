@@ -75,14 +75,14 @@
 <!-- ================= SUMÁRIO + RESUMO ================= -->
 <section class="page-break">
   <h2>Resumo</h2>
-  <p>Quando a Anvisa publica um recolhimento de alimento, a rede de supermercados precisa responder rapidamente <i>"quais lojas receberam esse lote?"</i> e o consumidor precisa saber se o produto que tem em casa está afetado. Os alertas, porém, chegam em texto livre e descrevem o lote de quatro formas diferentes (lista de lotes, final do lote, data de fabricação limite ou todos os lotes). O <b>Recall Seguro</b> é uma prova de conceito em que um <b>LLM (Google Gemini) extrai a regra de lote</b> do texto oficial em JSON validado, um <b>motor de regras determinístico</b> cruza essa regra com os recebimentos das lojas e <b>uma pessoa aprova</b> cada ação. O cidadão fotografa a embalagem e um <b>leitor local de OCR e código de barras</b> devolve <code>em_recall</code>, <code>sem_recall</code> ou <code>verificacao_pendente</code>, sem armazenar a foto.</p>
-  <p>Em 15 recolhimentos reais nunca vistos pelo prompt, a regra de lote foi extraída corretamente em <b>25 de 26 registros (96%)</b>, sem nenhum falso "sem recall" e sem alucinações. O motor reproduziu os três cenários de demonstração e classificou corretamente 1.000 recebimentos simulados em 53 ms. Nas 12 fotos reais, o leitor não cometeu nenhum erro confiante. A solução se relaciona ao <b>ODS 3 — Saúde e Bem-Estar</b>.</p>
+  <p>Quando a Anvisa publica um recolhimento de alimento, a rede de supermercados precisa responder rapidamente <i>"quais lojas receberam esse lote?"</i> e o consumidor precisa saber se o produto que tem em casa está afetado. Os alertas, porém, chegam em texto livre e descrevem o lote de quatro formas diferentes (lista de lotes, final do lote, data de fabricação limite ou todos os lotes). O <b>Recall Seguro</b> é uma prova de conceito em que um <b>LLM (Google Gemini) extrai a regra de lote</b> do texto oficial em JSON validado, um <b>motor de regras determinístico</b> cruza essa regra com os recebimentos das lojas e <b>uma pessoa aprova</b> cada ação. Para o cidadão, a API recebe a foto da embalagem e um <b>leitor local de OCR e código de barras</b> devolve <code>em_recall</code>, <code>sem_recall</code> ou <code>verificacao_pendente</code>, sem armazenar a foto; a interface do aplicativo ainda não foi concluída, e o fluxo foi validado pela API.</p>
+  <p>Em 15 recolhimentos reais nunca vistos pelo prompt, a regra de lote foi extraída corretamente em <b>25 de 26 registros (96%)</b>, sem nenhum falso "sem recall" e sem alucinações. O motor reproduziu os três cenários de demonstração e classificou corretamente 1.000 recebimentos simulados (mediana de 0,1 s em 10 execuções). Uma auditoria em 19/11 encontrou e corrigiu um falso negativo em recalls que abrangem uma categoria inteira de um fabricante. Nas 12 fotos reais, o leitor não cometeu nenhum erro confiante. A solução se relaciona ao <b>ODS 3 — Saúde e Bem-Estar</b>.</p>
 
   <div class="kpis">
     <div class="kpi"><b>25/26</b><span>regras de lote extraídas corretamente</span></div>
-    <div class="kpi"><b>0</b><span>falsos "sem recall" (extração, motor, OCR)</span></div>
-    <div class="kpi"><b>53 ms</b><span>para cruzar 1.000 recebimentos de 20 lojas</span></div>
-    <div class="kpi"><b>206</b><span>testes automatizados + 5 de ponta a ponta</span></div>
+    <div class="kpi"><b>0</b><span>falsos "sem recall" (extração, motor, OCR) após a correção de 19/11</span></div>
+    <div class="kpi"><b>≈ 0,1 s</b><span>para cruzar 1.000 recebimentos de 20 lojas (mediana)</span></div>
+    <div class="kpi"><b>228</b><span>testes automatizados (194 IA + 34 backend)</span></div>
   </div>
 
   <div class="toc">
@@ -144,6 +144,14 @@
     <li><b>Linha 2 — Rede de supermercados:</b> recebimentos (base simulada) → motor de regras → match com evidência → aprovação humana → painel.</li>
     <li><b>Linha 3 — Cidadão:</b> foto da embalagem → leitor OCR + EAN (local) → motor → resposta com orientação e fonte.</li>
   </ul>
+  <p><b>Estado de implementação (auditoria de 19/11/2026).</b> A Figura 1 mostra a arquitetura-alvo; nem todos os componentes estão operacionais na POC:</p>
+  <table>
+    <tr><th>Classificação</th><th>Componentes</th></tr>
+    <tr><td class="ok">Implementado e validado</td><td>Extrator LLM (2), validador (3), motor de regras (4), aprovação humana (6), painel da rede (8), API do cidadão <code>POST /cidadao/verificar</code></td></tr>
+    <tr><td class="warn">Implementado, experimental</td><td>Leitor da embalagem (9): nenhuma resposta conclusiva em fotos reais</td></tr>
+    <tr><td class="warn">Parcialmente implementado</td><td>Coletor (1): baixa os textos de avaliação, sem agendamento; contrato v2 do match; lista de alertas não vigentes (existe, mas não é lida)</td></tr>
+    <tr><td class="bad">Proposto como evolução</td><td>Interface do app do cidadão (10), base de recebimentos SQLite/Faker (5), log de auditoria append-only (7), persistência (a API guarda dados em memória) e deploy</td></tr>
+  </table>
   <p>Um único backend FastAPI atende painel e cidadão pelos endpoints <code>POST /alertas/coletar</code>, <code>GET /alertas</code>, <code>POST /motor/processar</code>, <code>GET /matches</code>, <code>POST /matches/{id}/decisao</code> e <code>POST /cidadao/verificar</code>. Os componentes se comunicam por <b>sete contratos JSON</b> acordados pelo grupo antes da implementação (alerta extraído, recebimento, match, decisão humana, leitura da embalagem, resposta ao cidadão e evento de auditoria), o que permitiu aos quatro papéis trabalhar em paralelo.</p>
 
   <h3>2.2 Tecnologias e justificativas</h3>
@@ -155,7 +163,7 @@
     <tr><td>Visão computacional</td><td>OpenCV (CLAHE) + EasyOCR + pyzbar</td><td>Lote/datas por OCR e EAN por código de barras, <b>tudo local</b>: a foto não sai da máquina</td></tr>
     <tr><td>API</td><td>FastAPI</td><td>Um backend para painel e app; validação e documentação OpenAPI automáticas</td></tr>
     <tr><td>Front-end</td><td>React 19 + Vite</td><td>Painel com indicadores, evidência e aprovação</td></tr>
-    <tr><td>Qualidade</td><td>pytest</td><td>206 testes unitários + 5 testes de ponta a ponta</td></tr>
+    <tr><td>Qualidade</td><td>pytest</td><td>228 testes automatizados: 194 da IA + 34 do backend (motor, cenários e cidadão)</td></tr>
   </table>
 </section>
 
@@ -243,13 +251,35 @@ def _calcular_pendencias(self) -> "AlertaExtraido":
     <tr><td>1 · Vaidosa · <code>lista</code></td><td>Loja A lote 153; Loja B lote 154</td><td>A: match → confirmado; B: sem match</td><td class="ok">✔ A <code>aguardando_aprovacao</code> → <code>confirmado</code> (qualidade.loja03); nova decisão → 409; B <code>sem_match</code></td></tr>
     <tr><td>2 · Sanibras · <code>data_corte</code></td><td>Fabricação 12/06 × 13/06/2026</td><td>A: match (dia limite incluso); B: sem match</td><td class="ok">✔ evidência <code>data_fabricacao</code> 2026-06-12</td></tr>
     <tr><td>3 · Vaidosa · lote ilegível</td><td>Lote vazio e <code>null</code></td><td><code>verificacao_pendente</code> com <code>["lote"]</code></td><td class="ok">✔ nenhum match conclusivo</td></tr>
-    <tr><td>Escala</td><td>1.000 recebimentos, 20 lojas</td><td>501 matches; 126 pendentes</td><td class="ok">✔ 501/501; 126/126; 53 ms</td></tr>
+    <tr><td>Escala</td><td>1.000 recebimentos, 20 lojas</td><td>501 matches; 126 pendentes</td><td class="ok">✔ 501/501; 126/126; ≈ 0,1 s (mediana de 10 execuções)</td></tr>
     <tr><td>2b · Sanibras com nome comercial</td><td>"Whey Protein 900 g", mesmo CNPJ, categoria suplemento</td><td>match por fabricante + categoria</td><td class="ok">✔ corrigido em 19/11 (antes: falso negativo)</td></tr>
   </table>
   <figure style="width:82%;margin-left:auto;margin-right:auto">
     <img src="../img/graficos/motor_escala.png" alt="Motor em escala">
-    <figcaption>Figura 4 — Motor de regras com 1.000 recebimentos simulados: todas as contagens iguais às esperadas.</figcaption>
+    <figcaption>Figura 4 — Motor de regras com 1.000 recebimentos simulados: todas as contagens iguais às esperadas. Tempo: mediana de 102 ms pela API (87–136 ms em 10 execuções, 2 vCPUs); uma medição única anterior registrou 53 ms.</figcaption>
   </figure>
+</section>
+
+<section class="page-break">
+  <h3>3.2.1 Correção do escopo <code>categoria_fabricante</code> (auditoria de 19/11)</h3>
+  <p>A auditoria encontrou dois caminhos para um falso "sem recall" quando o alerta abrange uma categoria inteira de um fabricante (ex.: "todos os suplementos da Sanibras fabricados até 12/06/2026"): (i) o motor comparava o nome do produto e recusava "Whey Protein 900 g"; (ii) o endpoint do cidadão respondia <code>sem_recall</code> para essa embalagem. A identidade passou a ser <b>fabricante (CNPJ ou razão social) + categoria</b>, preservando a regra de data; sem esses dados, a resposta é <code>verificacao_pendente</code>. Os seis testes novos falham no código original e passam no corrigido.</p>
+  <figure><img src="../img/evidencias/print_correcao_categoria_fabricante.png" alt="Antes e depois da correção"><figcaption>Figura 4a — Mesmos testes no código original (6 falhas) e no corrigido (todos aprovados).</figcaption></figure>
+  <figure style="width:92%;margin-left:auto;margin-right:auto"><img src="../img/evidencias/print_pytest_backend.png" alt="pytest backend"><figcaption>Figura 4b — Suíte do backend: 34 testes aprovados (motor, cenários de demo e fluxo do cidadão), com EasyOCR instalado.</figcaption></figure>
+</section>
+
+<section class="page-break">
+  <h3>3.2.2 Fluxo do cidadão pela API</h3>
+  <p>Com o backend em execução e o alerta oficial da Vaidosa carregado, as imagens foram enviadas a <code>POST /cidadao/verificar</code>. Além do código HTTP, conferiu-se se o resultado está semanticamente correto.</p>
+  <table>
+    <tr><th>Imagem</th><th>Tipo</th><th>Esperado</th><th>Obtido</th></tr>
+    <tr><td>demo_vaidosa_153.png</td><td>simulada</td><td><code>em_recall</code></td><td class="ok">✔ em_recall (lote 153, confiança 0,99)</td></tr>
+    <tr><td>demo_vaidosa_154.png</td><td>simulada</td><td><code>sem_recall</code></td><td class="ok">✔ sem_recall</td></tr>
+    <tr><td>demo_ilegivel.png</td><td>simulada</td><td><code>verificacao_pendente</code></td><td class="ok">✔ pendente (lote)</td></tr>
+    <tr><td>foto03, foto09, foto10, foto11</td><td>reais</td><td><code>verificacao_pendente</code></td><td class="ok">✔ pendente (produto fora do catálogo da POC ou lote ilegível)</td></tr>
+    <tr><td>imagem vazia</td><td>—</td><td>HTTP 400</td><td class="ok">✔ HTTP 400</td></tr>
+  </table>
+  <p>Nenhuma foto real gerou resposta conclusiva, e nenhum arquivo de imagem foi gravado no servidor. A <b>interface do aplicativo do cidadão não está operacional</b>: a pasta <code>src/app-cidadao</code> ainda replica o painel; a validação foi feita pela API e pela documentação interativa (Swagger).</p>
+  <figure style="width:96%;margin-left:auto;margin-right:auto"><img src="../img/evidencias/print_cidadao_resultados.png" alt="Resultados do cidadão"><figcaption>Figura 4c — Sete consultas ao endpoint do cidadão.</figcaption></figure>
 </section>
 
 <section class="page-break">
@@ -274,7 +304,7 @@ def _calcular_pendencias(self) -> "AlertaExtraido":
     <li><b>0/12 erros confiantes</b> — o leitor nunca deu uma resposta conclusiva com lote ou EAN errado.</li>
     <li><b>EAN 6/6</b> e <b>lote 4/7</b>, nenhum campo lido com valor errado (só "não lido").</li>
     <li><b>0/12 respostas conclusivas</b> em fotos reais: confiança abaixo de 0,8 ou EAN fora do quadro. O comportamento é seguro, porém conservador.</li>
-    <li>A convenção de delimitação do lote foi alinhada ao gabarito após a inspeção das fotos; por transparência, as duas versões são reportadas (lote 3/7 na regra original e 4/7 na alinhada).</li>
+    <li>A convenção de delimitação do lote foi alinhada ao gabarito após a inspeção das fotos; por transparência, as duas versões são reportadas; os totais da regra alinhada foram reproduzidos em 19/11, e a "regra original" é um resultado histórico que depende do histórico git do repositório anterior (lote 3/7 na regra original e 4/7 na alinhada).</li>
   </ul>
   <div class="two">
     <figure><img src="../../data/fotos_teste/foto11.jpg" alt="Foto real de embalagem"><figcaption>Figura 9 — Foto real (foto11): lote <code>H26H0115</code> e EAN lidos; confiança 0,69 → pendente.</figcaption></figure>
@@ -290,7 +320,7 @@ def _calcular_pendencias(self) -> "AlertaExtraido":
     <tr><th>Indicador</th><th>Como medir</th><th>Valor na POC</th><th>Meta em piloto</th></tr>
     <tr><td>Acerto da regra de lote extraída</td><td>Regras corretas ÷ alertas avaliados, por tipo</td><td>96% (25/26)</td><td>≥ 95%, com revisão humana</td></tr>
     <tr><td>Falsos "sem recall"</td><td>Pares alerta–recebimento afetados classificados como "sem recall"</td><td>0</td><td>0</td></tr>
-    <tr><td>Tempo de triagem</td><td>Cronômetro: fluxo manual × automatizado, mesmos alertas e lojas</td><td>Automatizado: 53 ms / 1.000 recebimentos; manual: a medir</td><td>Redução ≥ 90%</td></tr>
+    <tr><td>Tempo de triagem</td><td>Cronômetro: fluxo manual × automatizado, mesmos alertas e lojas</td><td>Automatizado: ≈ 0,1 s / 1.000 recebimentos (mediana); manual: a medir</td><td>Redução ≥ 90%</td></tr>
     <tr><td>Lojas com ação confirmada em 24 h</td><td>Matches confirmados ≤ 24 h ÷ matches gerados</td><td>—</td><td>≥ 90%</td></tr>
     <tr><td>Consultas do cidadão conclusivas</td><td>Respostas <code>em_recall</code>/<code>sem_recall</code> ÷ consultas</td><td>0/12 fotos reais</td><td>≥ 60% com guia de enquadramento</td></tr>
   </table>
@@ -298,8 +328,9 @@ def _calcular_pendencias(self) -> "AlertaExtraido":
 
   <!-- ================= 5. CONCLUSÕES ================= -->
   <h2>5. Conclusões</h2>
-  <p>A POC confirmou que a IA generativa é útil exatamente na etapa em que os alertas são heterogêneos — transformar texto oficial em uma regra estruturada — e que é possível usá-la sem entregar a decisão ao modelo. O desenho "LLM extrai, regras decidem, pessoa aprova", com o estado <code>verificacao_pendente</code> como rede de segurança, produziu <b>zero falsos "sem recall"</b> em todas as etapas avaliadas: extração, cruzamento e leitura da embalagem.</p>
+  <p>A POC confirmou que a IA generativa é útil exatamente na etapa em que os alertas são heterogêneos — transformar texto oficial em uma regra estruturada — e que é possível usá-la sem entregar a decisão ao modelo. O desenho "LLM extrai, regras decidem, pessoa aprova", com o estado <code>verificacao_pendente</code> como rede de segurança, produziu <b>zero falsos "sem recall"</b> em todas as etapas avaliadas — extração, cruzamento e leitura da embalagem — após a correção de 19/11 do escopo <code>categoria_fabricante</code>, que eliminou um falso negativo encontrado na auditoria.</p>
   <p><b>Aprendizados.</b> (1) Separar exemplos e reservados antes de escrever o prompt evitou métricas infladas; (2) reportar "contra o gabarito" e "sobre o recuperável" separou erro do modelo de informação ausente no texto; (3) a identidade do produto precisa vir antes do lote; (4) num contexto de saúde, um leitor de OCR conservador é preferível a um confiante.</p>
+  <p><b>Testes.</b> 228 testes automatizados (194 da IA + 34 do backend). Três falhas conhecidas são de ambiente, não de lógica: um teste depende de um commit do histórico do repositório anterior, e dois redesenham as imagens da demo com uma fonte indisponível no ambiente de verificação.</p>
   <p><b>Limitações e próximos passos.</b></p>
   <ul>
     <li><b>Corrigido em 19/11:</b> o escopo <code>categoria_fabricante</code> (caso Sanibras com nome comercial) passou a ser tratado por fabricante + categoria, com <code>verificacao_pendente</code> quando um deles falta.</li>

@@ -71,7 +71,7 @@ f,ax=plt.subplots(figsize=(7,2.8))
 lab=["Matches (lote na lista)","Pendentes (lote ausente)","Sem match"]; obs=[501,126,373]
 ax.barh(lab[::-1],obs[::-1],color=[GR,B2,B1][::-1] if False else [GR,B2,B1],height=0.55)
 for i,x in enumerate(obs[::-1]): ax.text(x+8,i,f"{x}  (esperado {x})",va="center",color=INK)
-ax.set_xlim(0,820); ax.set_title("Motor de regras: 1.000 recebimentos simulados, 20 lojas, 53 ms"); ax.set_xlabel("recebimentos"); ax.xaxis.grid(True,color="#eeede9"); ax.set_axisbelow(True)
+ax.set_xlim(0,820); ax.set_title("Motor de regras: 1.000 recebimentos simulados, 20 lojas (mediana ≈ 0,1 s)"); ax.set_xlabel("recebimentos"); ax.xaxis.grid(True,color="#eeede9"); ax.set_axisbelow(True)
 save(f,"motor_escala.png")
 
 

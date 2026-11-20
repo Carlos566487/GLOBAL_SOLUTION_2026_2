@@ -3,6 +3,7 @@
 | Arquivo | Conteúdo |
 |---|---|
 | `GS2026-2_Recall_Seguro.pdf` | **PDF único da entrega** (Introdução, Desenvolvimento, Resultados, Conclusões) |
+| `auditoria_final.md` | **Auditoria final (19/11)**: correções, testes, classificação dos componentes, revalidação das métricas e correções necessárias no relatório |
 | `arquitetura.md` | Diagrama (Mermaid), componentes e estado, contratos de dados e regras do motor |
 | `evidencias_testes.md` | Execução das suítes pytest, cenários de demo pela API, teste de escala e captura do painel |
 | `revisao_entrega_checklist.md` | Entregáveis × requisitos da GS 2026.2 e prioridades até o prazo |

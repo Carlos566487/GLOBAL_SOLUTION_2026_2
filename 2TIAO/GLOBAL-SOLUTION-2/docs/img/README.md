@@ -21,7 +21,7 @@ Todas as imagens usadas no [README do projeto](../../README.md), no [PDF da entr
 |---|---|---|---|
 | <img src="capa/banner.jpg" width="220"> `capa/banner.jpg` | Banner: nome, proposta e fluxo em 4 passos | `fontes/visuais.html` (#banner) | README |
 | <img src="capa/logo-fiap.png" width="120"> `capa/logo-fiap.png` | Logo FIAP | template FIAP-PORTFOLIO-AI | PDF (capa) |
-| <img src="destaques/kpis.png" width="220"> `destaques/kpis.png` | 25/26 regras corretas · 0 falsos "sem recall" · 53 ms · 206 testes | `fontes/visuais.html` (#kpis) | README |
+| <img src="destaques/kpis.png" width="220"> `destaques/kpis.png` | 25/26 regras corretas · 0 falsos "sem recall" · ≈ 0,1 s · 228 testes | `fontes/visuais.html` (#kpis) | README |
 | <img src="destaques/fluxo.png" width="220"> `destaques/fluxo.png` | Coleta → extração → cruzamento → decisão humana | `fontes/visuais.html` (#fluxo) | README |
 | <img src="destaques/principios.png" width="220"> `destaques/principios.png` | LLM só extrai · na dúvida, pendente · foto não é guardada | `fontes/visuais.html` (#principios) | README |
 

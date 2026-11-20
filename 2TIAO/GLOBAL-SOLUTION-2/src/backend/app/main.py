@@ -234,6 +234,11 @@ async def verificar_cidadao(
     ]
 
     candidatos = []
+    # Alertas de escopo "categoria_fabricante" (ex.: todos os suplementos de
+    # um fabricante) não se confirmam pelo nome do produto, e a leitura da
+    # embalagem não traz CNPJ nem categoria. Se a marca bate, a resposta
+    # segura é verificacao_pendente — nunca um "sem_recall".
+    pendencias_categoria: list[str] = []
 
     for alerta in alertas_validos:
         produto_compativel = (
@@ -246,10 +251,15 @@ async def verificar_cidadao(
             == normalizar_texto(leitura.marca)
         )
 
+        if alerta.get("escopo") == "categoria_fabricante":
+            if marca_compativel:
+                pendencias_categoria.extend(["fabricante", "categoria"])
+            continue
+
         if produto_compativel and marca_compativel:
             candidatos.append(alerta)
 
-    if not candidatos:
+    if not candidatos and not pendencias_categoria:
         return {
             "resultado": "sem_recall",
             "orientacao": (
@@ -272,7 +282,7 @@ async def verificar_cidadao(
         ),
     }
 
-    pendencias_encontradas = []
+    pendencias_encontradas = list(pendencias_categoria)
 
     for alerta in candidatos:
         tipo_regra = (

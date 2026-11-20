@@ -269,7 +269,23 @@ def avaliar_recebimento(
                 "evidencia": comparacoes,
             }
 
-        revisoes: list[str] = []
+        # Identidade confirmada: aplica a regra de lote/data normalmente e
+        # anexa à evidência as comparações de fabricante e categoria.
+        resultado = avaliar_recebimento(
+            {**alerta, "escopo": "produto"},
+            {
+                **recebimento,
+                "produto": alerta.get("produto"),
+                "marca": alerta.get("marca"),
+                "cnpj": alerta.get("cnpj"),
+            },
+        )
+        if isinstance(resultado.get("evidencia"), dict):
+            resultado["evidencia"] = {
+                **resultado["evidencia"],
+                "identidade": comparacoes,
+            }
+        return resultado
     else:
         identidade_compativel, revisoes = _identidade_produto(
             alerta,

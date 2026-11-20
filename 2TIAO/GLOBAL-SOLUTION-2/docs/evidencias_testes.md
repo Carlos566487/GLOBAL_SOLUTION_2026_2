@@ -1,13 +1,13 @@
 # Evidências de testes
 
-Registro das execuções usadas no README e no PDF. Executado em **19/11/2026**.
+Registro das execuções usadas no README e no PDF. Executado em **19/11/2026**. Auditoria completa (métricas, arquitetura e correções do PDF): [`auditoria_final.md`](auditoria_final.md).
 
 ## 1. Suítes automatizadas (pytest)
 
 | Suíte | Comando (a partir de `src/`) | Resultado |
 |---|---|---|
 | IA — schemas, prompt, extrator, Gemini, métricas, leitor OCR | `cd ia && python -m pytest` | **187 passed, 6 skipped, 1 failed** (194 testes) |
-| Backend completo — motor (18), cenários de demo (5) e fluxo do cidadão (4) | `cd backend && python -m pytest -v` | **27 passed** (com EasyOCR instalado; sem ele, 23 passed e 1 skipped) |
+| Backend completo — motor (18), cenários de demo (5), decisão do cidadão (7) e cidadão ponta a ponta com OCR (4) | `cd backend && python -m pytest -v` | **34 passed** (com EasyOCR instalado; sem ele, 30 passed e 1 módulo skipped) |
 
 ![pytest do backend](img/evidencias/print_pytest_backend.png)
 
@@ -82,7 +82,7 @@ Lote só com espaços e lote `null` ficam pendentes; nenhum match conclusivo é 
 
 | Recebimentos | Lojas | Matches (esperado) | Pendentes (esperado) | Tempo |
 |---|---|---|---|---|
-| 1.000 | 20 | **501 (501)** | **126 (126)** | **53 ms** |
+| 1.000 | 20 | **501 (501)** | **126 (126)** | **≈ 0,1 s** — mediana 102 ms (87–136 ms) em 10 execuções pela API; só o motor: mediana 27 ms. Medição única anterior: 53 ms |
 
 ![Motor em escala](img/graficos/motor_escala.png)
 
@@ -124,5 +124,5 @@ Observação: o alerta `bento` (sem regra de lote, `verificacao_pendente`) apare
 
 ## 6. Ainda não medido
 
-- **Tempo manual × automatizado** com cronômetro e o mesmo conjunto de alertas e recebimentos (métrica prevista na Nota de Produto). O tempo automatizado já está medido (53 ms / 1.000 recebimentos); falta o fluxo manual.
+- **Tempo manual × automatizado** com cronômetro e o mesmo conjunto de alertas e recebimentos (métrica prevista na Nota de Produto). O tempo automatizado já está medido (≈ 0,1 s / 1.000 recebimentos, mediana); falta o fluxo manual.
 - **Interface do app do cidadão** (a API já foi validada; falta a tela).

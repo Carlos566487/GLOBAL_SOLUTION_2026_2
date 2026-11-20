@@ -10,7 +10,7 @@ Revisão feita em **19/11/2026** comparando o repositório com o edital *GlobalS
 | Componente funcional com tecnologia do curso | ✅ | Extrator LLM, validador, motor, API e painel funcionando |
 | Resultado objetivo (tabela, gráfico, indicador, tela) | ✅ | Painel com indicadores; gráficos em `docs/img/`; relatórios de extração e OCR |
 | Ao menos uma abordagem atual de IA / automação / IoT | ✅ | IA Generativa (Gemini + schema) e visão computacional (EasyOCR + pyzbar) |
-| Evidência de testes + limitações | ✅ | `docs/evidencias_testes.md`; 206 testes + 5 de ponta a ponta; limitações no README §10 |
+| Evidência de testes + limitações | ✅ | `docs/evidencias_testes.md`; 228 testes (194 IA + 34 backend); limitações no README §10 |
 | Vídeo até 5 min (YouTube não listado) | 🔴 | Gravar, publicar e colar o link no README e no PDF. Dizer **"QUERO CONCORRER"** nos primeiros segundos |
 | ODS + forma de medir impacto | ✅ | ODS 3, tabela de indicadores no README §6 |
 | PDF único (Intro, Desenvolvimento, Resultados, Conclusões) | 🟡 | `docs/GS2026-2_Recall_Seguro.pdf` gerado; nomes e RMs preenchidos; **faltam turma e link do vídeo** na capa |
@@ -41,7 +41,7 @@ Revisão feita em **19/11/2026** comparando o repositório com o edital *GlobalS
 |---|---|
 | Acerto da extração por tipo de regra, recolhimento e registro | ✅ `resultados_extracao.md` |
 | Falsos positivos / negativos do cruzamento | ✅ cenários 1–3, 2b e escala (0 FP, 0 FN); o FN do escopo `categoria_fabricante` foi corrigido |
-| Tempo manual × automatizado | 🟡 automatizado medido (53 ms / 1.000); manual não cronometrado |
+| Tempo manual × automatizado | 🟡 automatizado medido (≈ 0,1 s / 1.000; mediana de 10 execuções); manual não cronometrado |
 | Leitura da embalagem em 10–15 fotos | ✅ 12 fotos |
 
 ## 4. Prioridade sugerida até o prazo (20/11)
