@@ -244,7 +244,7 @@ def _calcular_pendencias(self) -> "AlertaExtraido":
     <tr><td>2 · Sanibras · <code>data_corte</code></td><td>Fabricação 12/06 × 13/06/2026</td><td>A: match (dia limite incluso); B: sem match</td><td class="ok">✔ evidência <code>data_fabricacao</code> 2026-06-12</td></tr>
     <tr><td>3 · Vaidosa · lote ilegível</td><td>Lote vazio e <code>null</code></td><td><code>verificacao_pendente</code> com <code>["lote"]</code></td><td class="ok">✔ nenhum match conclusivo</td></tr>
     <tr><td>Escala</td><td>1.000 recebimentos, 20 lojas</td><td>501 matches; 126 pendentes</td><td class="ok">✔ 501/501; 126/126; 53 ms</td></tr>
-    <tr><td>2b · Sanibras com nome comercial</td><td>"Whey Protein 900 g", mesmo CNPJ</td><td>match (escopo do fabricante)</td><td class="bad">✘ sem_match — lacuna conhecida (teste <code>xfail</code>)</td></tr>
+    <tr><td>2b · Sanibras com nome comercial</td><td>"Whey Protein 900 g", mesmo CNPJ, categoria suplemento</td><td>match por fabricante + categoria</td><td class="ok">✔ corrigido em 19/11 (antes: falso negativo)</td></tr>
   </table>
   <figure style="width:82%;margin-left:auto;margin-right:auto">
     <img src="../img/graficos/motor_escala.png" alt="Motor em escala">
@@ -302,7 +302,7 @@ def _calcular_pendencias(self) -> "AlertaExtraido":
   <p><b>Aprendizados.</b> (1) Separar exemplos e reservados antes de escrever o prompt evitou métricas infladas; (2) reportar "contra o gabarito" e "sobre o recuperável" separou erro do modelo de informação ausente no texto; (3) a identidade do produto precisa vir antes do lote; (4) num contexto de saúde, um leitor de OCR conservador é preferível a um confiante.</p>
   <p><b>Limitações e próximos passos.</b></p>
   <ul>
-    <li>Implementar o <b>escopo <code>categoria_fabricante</code></b> no motor (falso negativo identificado no caso Sanibras com nome comercial).</li>
+    <li><b>Corrigido em 19/11:</b> o escopo <code>categoria_fabricante</code> (caso Sanibras com nome comercial) passou a ser tratado por fabricante + categoria, com <code>verificacao_pendente</code> quando um deles falta.</li>
     <li>Implementar o <b>coletor agendado</b>, a <b>base SQLite de recebimentos</b> e o <b>log de auditoria append-only</b> (hoje a API guarda dados em memória).</li>
     <li>Concluir a <b>tela do app do cidadão</b> (upload da foto → <code>POST /cidadao/verificar</code>) e guiar o enquadramento (lote + EAN no mesmo quadro, correção de rotação).</li>
     <li>Ampliar o golden set com os 7 recolhimentos não rotulados e casos de <code>sufixo</code>; cronometrar o fluxo manual.</li>

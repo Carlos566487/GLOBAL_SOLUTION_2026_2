@@ -271,7 +271,7 @@ Contratos de dados e regras do motor: [`docs/arquitetura.md`](docs/arquitetura.m
 | 2 · Sanibras · `data_corte` | fabricação 12/06 × 13/06 | match (dia limite incluso) · sem match | ✅ |
 | 3 · Vaidosa · lote ilegível | `"   "` e `null` | `verificacao_pendente` `["lote"]` | ✅ |
 | Escala | 1.000 recebimentos · 20 lojas | 501 matches · 126 pendentes | ✅ 501/501 · 126/126 · **53 ms** |
-| 2b · Sanibras com nome comercial | "Whey Protein 900 g" | match | ❌ lacuna conhecida (teste `xfail`) |
+| 2b · Sanibras com nome comercial | "Whey Protein 900 g", mesmo CNPJ, categoria suplemento | match por fabricante + categoria | ✅ corrigido em 19/11 (antes era falso negativo) |
 
 <p align="center"><img src="docs/img/graficos/motor_escala.png" alt="Motor com 1.000 recebimentos: 501 matches, 126 pendentes, 373 sem match, todos iguais ao esperado" width="70%"></p>
 
@@ -407,9 +407,9 @@ Catálogo de todas as imagens: [`docs/img/README.md`](docs/img/README.md).
 
 ## 🚧 Limitações e próximos passos
 
-- [ ] Escopo `categoria_fabricante` no motor (falso negativo Sanibras com nome comercial — teste `xfail`).
+- [x] Escopo `categoria_fabricante` no motor: identidade por fabricante (CNPJ ou razão social) + categoria; dado ausente → `verificacao_pendente` (corrigido em 19/11).
 - [ ] Coletor agendado, base SQLite de recebimentos e log de auditoria append-only (hoje a API guarda dados em memória).
-- [ ] Tela do app do cidadão (`app-cidadao` ainda replica o painel; o endpoint `POST /cidadao/verificar` está implementado, sem teste de ponta a ponta).
+- [ ] Tela do app do cidadão (`app-cidadao` ainda replica o painel). O endpoint `POST /cidadao/verificar` foi validado de ponta a ponta com as 3 imagens da demo (`em_recall`, `sem_recall`, `verificacao_pendente`).
 - [ ] OCR: guia de enquadramento (lote + EAN no mesmo quadro) e correção de rotação.
 - [ ] Cronometrar o fluxo manual e fazer piloto com uma rede real.
 

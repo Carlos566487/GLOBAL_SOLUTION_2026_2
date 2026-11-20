@@ -7,6 +7,7 @@ from typing import Any
 
 
 TIPOS_REGRA = {"lista", "sufixo", "data_corte", "todos"}
+ESCOPO_CATEGORIA_FABRICANTE = "categoria_fabricante"
 
 
 def normalizar_lote(valor: str | None) -> str | None:
@@ -129,6 +130,76 @@ def _identidade_produto(
     return True, revisoes
 
 
+def _identidade_categoria_fabricante(
+    alerta: dict[str, Any],
+    recebimento: dict[str, Any],
+) -> tuple[str, list[str], list[dict[str, Any]]]:
+    """
+    Identidade para alertas com escopo ``categoria_fabricante`` (contrato v2).
+
+    Confirma o FABRICANTE (CNPJ; sem CNPJ em um dos lados, razão social
+    normalizada) e a CATEGORIA. O nome comercial do produto não é usado.
+
+    Retorna ``(situacao, motivos, comparacoes)``:
+        - ``"confirmada"``: mesmo fabricante e mesma categoria;
+        - ``"diferente"``: fabricante ou categoria comprovadamente diferentes;
+        - ``"pendente"``: algum dado necessário está ausente. Na dúvida, o
+          motor nunca presume que o produto está fora do recall.
+    """
+    pendentes: list[str] = []
+    comparacoes: list[dict[str, Any]] = []
+
+    # 1) Fabricante: CNPJ tem prioridade; razão social é o fallback.
+    cnpj_alerta = normalizar_cnpj(alerta.get("cnpj"))
+    cnpj_recebimento = normalizar_cnpj(recebimento.get("cnpj"))
+
+    if cnpj_alerta and cnpj_recebimento:
+        comparacoes.append({
+            "campo": "cnpj",
+            "operador": "igual",
+            "valor_alerta": alerta.get("cnpj"),
+            "valor_recebimento": recebimento.get("cnpj"),
+        })
+        if cnpj_alerta != cnpj_recebimento:
+            return "diferente", [], comparacoes
+    else:
+        fabricante_alerta = normalizar_texto(alerta.get("fabricante"))
+        fabricante_recebimento = normalizar_texto(recebimento.get("fabricante"))
+
+        if fabricante_alerta and fabricante_recebimento:
+            comparacoes.append({
+                "campo": "fabricante",
+                "operador": "igual",
+                "valor_alerta": alerta.get("fabricante"),
+                "valor_recebimento": recebimento.get("fabricante"),
+            })
+            if fabricante_alerta != fabricante_recebimento:
+                return "diferente", [], comparacoes
+        else:
+            pendentes.append("fabricante")
+
+    # 2) Categoria do produto.
+    categoria_alerta = normalizar_texto(alerta.get("categoria"))
+    categoria_recebimento = normalizar_texto(recebimento.get("categoria"))
+
+    if categoria_alerta and categoria_recebimento:
+        comparacoes.append({
+            "campo": "categoria",
+            "operador": "igual",
+            "valor_alerta": alerta.get("categoria"),
+            "valor_recebimento": recebimento.get("categoria"),
+        })
+        if categoria_alerta != categoria_recebimento:
+            return "diferente", [], comparacoes
+    else:
+        pendentes.append("categoria")
+
+    if pendentes:
+        return "pendente", pendentes, comparacoes
+
+    return "confirmada", [], comparacoes
+
+
 def avaliar_recebimento(
     alerta: dict[str, Any],
     recebimento: dict[str, Any],
@@ -170,23 +241,53 @@ def avaliar_recebimento(
             "evidencia": None,
         }
 
-    identidade_compativel, revisoes = _identidade_produto(
-        alerta,
-        recebimento,
-    )
+    if alerta.get("escopo") == ESCOPO_CATEGORIA_FABRICANTE:
+        # Recall de uma categoria inteira do fabricante (ex.: "todos os
+        # suplementos da Sanibras"): o nome comercial do recebimento
+        # ("Whey Protein 900 g") não precisa coincidir com a descrição
+        # genérica do alerta. A identidade é fabricante + categoria.
+        situacao, motivos, comparacoes = _identidade_categoria_fabricante(
+            alerta,
+            recebimento,
+        )
 
-    if not identidade_compativel:
-        return {
-            "resultado": "sem_match",
-            "motivos": [],
-            "match": False,
-            "revisao_manual": False,
-            "evidencia": {
-                "campo": "identidade_produto",
-                "valor_alerta": alerta.get("produto"),
-                "valor_recebimento": recebimento.get("produto"),
-            },
-        }
+        if situacao == "pendente":
+            return {
+                "resultado": "verificacao_pendente",
+                "motivos": motivos,
+                "match": False,
+                "revisao_manual": True,
+                "evidencia": comparacoes,
+            }
+
+        if situacao == "diferente":
+            return {
+                "resultado": "sem_match",
+                "motivos": [],
+                "match": False,
+                "revisao_manual": False,
+                "evidencia": comparacoes,
+            }
+
+        revisoes: list[str] = []
+    else:
+        identidade_compativel, revisoes = _identidade_produto(
+            alerta,
+            recebimento,
+        )
+
+        if not identidade_compativel:
+            return {
+                "resultado": "sem_match",
+                "motivos": [],
+                "match": False,
+                "revisao_manual": False,
+                "evidencia": {
+                    "campo": "identidade_produto",
+                    "valor_alerta": alerta.get("produto"),
+                    "valor_recebimento": recebimento.get("produto"),
+                },
+            }
 
     if tipo == "todos":
         return {

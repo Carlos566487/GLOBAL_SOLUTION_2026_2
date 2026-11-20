@@ -10,6 +10,7 @@ Todas as imagens usadas no [README do projeto](../../README.md), no [PDF da entr
 | [`graficos/`](graficos) | Gráficos de problema, extração, motor e OCR |
 | [`telas/`](telas) | Capturas do painel da rede rodando com a API |
 | [`exemplos/`](exemplos) | Galeria de leitura de embalagens (fotos reais × imagens simuladas) |
+| [`evidencias/`](evidencias) | Prints dos testes, da correção do motor e do endpoint do cidadão (19/11/2026) |
 | [`fontes/`](fontes) | Scripts e HTML que geram as imagens acima |
 
 ## Catálogo
@@ -52,6 +53,15 @@ Todas as imagens usadas no [README do projeto](../../README.md), no [PDF da entr
 | <img src="telas/painel_matches.png" width="220"> `telas/painel_matches.png` | Matches com evidência e aprovação | Mesma sessão | README, PDF |
 | <img src="telas/painel_rede.png" width="120"> `telas/painel_rede.png` | Página inteira do painel | Mesma sessão | `evidencias_testes.md` |
 | <img src="exemplos/galeria.png" width="220"> `exemplos/galeria.png` | 2 fotos reais (pendentes) + 3 imagens simuladas da demo | `data/fotos_teste/`, `data/demo/`, `fontes/visuais.html` (#galeria) | README |
+
+### Evidências (19/11/2026)
+
+| Imagem | Descrição | Origem | Usada em |
+|---|---|---|---|
+| <img src="evidencias/print_pytest_backend.png" width="220"> `print_pytest_backend.png` | `python -m pytest -v` no backend: 27 passed | execução real | `evidencias_testes.md` |
+| <img src="evidencias/print_correcao_categoria_fabricante.png" width="220"> `print_correcao_categoria_fabricante.png` | Caso Sanibras antes × depois da correção | motor original × corrigido, mesmo alerta e recebimento | `evidencias_testes.md` |
+| <img src="evidencias/print_cidadao_resultados.png" width="220"> `print_cidadao_resultados.png` | 7 imagens em `POST /cidadao/verificar` | API local com EasyOCR | `evidencias_testes.md` |
+| <img src="evidencias/print_swagger_cidadao_em_recall.png" width="120"> `print_swagger_cidadao_em_recall.png` | Swagger executando o endpoint com `demo_vaidosa_153.png` → `em_recall` | `/docs` da API local | `evidencias_testes.md` |
 
 ## Como regerar
 

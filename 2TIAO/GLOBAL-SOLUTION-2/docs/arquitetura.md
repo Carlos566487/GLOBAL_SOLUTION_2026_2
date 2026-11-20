@@ -37,13 +37,13 @@ Versão em imagem: [`img/diagramas/arquitetura.png`](img/diagramas/arquitetura.p
 | 1 | Coletor de alertas | requests, BeautifulSoup, pdfplumber | Tech Lead | 🟡 `baixar_textos.py` baixa os 20 textos oficiais da avaliação; coleta agendada não implementada |
 | 2 | Extrator LLM | Gemini `gemini-3.5-flash-lite`, schema + few-shot, temp. 0 | IA | ✅ `src/ia/extrator.py` |
 | 3 | Validador | Pydantic v2 | IA | ✅ `src/ia/schemas.py` |
-| 4 | Motor de regras | Python puro | Full-Stack | ✅ `lista`, `sufixo`, `data_corte`, `todos`; 🟡 escopo `categoria_fabricante` pendente |
+| 4 | Motor de regras | Python puro | Full-Stack | ✅ `lista`, `sufixo`, `data_corte`, `todos` e escopo `categoria_fabricante` (fabricante + categoria) |
 | 5 | Base de recebimentos | Faker + SQLite | Tech Lead | 🟡 recebimentos simulados nos testes; base SQLite não criada |
 | 6 | Aprovação humana | FastAPI + painel | Full-Stack | ✅ `POST /matches/{id}/decisao` + botões no painel |
 | 7 | Log de auditoria | SQLite append-only | Tech Lead | 🔴 não implementado (decisão fica gravada no próprio match) |
 | 8 | Painel da rede | React + Vite | Full-Stack | ✅ `src/painel` |
 | 9 | Leitor da embalagem | OpenCV + EasyOCR + pyzbar | IA | ✅ `src/ia/embalagem.py` |
-| 10 | App do cidadão | React + Vite | Full-Stack | 🟡 endpoint `POST /cidadao/verificar` implementado (sem teste e2e); a pasta `app-cidadao` ainda replica o painel |
+| 10 | App do cidadão | React + Vite | Full-Stack | 🟡 endpoint `POST /cidadao/verificar` validado de ponta a ponta (`tests/test_cidadao_verificar.py`); a pasta `app-cidadao` ainda replica o painel |
 
 ## 3. Contratos de dados (resumo)
 

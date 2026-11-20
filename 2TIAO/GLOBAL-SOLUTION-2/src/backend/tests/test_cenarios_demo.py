@@ -138,30 +138,47 @@ def test_cenario2_sanibras_data_corte_inclui_dia_limite(cliente):
     assert lojas["LOJA-B"]["resultado"] == "sem_match"
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason=(
-        "Lacuna conhecida: escopo 'categoria_fabricante' [contrato v2] ainda não "
-        "implementado no motor; um suplemento com nome comercial próprio não casa "
-        "com 'Suplementos alimentares do fabricante'. Ver docs/revisao_entrega_checklist.md."
-    ),
-)
+# Alerta Sanibras como o extrator o entrega (contrato v2): escopo
+# "categoria_fabricante" + categoria "suplemento". O registro do golden set
+# ainda não traz esses dois campos (pendência da PO), por isso são
+# acrescentados aqui, iguais à saída real do extrator em
+# docs/resultados_extracao_execucao.json.
+SANIBRAS_CATEGORIA = {**SANIBRAS, "escopo": "categoria_fabricante", "categoria": "suplemento"}
+
+
 def test_cenario2b_sanibras_produto_com_nome_comercial(cliente):
+    """Antes um falso negativo (xfail): agora o motor confirma fabricante
+    (CNPJ) + categoria e aplica a data de corte, sem depender do nome."""
     resp = cliente.post(
         "/motor/processar",
         json={
-            "alerta": SANIBRAS,
+            "alerta": SANIBRAS_CATEGORIA,
             "recebimentos": [
-                _suplemento(
-                    recebimento_id="r-0103",
-                    loja_id="LOJA-A",
-                    produto="Whey Protein 900 g",
-                    data_fabricacao="2026-06-12",
-                )
+                _suplemento(recebimento_id="r-0103", loja_id="LOJA-A",
+                            produto="Whey Protein 900 g", data_fabricacao="2026-06-12"),
+                _suplemento(recebimento_id="r-0104", loja_id="LOJA-B",
+                            produto="Whey Protein 900 g", data_fabricacao="2026-06-13"),
+                _suplemento(recebimento_id="r-0105", loja_id="LOJA-C",
+                            produto="Creatina 300 g", categoria=None, data_fabricacao="2026-06-01"),
+                _suplemento(recebimento_id="r-0106", loja_id="LOJA-D",
+                            produto="Whey Protein 900 g", cnpj="11.111.111/0001-11",
+                            fabricante="Outra Empresa Ltda.", data_fabricacao="2026-06-01"),
             ],
         },
     ).json()
-    assert _por_loja(resp)["LOJA-A"]["resultado"] == "match"
+
+    lojas = _por_loja(resp)
+    # Nome comercial diferente, mesmo fabricante e categoria, dentro da data: match.
+    assert lojas["LOJA-A"]["resultado"] == "match"
+    assert lojas["LOJA-A"]["evidencia"]["campo"] == "data_fabricacao"
+    # Mesma identidade, fabricado depois do corte: fora do recall.
+    assert lojas["LOJA-B"]["resultado"] == "sem_match"
+    # Categoria não informada: não presume seguro.
+    assert lojas["LOJA-C"]["resultado"] == "verificacao_pendente"
+    assert lojas["LOJA-C"]["motivos"] == ["categoria"]
+    # Outro fabricante: fora do recall.
+    assert lojas["LOJA-D"]["resultado"] == "sem_match"
+    assert len(resp["matches_criados"]) == 1
 
 
 def test_cenario3_vaidosa_lote_ilegivel_fica_pendente(cliente):

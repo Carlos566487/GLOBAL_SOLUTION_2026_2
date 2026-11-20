@@ -26,7 +26,7 @@ Revisão feita em **19/11/2026** comparando o repositório com o edital *GlobalS
 | 1 | Coletor de alertas (agendado, URL + hash) | 🟡 | Só o script de avaliação `baixar_textos.py`; `POST /alertas/coletar` recebe texto já coletado |
 | 2 | Extrator LLM | ✅ | Avaliado em 15 recolhimentos reservados |
 | 3 | Validador Pydantic | ✅ | 36/36 registros do gabarito validam |
-| 4 | Motor de regras | 🟡 | 4 tipos de regra ✅; escopo `categoria_fabricante` 🔴 (falso negativo Sanibras); evidência ainda no formato v1 (objeto, não lista); match sem `recebimento_id` |
+| 4 | Motor de regras | 🟡 | 4 tipos de regra ✅; escopo `categoria_fabricante` ✅ (corrigido em 19/11); evidência ainda no formato v1 (objeto, não lista); match sem `recebimento_id` |
 | 5 | Base de recebimentos (Faker + SQLite) | 🔴 | `data/recebimentos/` só tem README; recebimentos simulados existem apenas nos testes |
 | 6 | Aprovação humana | ✅ | Endpoint + botões no painel; decisão imutável (409) |
 | 7 | Log de auditoria append-only | 🔴 | Não implementado; a decisão fica no próprio match, em memória |
@@ -40,7 +40,7 @@ Revisão feita em **19/11/2026** comparando o repositório com o edital *GlobalS
 | Métrica | Estado |
 |---|---|
 | Acerto da extração por tipo de regra, recolhimento e registro | ✅ `resultados_extracao.md` |
-| Falsos positivos / negativos do cruzamento | ✅ cenários 1–3 e escala (0 FP, 0 FN); 🔴 1 FN conhecido no escopo `categoria_fabricante` |
+| Falsos positivos / negativos do cruzamento | ✅ cenários 1–3, 2b e escala (0 FP, 0 FN); o FN do escopo `categoria_fabricante` foi corrigido |
 | Tempo manual × automatizado | 🟡 automatizado medido (53 ms / 1.000); manual não cronometrado |
 | Leitura da embalagem em 10–15 fotos | ✅ 12 fotos |
 
@@ -49,7 +49,7 @@ Revisão feita em **19/11/2026** comparando o repositório com o edital *GlobalS
 1. **Preencher** turma e link do vídeo (README e capa do PDF) e regerar o PDF (`python docs/pdf_fonte/gerar_pdf.py`).
 2. **Gravar e publicar o vídeo** com "QUERO CONCORRER" no início, mostrando: alerta oficial → extração → painel → aprovação → leitura da embalagem.
 3. Confirmar o convite aceito pela `fiap-tutoria`.
-4. Se houver tempo: tela mínima do app do cidadão (upload → `POST /cidadao/verificar`) e escopo `categoria_fabricante` no motor (o teste `xfail` já descreve o comportamento esperado; quando passar, remover o `xfail`).
+4. ~~Escopo `categoria_fabricante` no motor~~ (feito em 19/11). Se houver tempo: tela mínima do app do cidadão (upload → `POST /cidadao/verificar`, já validado pela API).
 5. **Congelar o repositório** após o envio.
 
 ## 5. Pendências herdadas (registradas pelo Engenheiro de IA)

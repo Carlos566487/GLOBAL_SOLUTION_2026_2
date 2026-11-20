@@ -11,7 +11,8 @@ API única que atende o painel da rede e o app do cidadão. O **motor de regras*
 | `app/repositorio.py` | Armazenamento **em memória** (POC; reiniciar a API apaga os dados) |
 | `app/schemas_api.py` | Modelos Pydantic das requisições |
 | `tests/test_motor_regras.py` | 12 testes unitários do motor |
-| `tests/test_cenarios_demo.py` | 3 cenários de demo + escala (1.000 recebimentos) pela API; 1 `xfail` documenta a lacuna do escopo `categoria_fabricante` |
+| `tests/test_cenarios_demo.py` | 3 cenários de demo, caso Sanibras com nome comercial (escopo `categoria_fabricante`) e escala (1.000 recebimentos) pela API |
+| `tests/test_cidadao_verificar.py` | Fluxo do cidadão: `POST /cidadao/verificar` com as 3 imagens da demo (`em_recall`, `sem_recall`, `verificacao_pendente`); pulado sem EasyOCR |
 
 ## Endpoints
 
@@ -40,4 +41,4 @@ cd backend
 python -m pytest -v
 ```
 
-Resultado em 19/11/2026: motor 12 passed; cenários 4 passed + 1 xfailed. Detalhes em [`../../docs/evidencias_testes.md`](../../docs/evidencias_testes.md).
+Resultado em 19/11/2026 (com EasyOCR instalado): **27 passed** — motor 18, cenários 5, cidadão 4. Sem EasyOCR, o módulo do cidadão é pulado (23 passed, 1 skipped). Detalhes em [`../../docs/evidencias_testes.md`](../../docs/evidencias_testes.md).

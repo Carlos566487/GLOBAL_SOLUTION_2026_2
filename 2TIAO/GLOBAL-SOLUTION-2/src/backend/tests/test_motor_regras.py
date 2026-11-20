@@ -213,3 +213,74 @@ def test_cnpj_diferente_nao_deve_gerar_match():
 
     assert resultado["match"] is False
     assert resultado["resultado"] == "sem_match"
+
+
+
+# --- Escopo categoria_fabricante (contrato v2) -----------------------------
+
+def alerta_categoria(**extra):
+    alerta = {
+        "alerta_id": "sanibras",
+        "produto": "Suplementos alimentares do fabricante",
+        "marca": "Sanibras",
+        "fabricante": "Sanibras Medicamentos e Nutrição Ltda.",
+        "cnpj": "82.268.269/0001-18",
+        "escopo": "categoria_fabricante",
+        "categoria": "suplemento",
+        "status_extracao": "ok",
+        "campos_pendentes": [],
+        "regra_lote": {"tipo": "data_corte", "lotes": [], "sufixo": None, "fabricado_ate": "2026-06-12"},
+    }
+    alerta.update(extra)
+    return alerta
+
+
+def recebimento_suplemento(**dados):
+    recebimento = {
+        "loja_id": "LOJA-A",
+        "produto": "Whey Protein 900 g",
+        "marca": "Sanibras",
+        "fabricante": "Sanibras Medicamentos e Nutrição Ltda.",
+        "cnpj": "82.268.269/0001-18",
+        "categoria": "suplemento",
+        "lote": "X1",
+        "data_fabricacao": "2026-06-10",
+    }
+    recebimento.update(dados)
+    return recebimento
+
+
+def test_categoria_fabricante_ignora_nome_comercial():
+    r = avaliar_recebimento(alerta_categoria(), recebimento_suplemento())
+    assert r["resultado"] == "match"
+
+
+def test_categoria_fabricante_preserva_data_de_corte():
+    r = avaliar_recebimento(alerta_categoria(), recebimento_suplemento(data_fabricacao="2026-06-13"))
+    assert r["resultado"] == "sem_match"
+    r = avaliar_recebimento(alerta_categoria(), recebimento_suplemento(data_fabricacao=None))
+    assert r["resultado"] == "verificacao_pendente"
+
+
+def test_categoria_fabricante_cnpj_diferente_nao_casa():
+    r = avaliar_recebimento(alerta_categoria(), recebimento_suplemento(cnpj="11.111.111/0001-11"))
+    assert r["resultado"] == "sem_match"
+
+
+def test_categoria_fabricante_categoria_diferente_nao_casa():
+    r = avaliar_recebimento(alerta_categoria(), recebimento_suplemento(categoria="medicamento"))
+    assert r["resultado"] == "sem_match"
+
+
+def test_categoria_fabricante_sem_categoria_fica_pendente():
+    r = avaliar_recebimento(alerta_categoria(), recebimento_suplemento(categoria=None))
+    assert r["resultado"] == "verificacao_pendente"
+    assert r["motivos"] == ["categoria"]
+
+
+def test_categoria_fabricante_sem_cnpj_usa_razao_social():
+    r = avaliar_recebimento(alerta_categoria(), recebimento_suplemento(cnpj=None))
+    assert r["resultado"] == "match"
+    r = avaliar_recebimento(alerta_categoria(), recebimento_suplemento(cnpj=None, fabricante=None))
+    assert r["resultado"] == "verificacao_pendente"
+    assert r["motivos"] == ["fabricante"]
