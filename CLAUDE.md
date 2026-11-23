@@ -13,8 +13,9 @@ Contexto persistente do projeto para o Claude Code. Responda sempre em portuguê
   | Dev Full Stack | Endrew Alves | RM563646 |
   | Tech Lead e Documentador | Carlos Eduardo | RM566487 |
 
+- **Turma:** 2º ano • 2TIAOA • 2026/1
 - **Repositório:** [`Carlos566487/GLOBAL_SOLUTION_2026_2`](https://github.com/Carlos566487/GLOBAL_SOLUTION_2026_2) (https://github.com/Carlos566487/GLOBAL_SOLUTION_2026_2.git), com a estrutura do template `fiap-tutoria/FIAP-PORTFOLIO-AI`; deve ficar privado e compartilhado com `fiap-tutoria`. Repositório anterior: `JV-004/GS-2`.
-- **Vídeo da apresentação (YouTube, não listado):** https://youtu.be/_yUmZ12cpyI
+- **Vídeo da apresentação (YouTube, não listado):** https://youtu.be/2S1gYwfXBZM
 
 ---
 

@@ -23,7 +23,7 @@
 
 <p align="center">
   <b><a href="2TIAO/GLOBAL-SOLUTION-2/docs/GS2026-2_Recall_Seguro.pdf">📄 PDF da entrega</a></b> ·
-  <b><a href="https://youtu.be/_yUmZ12cpyI">🎬 Vídeo da apresentação</a></b> ·
+  <b><a href="https://youtu.be/2S1gYwfXBZM">🎬 Vídeo da apresentação</a></b> ·
   <b><a href="#resultados">📊 Resultados</a></b> ·
   <b><a href="#como-executar">🔧 Como executar</a></b> ·
   <b><a href="2TIAO/GLOBAL-SOLUTION-2/docs/revisao_entrega_checklist.md">✅ Checklist da entrega</a></b> ·
@@ -64,7 +64,7 @@
 | Endrew Alves | RM563646 | 🎨 Dev Full-Stack |
 | Carlos Eduardo | RM566487 | 📄 Tech Lead & Documentador |
 
-**Participação na competição:** [x] Sim, aceitamos participar / [ ] Não vamos participar.
+**Turma:** 2º ano • 2TIAOA • 2026/1 · **Participação na competição:** [x] Sim, aceitamos participar / [ ] Não vamos participar.
 
 ### 👩‍🏫 Professores
 
@@ -297,10 +297,10 @@ Relatórios completos: [`resultados_extracao.md`](2TIAO/GLOBAL-SOLUTION-2/docs/r
 ### 🎬 Vídeo da apresentação (4:50)
 
 <p align="center">
-  <a href="https://youtu.be/_yUmZ12cpyI"><img src="https://img.youtube.com/vi/_yUmZ12cpyI/hqdefault.jpg" alt="Vídeo da apresentação do Recall Seguro no YouTube" width="560"></a>
+  <a href="https://youtu.be/2S1gYwfXBZM"><img src="https://img.youtube.com/vi/2S1gYwfXBZM/hqdefault.jpg" alt="Vídeo da apresentação do Recall Seguro no YouTube" width="560"></a>
 </p>
 
-<p align="center"><a href="https://youtu.be/_yUmZ12cpyI">https://youtu.be/_yUmZ12cpyI</a> </p>
+<p align="center"><a href="https://youtu.be/2S1gYwfXBZM">https://youtu.be/2S1gYwfXBZM</a> · YouTube, não listado · 8 cenas: problema, solução, extração com IA, painel da rede, consulta do cidadão, governança/LGPD/ODS 3 e encerramento.</p>
 
 ### Painel da rede (React + Vite)
 

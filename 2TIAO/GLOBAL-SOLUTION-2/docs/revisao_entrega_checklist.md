@@ -11,11 +11,11 @@ Revisão feita em **19/11/2026** comparando o repositório com o edital *GlobalS
 | Resultado objetivo (tabela, gráfico, indicador, tela) | ✅ | Painel com indicadores; gráficos em `docs/img/`; relatórios de extração e OCR |
 | Ao menos uma abordagem atual de IA / automação / IoT | ✅ | IA Generativa (Gemini + schema) e visão computacional (EasyOCR + pyzbar) |
 | Evidência de testes + limitações | ✅ | `docs/evidencias_testes.md`; 228 testes (194 IA + 34 backend); limitações no README §10 |
-| Vídeo até 5 min (YouTube não listado) | ✅ | Publicado: https://youtu.be/_yUmZ12cpyI (4:50). Link no README e no PDF |
+| Vídeo até 5 min (YouTube não listado) | ✅ | Publicado: https://youtu.be/2S1gYwfXBZM (4:50). Link no README e no PDF |
 | ODS + forma de medir impacto | ✅ | ODS 3, tabela de indicadores no README §6 |
-| PDF único (Intro, Desenvolvimento, Resultados, Conclusões) | 🟡 | `docs/GS2026-2_Recall_Seguro.pdf` gerado; nomes, RMs e link do vídeo preenchidos; **falta a turma** na capa |
+| PDF único (Intro, Desenvolvimento, Resultados, Conclusões) | ✅ | `docs/GS2026-2_Recall_Seguro.pdf`: turma (2º ano • 2TIAOA • 2026/1), nomes, RMs, links do vídeo e do GitHub na capa |
 | GitHub privado compartilhado com `fiap-tutoria` | 🔴 | Repositório `Carlos566487/GLOBAL_SOLUTION_2026_2` está **público**: mudar para privado (*Settings → General → Danger Zone → Change visibility*) e convidar `fiap-tutoria` (*Settings → Collaborators*) |
-| README com proposta, tecnologias, integrantes e execução | 🟡 | README reescrito com integrantes, RMs e professores; **falta a turma** |
+| README com proposta, tecnologias, integrantes e execução | ✅ | README com turma, integrantes, RMs, professores e link do vídeo |
 | Código em texto legível (sem .zip, prints, venv) | ✅ | `.gitignore` bloqueia `.zip`, `.venv`, `.env`, `node_modules` |
 | Integração de múltiplas disciplinas (pódio) | ✅ | README §11 |
 
@@ -46,8 +46,8 @@ Revisão feita em **19/11/2026** comparando o repositório com o edital *GlobalS
 
 ## 4. Prioridade sugerida até o prazo (20/11)
 
-1. **Preencher** turma e link do vídeo (README e capa do PDF) e regerar o PDF (`python docs/pdf_fonte/gerar_pdf.py`).
-2. ~~Gravar e publicar o vídeo~~ (feito: https://youtu.be/_yUmZ12cpyI).
+1. ~~Preencher turma e link do vídeo e regerar o PDF~~ (feito em 23/11).
+2. ~~Gravar e publicar o vídeo~~ (feito: https://youtu.be/2S1gYwfXBZM).
 3. Confirmar o convite aceito pela `fiap-tutoria`.
 4. ~~Escopo `categoria_fabricante` no motor~~ (feito em 19/11). Se houver tempo: tela mínima do app do cidadão (upload → `POST /cidadao/verificar`, já validado pela API).
 5. **Congelar o repositório** após o envio.
